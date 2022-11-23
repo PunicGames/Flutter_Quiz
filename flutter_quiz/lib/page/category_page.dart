@@ -17,24 +17,12 @@ class CategoryPage extends StatefulWidget {
 
 class _CategoryPageState extends State<CategoryPage> {
   //hay alguna manera de no inicializar aqui estas variables?
-  //PageController controller;
-  //Question question;
-  PageController controller = PageController();
-  Question question = Question(
-    text: '',
-    options: [
-      Option(code: '', text: '', isCorrect: false),
-      Option(code: '', text: '', isCorrect: false),
-      Option(code: '', text: '', isCorrect: true),
-      Option(code: '', text: '', isCorrect: false),
-    ],
-    solution: '',
-  );
+  PageController? controller;
+  Question? question;
 
   @override
   void initState() {
     super.initState();
-
     controller = PageController();
     question = widget.category.questions.first;
   }
@@ -83,18 +71,18 @@ class _CategoryPageState extends State<CategoryPage> {
     //al seleccionar una opcion, activamos el booleano isLocked para dejar
     //claro que en esa ristra de opciones ya se ha seleccionado una y por
     //tanto no se puede volver a seleccionar otra
-    if (question.isLocked) {
+    if (question!.isLocked) {
       return;
     } else {
       setState(() {
-        question.isLocked = true;
-        question.selectedOption = option;
+        question?.isLocked = true;
+        question?.selectedOption = option;
       });
     }
   }
 
   void nextQuestion({int? index, bool jump = false}) {
-    final nextPage = controller.page ?? 1;
+    final nextPage = controller?.page ?? 1;
     //esto sirve basicamente para cuando pulsamos en los circulos para ir
     //directamente a un numero de pregunta en cocnreto, momento en el que
     //el indice no se establece ya que no estamos arrastrando y por tanto
@@ -107,7 +95,7 @@ class _CategoryPageState extends State<CategoryPage> {
     //de esta forma habilitamos que pueda saltar de una pregunta a otra
     //directamente
     if (jump) {
-      controller.jumpToPage(indexPage);
+      controller?.jumpToPage(indexPage);
     }
   }
 }

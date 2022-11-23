@@ -3,7 +3,7 @@ import '../model/question.dart';
 
 class QuestionNumbersWidget extends StatelessWidget {
   final List<Question> questions;
-  final Question question;
+  final Question? question;
   final ValueChanged<int> onClickedNumber;
 
   const QuestionNumbersWidget({

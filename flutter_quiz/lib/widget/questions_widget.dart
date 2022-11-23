@@ -6,7 +6,7 @@ import '../widget/options_widget.dart';
 
 class QuestionsWidget extends StatelessWidget {
   final Category category;
-  final PageController controller;
+  final PageController? controller;
   final ValueChanged<int> onChangedPage;
   final ValueChanged<Option> onClickedOption;
 
