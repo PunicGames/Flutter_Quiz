@@ -21,22 +21,14 @@ class _CategoryPageState extends State<CategoryPage> {
   //Question question;
   PageController controller = PageController();
   Question question = Question(
-    text: '¿Por que Kratos es tan palido?',
+    text: '',
     options: [
-      Option(code: 'A', text: 'Es Gamer', isCorrect: false),
-      Option(code: 'B', text: 'Es alergico a la luz del sol', isCorrect: false),
-      Option(
-          code: 'C',
-          text:
-              'Esta cubierto de pies a cabeza con las cenizas de su familia muerta',
-          isCorrect: true),
-      Option(
-          code: 'D',
-          text: 'Estuvo encerrado durante mucho tiempo',
-          isCorrect: false),
+      Option(code: '', text: '', isCorrect: false),
+      Option(code: '', text: '', isCorrect: false),
+      Option(code: '', text: '', isCorrect: true),
+      Option(code: '', text: '', isCorrect: false),
     ],
-    solution:
-        'Esta cubierto de pies a cabeza con las cenizas de su familia muerta',
+    solution: '',
   );
 
   @override
@@ -49,46 +41,16 @@ class _CategoryPageState extends State<CategoryPage> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        //appBar: buildAppBar(context),
-        appBar: AppBar(
-          title: Text(widget.category.categoryName),
-          actions: [
-            Icon(Icons.filter_alt_outlined),
-            SizedBox(width: 16),
-          ],
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: themeColors,
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-              ),
-            ),
-          ),
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(80),
-            child: Container(
-              padding: EdgeInsets.symmetric(vertical: 16),
-              child: QuestionNumbersWidget(
-                questions: widget.category.questions,
-                question: question,
-                onClickedNumber: (index) =>
-                    nextQuestion(index: index, jump: true),
-              ),
-            ),
-          ),
-        ),
+        appBar: buildAppBar(context),
         body: QuestionsWidget(
           category: widget.category,
           controller: controller,
           onChangedPage: (index) => nextQuestion(index: index),
-          onClickedOption:
-              selectOption, //cada vez que seleccionamos una opcion se ejecuta esta funcion
+          onClickedOption: selectOption,
         ),
       );
 
-//preguntar porque no puedo llamarlo directamente me da error.
-  Widget buildAppBar(context) => AppBar(
+  PreferredSizeWidget buildAppBar(context) => AppBar(
         title: Text(widget.category.categoryName),
         actions: [
           Icon(Icons.filter_alt_outlined),
@@ -118,6 +80,9 @@ class _CategoryPageState extends State<CategoryPage> {
       );
 
   void selectOption(Option option) {
+    //al seleccionar una opcion, activamos el booleano isLocked para dejar
+    //claro que en esa ristra de opciones ya se ha seleccionado una y por
+    //tanto no se puede volver a seleccionar otra
     if (question.isLocked) {
       return;
     } else {
@@ -129,16 +94,18 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 
   void nextQuestion({int? index, bool jump = false}) {
-    //final nextPage = controller.page + 1; porque esto no funciona
     final nextPage = controller.page ?? 1;
+    //esto sirve basicamente para cuando pulsamos en los circulos para ir
+    //directamente a un numero de pregunta en cocnreto, momento en el que
+    //el indice no se establece ya que no estamos arrastrando y por tanto
+    //no aumenta
     final indexPage = index ?? nextPage.toInt();
-    //la ?? significa que si no tienes el valor de la izquierda, se establezca el de la derecha
-
-    //asi conseguiria que siempre este en la pregunta correcta en la pagina correcta ya que el indice lo asegura
     setState(() {
       question = widget.category.questions[indexPage];
     });
 
+    //de esta forma habilitamos que pueda saltar de una pregunta a otra
+    //directamente
     if (jump) {
       controller.jumpToPage(indexPage);
     }

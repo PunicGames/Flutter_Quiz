@@ -151,4 +151,34 @@ final Pokemon_questions = [
     ],
     solution: 'Tauros',
   ),
+  Question(
+    text: 'a?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'b?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'c?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
 ];
