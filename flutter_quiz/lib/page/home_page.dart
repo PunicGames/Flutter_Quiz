@@ -7,9 +7,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.menu),
           elevation: 0,
           title: Text('Videogame Quiz'),
+          centerTitle: true,
+          //seccion de saludo de usuario
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(80),
             child: Container(
@@ -18,6 +19,8 @@ class HomePage extends StatelessWidget {
               child: buildWelcome(username),
             ),
           ),
+
+          //decoracion de la parte de arriba de la pagina
           flexibleSpace: Container(
             decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -26,8 +29,12 @@ class HomePage extends StatelessWidget {
                     end: Alignment.bottomLeft)),
           ),
           actions: [
-            Icon(Icons.search),
-            SizedBox(width: 12),
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                //cosas
+              },
+            )
           ],
         ),
         body: ListView(
@@ -73,4 +80,8 @@ class HomePage extends StatelessWidget {
               .toList(),
         ),
       );
+
+  void searchCategory(String query) {
+    final suggestions;
+  }
 }
