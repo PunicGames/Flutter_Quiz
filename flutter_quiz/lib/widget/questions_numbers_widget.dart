@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/question.dart';
+import '../classes/question.dart';
 
 class QuestionNumbersWidget extends StatelessWidget {
   final List<Question> questions;

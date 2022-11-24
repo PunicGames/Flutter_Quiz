@@ -1,5 +1,5 @@
-import '../model/option.dart';
-import '../model/question.dart';
+import '../classes/option.dart';
+import '../classes/question.dart';
 
 final GodOfWarIV_questions = [
   //  #1

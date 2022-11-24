@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../data/global_variables.dart';
-import '../model/category.dart';
-import '../model/option.dart';
-import '../model/question.dart';
+import '../classes/category.dart';
+import '../classes/option.dart';
+import '../classes/question.dart';
 import '../widget/questions_numbers_widget.dart';
 import '../widget/questions_widget.dart';
 

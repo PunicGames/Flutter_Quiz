@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_quiz/model/category.dart';
-import 'package:flutter_quiz/page/category_page.dart';
 import '../data/categories.dart';
 import '../data/global_variables.dart';
+import '../widget/categorySearch_widget.dart';
 import '../widget/category_header_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -82,84 +81,5 @@ class HomePage extends StatelessWidget {
               .map((category) => CategoryHeaderWidget(category: category))
               .toList(),
         ),
-      );
-}
-
-class CategorySearch extends SearchDelegate<Category?> {
-  final recentCategories = [
-    categories[0],
-    categories[4],
-    categories[2],
-  ];
-
-  @override
-  List<Widget>? buildActions(BuildContext context) => [
-        IconButton(
-          icon: Icon(Icons.clear),
-          onPressed: () {
-            //esto basicamente hace que si hay algo escrito en el query lo borra
-            //todo y si esta vacio, te vuelve a la pantalla de seleccion de quiz
-            if (query.isEmpty) {
-              close(context, null);
-            } else {
-              query = '';
-              showSuggestions(context);
-            }
-          },
-        )
-      ];
-
-  @override
-  Widget? buildLeading(BuildContext context) => IconButton(
-        icon: Icon(Icons.arrow_back),
-        onPressed: () => close(context, null),
-      );
-
-  @override
-  Widget buildResults(BuildContext context) => Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: categories
-              .map((category) => CategoryHeaderWidget(category: category))
-              .toList(),
-        ),
-      );
-
-  @override
-  Widget buildSuggestions(BuildContext context) {
-    final suggestions = query.isEmpty
-        ? recentCategories
-        : categories.where((category) {
-            final categoryLower = category.categoryName.toLowerCase();
-            final queryLower = query.toLowerCase();
-
-            return categoryLower.startsWith(queryLower);
-          }).toList();
-
-    return buildSuggestionsSuccess(suggestions);
-  }
-
-  Widget buildSuggestionsSuccess(List<Category> suggestions) =>
-      ListView.builder(
-        itemCount: suggestions.length,
-        itemBuilder: (context, index) {
-          final suggestion = suggestions[index];
-
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(suggestion.imageUrl),
-            ),
-            title: Text(suggestion.categoryName),
-            onTap: () {
-              query = suggestion.categoryName;
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoryPage(category: suggestion),
-                ),
-              );
-            },
-          );
-        },
       );
 }

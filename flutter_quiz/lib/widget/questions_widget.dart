@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../model/category.dart';
-import '../model/option.dart';
-import '../model/question.dart';
+import '../classes/category.dart';
+import '../classes/option.dart';
+import '../classes/question.dart';
 import '../widget/options_widget.dart';
 
 class QuestionsWidget extends StatelessWidget {

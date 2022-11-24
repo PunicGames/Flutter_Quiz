@@ -1,5 +1,5 @@
 import '../data/questions.dart';
-import '../model/category.dart';
+import '../classes/category.dart';
 
 final categories = <Category>[
   Category(

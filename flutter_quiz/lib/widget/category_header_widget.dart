@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../model/category.dart';
+import '../classes/category.dart';
 import '../page/category_page.dart';
 
 class CategoryHeaderWidget extends StatelessWidget {
