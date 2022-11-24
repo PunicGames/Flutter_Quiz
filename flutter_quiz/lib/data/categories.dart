@@ -29,12 +29,12 @@ final categories = <Category>[
   ),
   Category(
     questions: GodOfWarIV_questions,
-    categoryName: 'God of War IV',
+    categoryName: 'prueba 1',
     imageUrl: 'assets/GodOfWarIV_Image.jpg',
   ),
   Category(
     questions: Pokemon_questions,
-    categoryName: 'Pokemon',
+    categoryName: 'prueba 2',
     imageUrl: 'assets/Pokemon_Image.jpg',
   ),
 ];
