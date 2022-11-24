@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz/model/category.dart';
+import 'package:flutter_quiz/page/category_page.dart';
 import '../data/categories.dart';
 import '../data/global_variables.dart';
 import '../widget/category_header_widget.dart';
@@ -102,6 +103,7 @@ class CategorySearch extends SearchDelegate<Category?> {
               close(context, null);
             } else {
               query = '';
+              showSuggestions(context);
             }
           },
         )
@@ -146,6 +148,17 @@ class CategorySearch extends SearchDelegate<Category?> {
           return ListTile(
             leading: Icon(Icons.gamepad_sharp),
             title: Text(suggestion.categoryName),
+            onTap: () {
+              query = suggestion.categoryName;
+              //showResults(context);
+              //close(context, suggestion);
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoryPage(category: suggestion),
+                ),
+              );
+            },
           );
         },
       );

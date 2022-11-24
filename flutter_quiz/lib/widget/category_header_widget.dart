@@ -12,9 +12,11 @@ class CategoryHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => CategoryPage(category: category),
-        )),
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => CategoryPage(category: category),
+          ),
+        ),
         child: Container(
           padding: EdgeInsets.all(12),
           decoration: BoxDecoration(
