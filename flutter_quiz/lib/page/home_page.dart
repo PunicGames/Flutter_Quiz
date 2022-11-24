@@ -146,12 +146,12 @@ class CategorySearch extends SearchDelegate<Category?> {
           final suggestion = suggestions[index];
 
           return ListTile(
-            leading: Icon(Icons.gamepad_sharp),
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(suggestion.imageUrl),
+            ),
             title: Text(suggestion.categoryName),
             onTap: () {
               query = suggestion.categoryName;
-              //showResults(context);
-              //close(context, suggestion);
               Navigator.push(
                 context,
                 MaterialPageRoute(
