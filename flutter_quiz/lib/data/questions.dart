@@ -182,3 +182,132 @@ final Pokemon_questions = [
     solution: 'Tauros',
   ),
 ];
+
+final Fifa_questions = [
+  Question(
+    text: 'Cual es el pokemon que mas ha capturado Ash?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'a?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'b?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'c?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+];
+
+final MetalGear_questions = [
+  Question(
+    text: 'Cual es el pokemon que mas ha capturado Ash?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'a?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'b?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'c?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+];
+
+final GearsOfHell_questions = [
+  Question(
+    text: 'Cual es el pokemon que mas ha capturado Ash?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'a?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'b?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+  Question(
+    text: 'c?',
+    options: [
+      Option(code: 'A', text: 'Pikachu', isCorrect: false),
+      Option(code: 'B', text: 'Tauros', isCorrect: true),
+      Option(code: 'C', text: 'Weedle', isCorrect: false),
+      Option(code: 'D', text: 'Charmander', isCorrect: false),
+    ],
+    solution: 'Tauros',
+  ),
+];

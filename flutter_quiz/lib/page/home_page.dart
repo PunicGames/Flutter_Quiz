@@ -11,14 +11,14 @@ class HomePage extends StatelessWidget {
           title: Text('Videogame Quiz'),
           centerTitle: true,
           //seccion de saludo de usuario
-          bottom: PreferredSize(
-            preferredSize: Size.fromHeight(80),
-            child: Container(
-              padding: EdgeInsets.all(16),
-              alignment: Alignment.centerLeft,
-              child: buildWelcome(username),
-            ),
-          ),
+          // bottom: PreferredSize(
+          //   preferredSize: Size.fromHeight(80),
+          //   child: Container(
+          //     padding: EdgeInsets.all(16),
+          //     alignment: Alignment.centerLeft,
+          //     child: buildWelcome(username),
+          //   ),
+          // ),
 
           //decoracion de la parte de arriba de la pagina
           flexibleSpace: Container(
