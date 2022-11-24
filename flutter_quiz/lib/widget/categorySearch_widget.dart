@@ -61,11 +61,10 @@ class CategorySearch extends SearchDelegate<Category?> {
         itemCount: suggestions.length,
         itemBuilder: (context, index) {
           final suggestion = suggestions[index];
+          final queryText = suggestion.categoryName.substring(0, query.length);
+          final remainingText = suggestion.categoryName.substring(query.length);
 
           return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(suggestion.imageUrl),
-            ),
             // leading: ConstrainedBox(
             //   constraints: BoxConstraints(
             //     minWidth: 44,
@@ -75,7 +74,28 @@ class CategorySearch extends SearchDelegate<Category?> {
             //   ),
             //   child: Image.asset(suggestion.imageUrl, fit: BoxFit.cover),
             // ),
-            title: Text(suggestion.categoryName),
+            leading: CircleAvatar(
+              backgroundImage: AssetImage(suggestion.imageUrl),
+            ),
+            //title: Text(suggestion.categoryName),
+            title: RichText(
+              text: TextSpan(
+                  text: queryText,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: remainingText,
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 18,
+                      ),
+                    ),
+                  ]),
+            ),
             onTap: () {
               query = suggestion.categoryName;
               Navigator.push(
