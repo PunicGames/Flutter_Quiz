@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_quiz/page/main_page.dart';
 import '../page/home_page.dart';
 
 Future main() async {
@@ -19,6 +20,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: title,
-        home: HomePage(),
+        home: MainPage(),
       );
 }

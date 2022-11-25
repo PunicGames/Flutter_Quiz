@@ -49,24 +49,6 @@ class HomePage extends StatelessWidget {
         ),
       );
 
-  Widget buildWelcome(String username) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Hello',
-            style: TextStyle(fontSize: 16, color: Colors.white),
-          ),
-          Text(
-            username,
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          )
-        ],
-      );
-
   Widget buildCategories() => Container(
         //numero a tener en cuenta porque no es responsivo
         height: 450,
