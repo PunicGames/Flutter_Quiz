@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import '../classes/option.dart';
 import '../classes/question.dart';
 
@@ -837,22 +835,34 @@ final call_of_duty_questions_en = [
 ];
 
 // SLY COOPER SAGA ENGLISH QUESTIONS
-final zelda_questions_en = [
+final zelda_questions_es = [
   // #1
   Question(
     text: 'How did Bentley come to be in a wheel chair?',
     options: [
-      Option(code: 'A', text: "Clockwerk's beak crushed his legs.", isCorrect: true),
+      Option(
+          code: 'A',
+          text: "Clockwerk's beak crushed his legs.",
+          isCorrect: true),
       Option(code: 'B', text: 'Fell down the stairs.', isCorrect: false),
-      Option(code: 'C', text: 'He ate something bad for dinner.', isCorrect: false),
-      Option(code: 'D', text: 'Carmelita shot at the climbing device causing it to fall from a great height.', isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'He ate something bad for dinner.',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text:
+              'Carmelita shot at the climbing device causing it to fall from a great height.',
+          isCorrect: false),
     ],
-    solution: "Clockwerk's beak crushed his legs as he tried to remove the 'chip-of-hate'.",
+    solution:
+        "Clockwerk's beak crushed his legs as he tried to remove the 'chip-of-hate'.",
   ),
 
   // #2
   Question(
-    text: "Which development company is behind 'Sly Cooper 3: Honor Among Thieves'?",
+    text:
+        "Which development company is behind 'Sly Cooper 3: Honor Among Thieves'?",
     options: [
       Option(code: 'A', text: 'Imsomniac', isCorrect: false),
       Option(code: 'B', text: 'Team ICO', isCorrect: false),
@@ -909,5 +919,4 @@ final zelda_questions_en = [
     ],
     solution: 'Sucker Punch Productions, the creators of Sekiro.',
   ),
-
 ];
