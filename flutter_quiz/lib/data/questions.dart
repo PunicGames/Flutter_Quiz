@@ -539,7 +539,7 @@ final mario_bros_questions_en = [
       Option(code: 'A', text: 'True', isCorrect: true),
       Option(code: 'B', text: 'False', isCorrect: false),
     ],
-    solution: '1985',
+    solution: 'True',
   ),
 
   //  #20
@@ -834,4 +834,80 @@ final call_of_duty_questions_en = [
     ],
     solution: 'Verrückt was the first.',
   ),
+];
+
+// SLY COOPER SAGA ENGLISH QUESTIONS
+final zelda_questions_en = [
+  // #1
+  Question(
+    text: 'How did Bentley come to be in a wheel chair?',
+    options: [
+      Option(code: 'A', text: "Clockwerk's beak crushed his legs.", isCorrect: true),
+      Option(code: 'B', text: 'Fell down the stairs.', isCorrect: false),
+      Option(code: 'C', text: 'He ate something bad for dinner.', isCorrect: false),
+      Option(code: 'D', text: 'Carmelita shot at the climbing device causing it to fall from a great height.', isCorrect: false),
+    ],
+    solution: "Clockwerk's beak crushed his legs as he tried to remove the 'chip-of-hate'.",
+  ),
+
+  // #2
+  Question(
+    text: "Which development company is behind 'Sly Cooper 3: Honor Among Thieves'?",
+    options: [
+      Option(code: 'A', text: 'Imsomniac', isCorrect: false),
+      Option(code: 'B', text: 'Team ICO', isCorrect: false),
+      Option(code: 'C', text: 'Sucker Punch Productions', isCorrect: true),
+      Option(code: 'D', text: 'Naughty Dog', isCorrect: false),
+    ],
+    solution: 'Sucker Punch Productions, the creators of Sekiro.',
+  ),
+
+  // #3
+  Question(
+    text: "What kind of animal is Sly?",
+    options: [
+      Option(code: 'A', text: 'Weasel', isCorrect: false),
+      Option(code: 'B', text: 'Bobcat', isCorrect: false),
+      Option(code: 'C', text: 'Hippo', isCorrect: false),
+      Option(code: 'D', text: 'Racoon', isCorrect: true),
+    ],
+    solution: 'Sucker Punch Productions, the creators of Sekiro.',
+  ),
+
+  // #4
+  Question(
+    text: "What does Carmelita Fox do for a living?",
+    options: [
+      Option(code: 'A', text: 'Inspector', isCorrect: true),
+      Option(code: 'B', text: 'Private Military Contractor', isCorrect: false),
+      Option(code: 'C', text: 'Detective', isCorrect: false),
+      Option(code: 'D', text: 'Police Agent', isCorrect: false),
+    ],
+    solution: 'Inspector, she is also know as Inspector Fox',
+  ),
+
+  // #5
+  Question(
+    text: "What kind of animal is Bentley?",
+    options: [
+      Option(code: 'A', text: 'Weasel', isCorrect: false),
+      Option(code: 'B', text: 'Bobcat', isCorrect: false),
+      Option(code: 'C', text: 'Hippo', isCorrect: false),
+      Option(code: 'D', text: 'Racoon', isCorrect: true),
+    ],
+    solution: 'Sucker Punch Productions, the creators of Sekiro.',
+  ),
+
+  // #6
+  Question(
+    text: "What kind of animal is Murray?",
+    options: [
+      Option(code: 'A', text: 'Hippo', isCorrect: true),
+      Option(code: 'B', text: 'Rhino', isCorrect: false),
+      Option(code: 'C', text: 'Elephant', isCorrect: false),
+      Option(code: 'D', text: 'Steer', isCorrect: false),
+    ],
+    solution: 'Sucker Punch Productions, the creators of Sekiro.',
+  ),
+
 ];
