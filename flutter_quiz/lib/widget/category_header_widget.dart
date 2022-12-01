@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../classes/category.dart';
 import '../page/category_page.dart';
+import '../page/categoryViewer_page.dart';
 
 class CategoryHeaderWidget extends StatelessWidget {
   final Category category;
@@ -14,7 +15,7 @@ class CategoryHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) => GestureDetector(
         onTap: () => Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => CategoryPage(category: category),
+            builder: (context) => CategoryViewerPage(category: category),
           ),
         ),
         child: Container(
