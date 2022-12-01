@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../data/categories.dart';
 import '../classes/category.dart';
-import '../page/category_page.dart';
+import '../page/categoryViewer_page.dart';
 import 'category_header_widget.dart';
 
 class CategorySearch extends SearchDelegate<Category?> {
@@ -101,7 +101,8 @@ class CategorySearch extends SearchDelegate<Category?> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => CategoryPage(category: suggestion),
+                  builder: (context) =>
+                      CategoryViewerPage(category: suggestion),
                 ),
               );
             },
