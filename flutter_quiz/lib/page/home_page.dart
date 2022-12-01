@@ -44,14 +44,14 @@ class HomePage extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           children: [
             SizedBox(height: 8),
-            buildCategories(),
+            buildCategories(context),
           ],
         ),
       );
 
-  Widget buildCategories() => Container(
+  Widget buildCategories(context) => Container(
         //numero a tener en cuenta porque no es responsivo
-        height: 450,
+        height: MediaQuery.of(context).size.height * 0.9,
         child: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
