@@ -40,10 +40,6 @@ class _CategoryPageState extends State<CategoryPage> {
 
   PreferredSizeWidget buildAppBar(context) => AppBar(
         title: Text(widget.category.categoryName),
-        actions: [
-          Icon(Icons.filter_alt_outlined),
-          SizedBox(width: 16),
-        ],
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
