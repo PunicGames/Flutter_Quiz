@@ -73,6 +73,9 @@ class _CategoryPageState extends State<CategoryPage> {
       setState(() {
         question?.isLocked = true;
         question?.selectedOption = option;
+        if (option.isCorrect) {
+          widget.category.correctAnswer += 1;
+        }
       });
     }
   }

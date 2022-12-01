@@ -6,6 +6,7 @@ class Category {
   final String imageUrl;
   final String videoUrl;
   final String description;
+  int correctAnswer = 0;
 
   Category({
     required this.imageUrl,

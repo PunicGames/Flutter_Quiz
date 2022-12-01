@@ -99,36 +99,67 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
               color: Color.fromARGB(255, 70, 70, 70),
             ),
             SizedBox(height: 10),
-            //boton de play quiz
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => CategoryPage(category: widget.category),
-                ),
-              ),
-              child: Container(
-                width: MediaQuery.of(context).size.width / 2 - 16 * 2,
-                height: MediaQuery.of(context).size.height * 0.1,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: themeColors,
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Play Quiz",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.white),
+            //boton de play quiz y estadisticas
+            Row(
+              children: [
+                //boton de quiz
+                GestureDetector(
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          CategoryPage(category: widget.category),
                     ),
-                  ],
+                  ),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
+                    height: MediaQuery.of(context).size.height * 0.1,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: themeColors,
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Play Quiz",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
+                SizedBox(width: 16),
+                //estadisticas del quiz
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.1,
+                  width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(color: Colors.black),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        widget.category.correctAnswer.toString() +
+                            " / " +
+                            widget.category.questions.length.toString(),
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: Colors.black),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),
