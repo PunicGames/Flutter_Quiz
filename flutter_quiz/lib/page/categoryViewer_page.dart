@@ -53,26 +53,10 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
         builder: (context, player) => Scaffold(
           appBar: buildAppBar(context),
           body: ListView(
+            padding: const EdgeInsets.all(16),
             children: [
               player,
-              SizedBox(height: 16),
-              Text(widget.category.description),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        CategoryPage(category: widget.category),
-                  ),
-                ),
-                child: Container(
-                  height: 40,
-                  padding: EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
-              ),
+              buildStructure(),
             ],
           ),
         ),
@@ -88,6 +72,65 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
               end: Alignment.bottomLeft,
             ),
           ),
+        ),
+      );
+
+  Widget buildStructure() => Container(
+        padding: const EdgeInsets.only(left: 0, top: 10, right: 0, bottom: 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //texto de sinopsis
+            Text(
+              "Sinopsis",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(height: 10),
+            //texto de la descripcion
+            Text(
+              widget.category.description,
+              style: TextStyle(fontSize: 16),
+              textAlign: TextAlign.justify,
+            ),
+            SizedBox(height: 10),
+            Divider(
+              thickness: 2,
+              color: Color.fromARGB(255, 70, 70, 70),
+            ),
+            SizedBox(height: 10),
+            //boton de play quiz
+            GestureDetector(
+              onTap: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => CategoryPage(category: widget.category),
+                ),
+              ),
+              child: Container(
+                width: MediaQuery.of(context).size.width / 2 - 16 * 2,
+                height: MediaQuery.of(context).size.height * 0.1,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: themeColors,
+                      begin: Alignment.topRight,
+                      end: Alignment.bottomLeft),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Play Quiz",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       );
 }

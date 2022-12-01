@@ -8,7 +8,7 @@ final categories = <Category>[
       imageUrl: 'assets/GodOfWarIV_Image.jpg',
       videoUrl: 'https://youtu.be/dK42JGgkoF8',
       description:
-          "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
+          "Kratos, que ha dejado atrás el mundo de los dioses, deberá adaptarse a tierras que no le son familiares, afrontar peligros inesperados y aprovechar una segunda oportunidad de ejercer como padre. Junto a su hijo Atreus se aventurará en lo más profundo e inclemente de las tierras de Midgard y luchará por culminar una búsqueda profundamente personal."),
   Category(
       questions: Pokemon_questions,
       categoryName: 'Pokemon',
