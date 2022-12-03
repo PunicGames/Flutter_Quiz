@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/global_variables.dart';
+import '../data/favorites.dart';
 import '../classes/category.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'category_page.dart';
@@ -73,6 +74,15 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
             ),
           ),
         ),
+        actions: [
+          IconButton(
+            icon: (widget.category.isFavorite
+                ? const Icon(Icons.favorite)
+                : Icon(Icons.favorite_border)),
+            color: Colors.red,
+            onPressed: toggleFavorite,
+          )
+        ],
       );
 
   Widget buildStructure() => Container(
@@ -164,4 +174,16 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
           ],
         ),
       );
+
+  void toggleFavorite() {
+    setState(() {
+      if (widget.category.isFavorite) {
+        widget.category.isFavorite = false;
+        favorites.remove(widget.category);
+      } else {
+        widget.category.isFavorite = true;
+        favorites.add(widget.category);
+      }
+    });
+  }
 }
