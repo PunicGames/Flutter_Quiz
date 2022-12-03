@@ -11,30 +11,23 @@ class HomePage extends StatelessWidget {
           elevation: 0,
           title: Text('Videogame Quiz'),
           centerTitle: true,
-          //seccion de saludo de usuario
-          // bottom: PreferredSize(
-          //   preferredSize: Size.fromHeight(80),
-          //   child: Container(
-          //     padding: EdgeInsets.all(16),
-          //     alignment: Alignment.centerLeft,
-          //     child: buildWelcome(username),
-          //   ),
-          // ),
 
           //decoracion de la parte de arriba de la pagina
           flexibleSpace: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: themeColors,
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft)),
+              gradient: LinearGradient(
+                  colors: themeColors,
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft),
+            ),
           ),
+
+          //boton de buscar
           actions: [
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                final results =
-                    showSearch(context: context, delegate: CategorySearch());
+                showSearch(context: context, delegate: CategorySearch());
               },
             )
           ],
@@ -43,7 +36,7 @@ class HomePage extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           padding: const EdgeInsets.all(16),
           children: [
-            SizedBox(height: 8),
+            //SizedBox(height: 8),
             buildCategories(context),
           ],
         ),
@@ -51,13 +44,13 @@ class HomePage extends StatelessWidget {
 
   Widget buildCategories(context) => Container(
         //numero a tener en cuenta porque no es responsivo
-        height: MediaQuery.of(context).size.height * 0.9,
+        height: MediaQuery.of(context).size.height * 0.8,
         child: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 4 / 3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
+            crossAxisCount: 2, //numero de quiz por columna
+            childAspectRatio: 4 / 3, //aspectratio de cada quiz
+            crossAxisSpacing: 10, //espacio entre las columnas
+            mainAxisSpacing: 10, //espacio entre las filas
           ),
           children: categories
               .map((category) => CategoryHeaderWidget(category: category))

@@ -6,7 +6,8 @@ final categories = <Category>[
       questions: GodOfWarIV_questions,
       categoryName: 'God of War IV',
       imageUrl: 'assets/GodOfWarIV_Image.jpg',
-      videoUrl: 'https://youtu.be/dK42JGgkoF8',
+      videoUrl:
+          'https://www.youtube.com/watch?v=dK42JGgkoF8&t=2s&ab_channel=PlayStationEspa%C3%B1a',
       description:
           "Kratos, que ha dejado atrás el mundo de los dioses, deberá adaptarse a tierras que no le son familiares, afrontar peligros inesperados y aprovechar una segunda oportunidad de ejercer como padre. Junto a su hijo Atreus se aventurará en lo más profundo e inclemente de las tierras de Midgard y luchará por culminar una búsqueda profundamente personal."),
   Category(
