@@ -53,7 +53,7 @@ class OptionsWidget extends StatelessWidget {
   }
 
   Widget buildAnswer(Option option) => Container(
-        height: 50,
+        height: (option.text.length > 75 ? 100 : 50),
         child: Row(
           children: [
             //letra de la opcion
