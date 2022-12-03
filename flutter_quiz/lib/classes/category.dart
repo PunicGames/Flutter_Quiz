@@ -7,6 +7,7 @@ class Category {
   final String videoUrl;
   final String description;
   int correctAnswer = 0;
+  bool isFavorite = false;
 
   Category({
     required this.imageUrl,
