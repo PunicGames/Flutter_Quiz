@@ -48,7 +48,7 @@ class QuestionsWidget extends StatelessWidget {
             //Subtexto debajo de la pregunta
             SizedBox(height: 10),
             Text(
-              'Escoge tu respuesta pulsado en ella',
+              'Choose your answer',
               style: TextStyle(fontStyle: FontStyle.italic, fontSize: 16),
             ),
             SizedBox(height: 32),

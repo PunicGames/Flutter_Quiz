@@ -140,6 +140,253 @@ final GodOfWarIV_questions = [
   ),
 ];
 
+final DarkSouls_questions = [
+//  ---------------------1
+  Question(
+    text: 'What is the Lordvessel?',
+    options: [
+      Option(code: 'A', text: 'It´s the king´s coffin', isCorrect: false),
+      Option(
+          code: 'B',
+          text:
+              'It´s an item that grants you the art of warping between bonfires',
+          isCorrect: true),
+      Option(
+          code: 'C',
+          text:
+              'It´s a consumable item that grants you an enormous amount of souls',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'It´s one of the most powerful weapons in the game',
+          isCorrect: false),
+    ],
+    solution:
+        'It´s an item that grants the player the art of warping between bonfires',
+  ),
+  //  ---------------------2
+  Question(
+    text:
+        'What is the name of the weapon obtained from Seath the Scaleless by cutting off his tail?',
+    options: [
+      Option(code: 'A', text: 'Holy Moonlight Sword', isCorrect: false),
+      Option(code: 'B', text: 'Moonlight Greatsword', isCorrect: true),
+      Option(code: 'C', text: 'Large Sword of Moonlight', isCorrect: false),
+      Option(code: 'D', text: 'Dragon´s Maw', isCorrect: false),
+    ],
+    solution: 'Moonlight Greatsword',
+  ),
+  //  ---------------------3
+  Question(
+    text: 'Is it always sunny in Anor Londo?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'Of course! It´s the city of gods!',
+          isCorrect: false),
+      Option(code: 'B', text: 'It depends of the day', isCorrect: false),
+      Option(
+          code: 'C',
+          text:
+              'Although it appears to be always sunny, it´s just a mere illusion',
+          isCorrect: true),
+      Option(
+          code: 'D',
+          text: 'It was, until the gods destroyed the dragons',
+          isCorrect: false),
+    ],
+    solution:
+        'Although it appears to be always sunny, it´s just a mere illusion',
+  ),
+  //  ---------------------4
+  Question(
+    text: 'What is the maximum upgrade level for a regular weapon?',
+    options: [
+      Option(code: 'A', text: '5', isCorrect: false),
+      Option(code: 'B', text: '10', isCorrect: false),
+      Option(code: 'C', text: '15', isCorrect: true),
+      Option(code: 'D', text: '20', isCorrect: false),
+    ],
+    solution: '15',
+  ),
+  //  ---------------------5
+  Question(
+    text: 'What is the name of the first boss of the DLC?',
+    options: [
+      Option(code: 'A', text: 'Sanctuary Guardian', isCorrect: true),
+      Option(
+          code: 'B', text: 'Guardian Lion of the Sanctuary', isCorrect: false),
+      Option(code: 'C', text: 'Great Grey Wolf Sif', isCorrect: false),
+      Option(code: 'D', text: 'Oolacile Guardian', isCorrect: false),
+    ],
+    solution: 'Sanctuary Guardian',
+  ),
+  //  ---------------------6
+  Question(
+    text: 'How can you kill the ghosts enemies of New Londo?',
+    options: [
+      Option(code: 'A', text: 'You can´t kill them', isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'Being cursed or using a cursed weapon',
+          isCorrect: true),
+      Option(
+          code: 'C',
+          text: 'Using a divine weapon or a divine spell',
+          isCorrect: false),
+      Option(
+          code: 'D', text: 'Attacking them with black magic', isCorrect: false),
+    ],
+    solution: 'Being cursed or using a cursed weapon',
+  ),
+  //  ---------------------7
+  Question(
+    text:
+        'What is the most distinctive physical trait of the princess Gwynevere?',
+    options: [
+      Option(code: 'A', text: 'Her beautiful hair', isCorrect: false),
+      Option(code: 'B', text: 'Her purple glowing eyes', isCorrect: false),
+      Option(code: 'C', text: 'Her big chest', isCorrect: true),
+      Option(code: 'D', text: 'Her feet', isCorrect: false),
+    ],
+    solution: 'You naughty boy! Her big chest',
+  ),
+  //  ---------------------8
+  Question(
+    text: 'What happened to Artorias left arm?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'He broke his arm protecting his wolf Sif with his shield',
+          isCorrect: true),
+      Option(code: 'B', text: 'Nothing, it´s perfectly fine', isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'He broke his arm fighting against you',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'Nothing, the arm he broke was the right one',
+          isCorrect: false),
+    ],
+    solution: 'He broke his arm protecting his wolf Sif with his shield',
+  ),
+  //  ---------------------9
+  Question(
+    text:
+        'Where do you end up if you take the elevator inside the Undead Parish?',
+    options: [
+      Option(code: 'A', text: 'Undead Burg', isCorrect: false),
+      Option(code: 'B', text: 'Majula', isCorrect: false),
+      Option(code: 'C', text: 'Northern Undead Asylum', isCorrect: false),
+      Option(code: 'D', text: 'Firelink Shrine', isCorrect: true),
+    ],
+    solution: 'Firelink Shrine',
+  ),
+  //  ---------------------10
+  Question(
+    text: 'What is the name of the place with the toxic swamp?',
+    options: [
+      Option(code: 'A', text: 'Depths', isCorrect: false),
+      Option(code: 'B', text: 'Darkroot Garden', isCorrect: false),
+      Option(code: 'C', text: 'Blighttown', isCorrect: true),
+      Option(code: 'D', text: 'Amana Sanctuary', isCorrect: false),
+    ],
+    solution: 'Blighttown',
+  ),
+  //  ---------------------11
+  Question(
+    text: 'What is the name of the unique weapons upgrade material?',
+    options: [
+      Option(code: 'A', text: 'Twinkling titanite', isCorrect: false),
+      Option(code: 'B', text: 'Dragon scale', isCorrect: false),
+      Option(code: 'C', text: 'Demon titanite', isCorrect: false),
+      Option(code: 'D', text: 'It depends', isCorrect: true),
+    ],
+    solution: 'It depends',
+  ),
+  //  ---------------------12
+  Question(
+    text: 'How many weapons can you obtain by chopping off boss´s tails?',
+    options: [
+      Option(code: 'A', text: '3', isCorrect: false),
+      Option(code: 'B', text: '5', isCorrect: false),
+      Option(code: 'C', text: '7', isCorrect: true),
+      Option(code: 'D', text: '9', isCorrect: false),
+    ],
+    solution: '7',
+  ),
+//  ---------------------13
+  Question(
+    text: 'What are the names of the Four Knights of Gwyn?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'Artorias, Ornstein & Smough, Gough and Ciaran',
+          isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'Artorias, Ornstein, Smough and Ciaran',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'Artorias, Ornstein, Smough and Gough',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'Artorias, Ornstein, Gough and Ciaran',
+          isCorrect: true),
+    ],
+    solution: 'Artorias, Ornstein, Gough and Ciaran',
+  ),
+  //  ---------------------14
+  Question(
+    text: 'How many endings are there in Dark Souls?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: true),
+      Option(code: 'C', text: '3', isCorrect: false),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: '2',
+  ),
+  //  ---------------------15
+  Question(
+    text: 'What of these weapon types it is not showcased in Dark Souls?',
+    options: [
+      Option(code: 'A', text: 'Katanas', isCorrect: false),
+      Option(code: 'B', text: 'Great Hammers', isCorrect: false),
+      Option(code: 'C', text: 'Colossal Swords', isCorrect: true),
+      Option(code: 'D', text: 'Whips', isCorrect: false),
+    ],
+    solution: 'Colossal Swords. That´s Elden Ring you idiot!',
+  ),
+  //  ---------------------16
+  Question(
+    text:
+        'What do you need to do in order to enter to the Painted World of Ariamis?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'To have found the peculiar doll item in the Undead Parish',
+          isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'To have found Slave Knight Gael in the Cathedral of the Deep',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'To have found the peculiar doll item in the Undead Asylum',
+          isCorrect: true),
+      Option(
+          code: 'D',
+          text: 'To have found Slave Knight Gael in the Undead Asylum',
+          isCorrect: false),
+    ],
+    solution: 'To have found the peculiar doll item in the Undead Asylum',
+  ),
+];
+
 final Pokemon_questions = [
   Question(
     text: 'Cual es el pokemon que mas ha capturado Ash?',

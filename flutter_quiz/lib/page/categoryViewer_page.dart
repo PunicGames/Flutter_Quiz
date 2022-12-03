@@ -82,7 +82,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
           children: [
             //texto de sinopsis
             Text(
-              "Sinopsis",
+              "Description",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               textAlign: TextAlign.justify,
             ),

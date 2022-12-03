@@ -11,12 +11,13 @@ final categories = <Category>[
       description:
           "Kratos, que ha dejado atrás el mundo de los dioses, deberá adaptarse a tierras que no le son familiares, afrontar peligros inesperados y aprovechar una segunda oportunidad de ejercer como padre. Junto a su hijo Atreus se aventurará en lo más profundo e inclemente de las tierras de Midgard y luchará por culminar una búsqueda profundamente personal."),
   Category(
-      questions: Pokemon_questions,
-      categoryName: 'Pokemon',
-      imageUrl: 'assets/Pokemon_Image.jpg',
-      videoUrl: 'https://youtu.be/GQyWIur03aw',
+      questions: DarkSouls_questions,
+      categoryName: 'Dark Souls',
+      imageUrl: 'assets/dark_souls.jpg',
+      videoUrl:
+          'https://www.youtube.com/watch?v=9IbPrk-yuts&ab_channel=BandaiNamcoEntertainmentAmerica',
       description:
-          "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
+          "Dark Souls is the spiritual successor to the 2009 Gamespot Game of the Year winner Demon's Souls that's set in a rich, dark fantasy universe. Tense dungeon crawling, fearsome enemy encounters and groundbreaking online features combine for a truly unique gaming experience."),
   Category(
       questions: Fifa_questions,
       categoryName: 'Fifa',
