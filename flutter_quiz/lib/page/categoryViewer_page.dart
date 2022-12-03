@@ -160,7 +160,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                       Text(
                         widget.category.correctAnswer.toString() +
                             " / " +
-                            widget.category.questions.length.toString(),
+                            10.toString(),
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,

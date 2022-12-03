@@ -9,6 +9,7 @@ class QuestionsWidget extends StatelessWidget {
   final PageController? controller;
   final ValueChanged<int> onChangedPage;
   final ValueChanged<Option> onClickedOption;
+  final List<Question> questionsPool;
 
   const QuestionsWidget({
     Key? key,
@@ -16,15 +17,16 @@ class QuestionsWidget extends StatelessWidget {
     required this.controller,
     required this.onChangedPage,
     required this.onClickedOption,
+    required this.questionsPool,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) => PageView.builder(
         onPageChanged: onChangedPage,
         controller: controller,
-        itemCount: category.questions.length,
+        itemCount: questionsPool.length,
         itemBuilder: (context, index) {
-          final question = category.questions[index];
+          final question = questionsPool[index];
 
           return buildQuestion(question: question);
         },

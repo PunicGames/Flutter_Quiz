@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import '../data/global_variables.dart';
 import '../classes/category.dart';
@@ -17,14 +19,23 @@ class CategoryPage extends StatefulWidget {
 
 class _CategoryPageState extends State<CategoryPage> {
   //hay alguna manera de no inicializar aqui estas variables?
+  final TOTAL_QUESTIONS = 10;
   PageController? controller;
   Question? question;
+  List<Question> questionsPool = List.empty(growable: true);
+  var rng = Random();
 
   @override
   void initState() {
     super.initState();
     controller = PageController();
-    question = widget.category.questions.first;
+    //Cloning not referencing !!!
+    List<Question> auxList = List<Question>.from(widget.category.questions);
+    for (int i = 0; i < TOTAL_QUESTIONS; i++) {
+      questionsPool.add(auxList.removeAt(rng.nextInt(auxList.length)));
+    }
+    //question = widget.category.questions.first;
+    question = questionsPool.first;
   }
 
   @override
@@ -35,6 +46,7 @@ class _CategoryPageState extends State<CategoryPage> {
           controller: controller,
           onChangedPage: (index) => nextQuestion(index: index),
           onClickedOption: selectOption,
+          questionsPool: questionsPool,
         ),
       );
 
@@ -54,7 +66,7 @@ class _CategoryPageState extends State<CategoryPage> {
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 16),
             child: QuestionNumbersWidget(
-              questions: widget.category.questions,
+              questions: questionsPool,
               question: question,
               onClickedNumber: (index) =>
                   nextQuestion(index: index, jump: true),
@@ -85,7 +97,8 @@ class _CategoryPageState extends State<CategoryPage> {
     //no aumenta
     final indexPage = index ?? nextPage.toInt();
     setState(() {
-      question = widget.category.questions[indexPage];
+      //question = widget.category.questions[indexPage];
+      question = questionsPool[indexPage];
     });
 
     //de esta forma habilitamos que pueda saltar de una pregunta a otra

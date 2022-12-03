@@ -387,6 +387,19 @@ final DarkSouls_questions = [
   ),
 ];
 
+final Bloodborne_questions = [
+  Question(
+    text:
+        'What is the name of the weapon obtained from Seath the Scaleless by cutting off his tail?',
+    options: [
+      Option(code: 'A', text: 'Holy Moonlight Sword', isCorrect: false),
+      Option(code: 'B', text: 'Moonlight Greatsword', isCorrect: true),
+      Option(code: 'C', text: 'Large Sword of Moonlight', isCorrect: false),
+      Option(code: 'D', text: 'Dragon´s Maw', isCorrect: false),
+    ],
+    solution: 'Moonlight Greatsword',
+  ),
+];
 final Pokemon_questions = [
   Question(
     text: 'Cual es el pokemon que mas ha capturado Ash?',
