@@ -718,12 +718,264 @@ final Bloodborne_questions = [
   ),
 ];
 
-final Sekiro_questions = [];
+final Sekiro_questions = [
+  //--------------------------1
+  Question(
+    text: 'What arm does Sekiro losses in his fight against Genichiro Ashina?',
+    options: [
+      Option(code: 'A', text: 'Left arm', isCorrect: true),
+      Option(code: 'B', text: 'Right arm', isCorrect: false),
+      Option(code: 'C', text: 'Both arms', isCorrect: false),
+    ],
+    solution: 'The left one',
+  ),
+  //--------------------------2
+  Question(
+    text: 'Is Emma proficient with the sword?',
+    options: [
+      Option(code: 'A', text: 'Yes', isCorrect: true),
+      Option(code: 'B', text: 'No', isCorrect: false),
+      Option(code: 'C', text: 'It´s a mistery', isCorrect: false),
+    ],
+    solution: 'Yes',
+  ),
+  //--------------------------3
+  Question(
+    text: 'What is Genichiro Ashina to Isshin Ashina?',
+    options: [
+      Option(code: 'A', text: 'His grandchild', isCorrect: true),
+      Option(code: 'B', text: 'His son', isCorrect: false),
+      Option(code: 'C', text: 'His brother', isCorrect: false),
+      Option(code: 'D', text: 'His spouse', isCorrect: false),
+    ],
+    solution: 'His grandchild',
+  ),
+  //--------------------------4
+  Question(
+    text:
+        'How many years into the past are you transported in the Hirata State level?',
+    options: [
+      Option(code: 'A', text: '1 year', isCorrect: false),
+      Option(code: 'B', text: '2 year', isCorrect: false),
+      Option(code: 'C', text: '3 year', isCorrect: true),
+      Option(code: 'D', text: '4 year', isCorrect: false),
+    ],
+    solution: 'Three years',
+  ),
+  //--------------------------5
+  Question(
+    text: 'How many perilous attack types are there in the game?',
+    options: [
+      Option(code: 'A', text: '1. Thrust attacks', isCorrect: false),
+      Option(code: 'B', text: '2. Thrust and sweep attacks', isCorrect: false),
+      Option(
+          code: 'C',
+          text: '3. Thrust, sweep and lightning attacks',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: '4. Thrust, sweep, grab and lightning attacks',
+          isCorrect: true),
+      Option(
+          code: 'E',
+          text: '5. Thrust, sweep, grab, jump and lightning attacks',
+          isCorrect: false),
+    ],
+    solution: 'There are four',
+  ),
+  //--------------------------6
+  Question(
+    text: 'What status effect can apparition type enemies inflict you?',
+    options: [
+      Option(code: 'A', text: '1. Frenzy', isCorrect: false),
+      Option(code: 'B', text: '2. Curse', isCorrect: false),
+      Option(code: 'C', text: '3. Terror', isCorrect: true),
+      Option(code: 'D', text: '4. Madness', isCorrect: false),
+    ],
+    solution: 'Terror it is!',
+  ),
+  //--------------------------7
+  Question(
+    text: 'You can use Mikiri Counter against...',
+    options: [
+      Option(code: 'A', text: 'Sweep attacks', isCorrect: false),
+      Option(code: 'B', text: 'Thurst attacks', isCorrect: true),
+      Option(code: 'C', text: 'Jump attacks', isCorrect: false),
+      Option(code: 'D', text: 'Grab attacks', isCorrect: false),
+    ],
+    solution: 'Thrust attacks',
+  ),
+  //--------------------------8
+  Question(
+    text:
+        'How many deathblows can you cheese from the Corrupted Monk in Fountainhead Palace?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: true),
+      Option(code: 'C', text: '3', isCorrect: false),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: 'Two out of three',
+  ),
+  //--------------------------9
+  Question(
+    text:
+        'If you want to parry and deflect a lightning attack you first have to...',
+    options: [
+      Option(code: 'A', text: 'Jump', isCorrect: true),
+      Option(code: 'B', text: 'Mikiri counter it', isCorrect: false),
+      Option(code: 'C', text: 'You can´t', isCorrect: false),
+      Option(code: 'D', text: 'Attack', isCorrect: false),
+    ],
+    solution:
+        'Of course it´s jump. Dont you know nothing about electrical circuits?',
+  ),
+  //--------------------------10
+  Question(
+    text:
+        'Hown many skins can you obtain from completing all Gauntles of Strength fights',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: 'Three',
+  ),
+  //--------------------------11
+  Question(
+    text: 'How many folding screen monkeys are there?',
+    options: [
+      Option(code: 'A', text: '2', isCorrect: false),
+      Option(code: 'B', text: '3', isCorrect: false),
+      Option(code: 'C', text: '4', isCorrect: true),
+      Option(code: 'D', text: '5', isCorrect: false),
+    ],
+    solution: 'Four',
+  ),
+  //--------------------------12
+  Question(
+    text: 'Sekiro Fushigiri mortal blade is a...?',
+    options: [
+      Option(code: 'A', text: 'Katana', isCorrect: false),
+      Option(code: 'B', text: 'Odachi', isCorrect: true),
+      Option(code: 'C', text: 'Bastard sword', isCorrect: false),
+      Option(code: 'D', text: 'Kusabimaru', isCorrect: false),
+    ],
+    solution: 'Odachi. Meaning big sword.',
+  ),
+  //--------------------------13
+  Question(
+    text: 'What is inside the Guardian Ape?',
+    options: [
+      Option(
+          code: 'A', text: 'Nothing, just flesh and organs', isCorrect: false),
+      Option(code: 'B', text: 'A tiny person', isCorrect: false),
+      Option(code: 'C', text: 'A centipede', isCorrect: true),
+      Option(code: 'D', text: 'Is hollow!', isCorrect: false),
+    ],
+    solution: 'A centipede',
+  ),
+  //--------------------------14
+  Question(
+    text: 'How many finals are there in Sekiro?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: false),
+      Option(code: 'D', text: '4', isCorrect: true),
+    ],
+    solution: '4',
+  ),
+  //--------------------------15
+  Question(
+    text: 'What item makes fights against apparition type enemies much easier?',
+    options: [
+      Option(code: 'A', text: 'No one', isCorrect: false),
+      Option(code: 'B', text: 'Divine confetti', isCorrect: true),
+      Option(code: 'C', text: 'Ako´s sugar', isCorrect: false),
+      Option(code: 'D', text: 'Salt', isCorrect: false),
+      Option(code: 'E', text: 'Ceremonial tanto', isCorrect: false),
+    ],
+    solution: 'Divine confetti',
+  ),
+  //--------------------------16
+  Question(
+    text: 'Is there a hard mode in Sekiro?',
+    options: [
+      Option(code: 'A', text: 'No. Sekiro is hard enough', isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'Yes. If you dont take Kuro´s Charm',
+          isCorrect: true),
+      Option(code: 'C', text: 'Yes', isCorrect: false),
+      Option(code: 'D', text: 'Not just one but two!', isCorrect: true),
+    ],
+    solution: 'Not just one but two! Charmless and Demon Bell',
+  ),
+  //--------------------------17
+  Question(
+    text: 'How can you beat the Armored Warrior?',
+    options: [
+      Option(code: 'A', text: 'You can´t', isCorrect: false),
+      Option(code: 'B', text: 'By cutting off his head', isCorrect: false),
+      Option(code: 'C', text: 'By pushing him into the void', isCorrect: true),
+      Option(
+          code: 'D', text: 'By messing with his son Roberto', isCorrect: false),
+    ],
+    solution: 'By pushing him into the void. This is Sparta!',
+  ),
+  //--------------------------18
+  Question(
+    text: 'Does Isshin use a gun when fights against you?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'Impossible. There were no guns at that time',
+          isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'Yes, only when he is in the Sword Saint form',
+          isCorrect: true),
+      Option(code: 'C', text: 'Yes, always', isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'Yes, only when he is in his aged form',
+          isCorrect: false),
+    ],
+    solution: 'Sword Saint',
+  ),
+  //--------------------------19
+  Question(
+    text: 'Who is the Tengu of Ashina?',
+    options: [
+      Option(code: 'A', text: 'Isshin Ashina', isCorrect: true),
+      Option(code: 'B', text: 'Genichiro Ashina', isCorrect: false),
+      Option(code: 'C', text: 'Sekiro', isCorrect: false),
+      Option(code: 'D', text: 'Tomoe', isCorrect: false),
+      Option(code: 'D', text: 'It´s a mistery', isCorrect: false),
+    ],
+    solution: 'Isshin Ashina',
+  ),
+  //--------------------------20
+  Question(
+    text:
+        'Which of these actions can Great Shinoby Owl NOT do when fighting against you?',
+    options: [
+      Option(code: 'A', text: 'Prevent you from healing', isCorrect: true),
+      Option(code: 'B', text: 'Throwing shurikens', isCorrect: false),
+      Option(code: 'C', text: 'Throwing poison bombs', isCorrect: false),
+      Option(code: 'D', text: 'Mikiri counter you', isCorrect: false),
+      Option(code: 'D', text: 'Use shinobi lightning attacks', isCorrect: true),
+    ],
+    solution: 'Use shinobi lightning attacks',
+  ),
+];
 
 final PokemonBlackWhite_questions = [
   //  ---------------------1
   Question(
-    text: 'who is the Unova Pokedex number 0?',
+    text: 'Who is the Unova Pokedex number 0?',
     options: [
       Option(code: 'A', text: 'Victini', isCorrect: true),
       Option(code: 'B', text: 'Meloetta', isCorrect: false),
@@ -791,7 +1043,7 @@ final PokemonBlackWhite_questions = [
   ),
   //  ---------------------7
   Question(
-    text: 'which pokemon does AZ have a special relationship??',
+    text: 'Which pokemon does AZ have a special relationship??',
     options: [
       Option(code: 'A', text: 'Floette', isCorrect: true),
       Option(code: 'B', text: 'Flabebe', isCorrect: false),
