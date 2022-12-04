@@ -389,17 +389,269 @@ final DarkSouls_questions = [
 
 final Bloodborne_questions = [
   Question(
-    text:
-        'What is the name of the weapon obtained from Seath the Scaleless by cutting off his tail?',
+    text: 'What year was released the Bloodborne DLC "The old hunters"?',
     options: [
-      Option(code: 'A', text: 'Holy Moonlight Sword', isCorrect: false),
-      Option(code: 'B', text: 'Moonlight Greatsword', isCorrect: true),
-      Option(code: 'C', text: 'Large Sword of Moonlight', isCorrect: false),
-      Option(code: 'D', text: 'Dragon´s Maw', isCorrect: false),
+      Option(code: 'A', text: '2014', isCorrect: false),
+      Option(code: 'B', text: '2015', isCorrect: true),
+      Option(code: 'C', text: '2016', isCorrect: false),
     ],
-    solution: 'Moonlight Greatsword',
+    solution: 'November of 2015, the same year of the game release date',
   ),
+  Question(
+    text:
+        'What famous writer works is the atmosphere of Bloodborne greatly inspired by?',
+    options: [
+      Option(code: 'A', text: 'Edgar Allan Poe', isCorrect: false),
+      Option(code: 'B', text: 'Howard Philip Lovecraft', isCorrect: true),
+      Option(code: 'C', text: 'Robert William Chambers', isCorrect: false),
+      Option(code: 'D', text: 'Richard Bachman', isCorrect: false),
+    ],
+    solution: 'H.P Lovecraft',
+  ),
+  Question(
+    text:
+        'How many umbilical cords do you need to use in order to gain access to the ending "Childhood´s Beginning"?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: '3',
+  ),
+  Question(
+    text: 'How do you parry an enemy in bloodborne?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'By shooting him with your firearm at the right time',
+          isCorrect: true),
+      Option(
+          code: 'B',
+          text: 'By guarding with your melee weapon at the right time',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'By raising your shield at the right time',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'By shooting with your firearm at the arm of the enemy',
+          isCorrect: false),
+    ],
+    solution: 'By shooting him with your firearm at the right time',
+  ),
+  //5
+  Question(
+    text: 'What is the name of the inhabitants of the labrynth below Yharnam?',
+    options: [
+      Option(code: 'A', text: 'Pthumerians', isCorrect: true),
+      Option(code: 'B', text: 'Misbegottens', isCorrect: false),
+      Option(code: 'C', text: 'Albinaurics', isCorrect: false),
+      Option(code: 'D', text: 'White-faced locusts', isCorrect: false),
+    ],
+    solution: 'Pthumerians',
+  ),
+  Question(
+    text: 'What happens to Vicaria Amelia when you encounter her?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'She attacks you with her trick weapon',
+          isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'She begs you to save her from her nightmare',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'She transforms into an horrifying beast',
+          isCorrect: true),
+      Option(
+          code: 'D',
+          text: 'She is in those days of the month',
+          isCorrect: false),
+    ],
+    solution: 'She transforms into an horrifying beast',
+  ),
+  //7
+  Question(
+    text:
+        'What do you need to do in order to receive the invitation to Cainhurst Castle?',
+    options: [
+      Option(
+          code: 'A',
+          text:
+              'Obtain the Cainhurst summons letter left inside Iosefka´s Clinic',
+          isCorrect: true),
+      Option(
+          code: 'B',
+          text:
+              'Obtain the Cainhurst summons letter left inside Oedon´s Chapel',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'Speak to the suspicious beggar inside the Forbidden Woods',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'Speak to the suspicious beggar inside the Oedon´s Chapel',
+          isCorrect: false),
+    ],
+    solution:
+        'Obtain the Cainhurst summons letter left inside Iosefka´s Clinic',
+  ),
+  //8
+  Question(
+    text: 'What is the maximum upgrade level for regular weapons?',
+    options: [
+      Option(code: 'A', text: '5', isCorrect: false),
+      Option(code: 'B', text: '10', isCorrect: true),
+      Option(code: 'C', text: '15', isCorrect: false),
+      Option(code: 'D', text: '20', isCorrect: false),
+    ],
+    solution: '10',
+  ),
+  //9
+  Question(
+    text: 'Are there new boss designs in the optional labrynth levels?',
+    options: [
+      Option(code: 'A', text: 'No', isCorrect: false),
+      Option(code: 'B', text: 'Yes', isCorrect: true),
+    ],
+    solution: 'Yes',
+  ),
+  Question(
+    text: 'What are the names of the hunters Eileen the Crow fights?',
+    options: [
+      Option(
+          code: 'A', text: 'Henryk, Bloody Crow of Cainhurst', isCorrect: true),
+      Option(code: 'B', text: 'Father Gascoine, Henryk', isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'Father Gascoine, Henryk, Bloody Crow of Cainhurst',
+          isCorrect: false),
+      Option(
+          code: 'D', text: 'Djura, Bloody Crow of Cainhurst', isCorrect: false),
+    ],
+    solution: 'Henryk, Bloody Crow of Cainhurst',
+  ),
+  Question(
+    text: 'What is not a possible ending for Arianna, Woman of the Night?',
+    options: [
+      Option(code: 'A', text: 'She ends up killed by Adella', isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'She ends up killed by the suspicios beggar',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'She ends up transformed into a celestial emissary',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'She ends up giving birth to an alien baby',
+          isCorrect: false),
+      Option(code: 'E', text: 'She ends up killing Adella', isCorrect: true),
+    ],
+    solution: 'She ends up killing Adella',
+  ),
+  Question(
+    text: 'How many endings are there in Bloodborne?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: '3',
+  ),
+  Question(
+    text: 'How many nightmare levels are there in Bloodborne?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: '3',
+  ),
+  Question(
+    text: 'How many levels are there in the Nightmare Headstone?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: '3',
+  ),
+  Question(
+    text: 'How many levels are there in the Yharnam Headstone?',
+    options: [
+      Option(code: 'A', text: '2', isCorrect: false),
+      Option(code: 'B', text: '4', isCorrect: false),
+      Option(code: 'C', text: '6', isCorrect: true),
+      Option(code: 'D', text: '8', isCorrect: false),
+    ],
+    solution: '6',
+  ),
+  Question(
+    text: 'What are the beasts of Yharnam afraid of?',
+    options: [
+      Option(code: 'A', text: 'Nothing', isCorrect: false),
+      Option(code: 'B', text: 'Fire', isCorrect: true),
+      Option(code: 'C', text: 'Blood', isCorrect: false),
+      Option(code: 'D', text: 'Arcane', isCorrect: false),
+    ],
+    solution: 'Fire',
+  ),
+  Question(
+    text: 'What resistence lowers the more insight you have?',
+    options: [
+      Option(code: 'A', text: 'Fire resistance', isCorrect: false),
+      Option(code: 'B', text: 'Poison resistance', isCorrect: false),
+      Option(code: 'C', text: 'Beasthood resistance', isCorrect: false),
+      Option(code: 'D', text: 'Frenzy resistance', isCorrect: true),
+    ],
+    solution: 'Frenzy resistance',
+  ),
+  Question(
+    text: 'What can you NOT do if you run out of silver bullets?',
+    options: [
+      Option(
+          code: 'A', text: 'Wait for an enemy to drop some', isCorrect: false),
+      Option(
+          code: 'B',
+          text: 'Go back to the Hunters Dream and buy some more',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text:
+              'Make bullets with your own blood at the cost of some of your life',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text:
+              'Use a mobile workshop to quickly make some at the cost of your blood echoes',
+          isCorrect: true),
+    ],
+    solution:
+        'Use a mobile workshop to quickly make some at the cost of your blood echoes',
+  ),
+  Question(
+    text:
+        'How many shadows of Yharnam do you encounter in the Forbidden Woods?',
+    options: [
+      Option(code: 'A', text: '1', isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: '3',
+  )
 ];
+
 final Pokemon_questions = [
   Question(
     text: 'Cual es el pokemon que mas ha capturado Ash?',
