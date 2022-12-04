@@ -29,7 +29,9 @@ class OptionsWidget extends StatelessWidget {
     final color = getColorForOption(option, question);
 
     return GestureDetector(
-      onTap: () => onClickedOption(option), //funcion que ejecuta al hacer click
+      onTap: () {
+        onClickedOption(option);
+      }, //funcion que ejecuta al hacer click
       child: Container(
         //distancia del contenedor de la opcion a los bordes del boton
         padding: EdgeInsets.all(12),
