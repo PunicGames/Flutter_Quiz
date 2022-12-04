@@ -53,11 +53,11 @@ class OptionsWidget extends StatelessWidget {
   }
 
   Widget buildAnswer(Option option) {
-    print(option.code + ": " + option.text.length.toString());
-    var a = double.parse(option.text.length.toString());
+    //print(option.code + ": " + option.text.length.toString());
+    //var a = double.parse(option.text.length.toString());
+
     return Container(
-      //problemon con el tamaño
-      height: (option.text.length > 40 ? 75 : 50),
+      //no se determina el tamaño para que se adecue al flexible container
       child: Row(
         children: [
           //letra de la opcion
