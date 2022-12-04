@@ -41,6 +41,14 @@ final categories = <Category>[
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
+      questions: Sekiro_questions,
+      categoryName: 'Sekiro: Shadows Die Twice',
+      imageUrl: 'assets/sekiro.jpg',
+      videoUrl:
+          'https://www.youtube.com/watch?v=rXMX4YJ7Lks&ab_channel=PlayStation',
+      description:
+          "Explore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face-to-face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head-to-head combat in a bloody confrontation. Take Revenge. Restore Your Honor. Kill Ingeniously."),
+  Category(
       questions: GearsOfHell_questions,
       categoryName: 'Gears of Hell',
       imageUrl: 'assets/GearsOfHell_Image.jpg',
