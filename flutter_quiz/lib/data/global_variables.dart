@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
-final username = 'Alvaro';
-final themeColors = [Colors.green, Colors.blue];
-final themeColors2 = [
-  Color.fromARGB(255, 62, 0, 97),
-  Color.fromARGB(255, 231, 15, 88)
+var themeColors = [
+  Color.fromARGB(255, 76, 176, 79),
+  Color.fromARGB(255, 33, 150, 245),
 ];
-final themeColors3 = [
+
+final themeColors0 = [
+  Color.fromARGB(255, 76, 176, 79),
+  Color.fromARGB(255, 33, 150, 245),
+];
+
+final themeColors1 = [
+  Color.fromARGB(255, 62, 0, 97),
+  Color.fromARGB(255, 231, 15, 88),
+];
+final themeColors2 = [
   Color.fromARGB(255, 152, 62, 255),
-  Color.fromARGB(255, 38, 168, 255)
+  Color.fromARGB(255, 38, 168, 255),
 ];
