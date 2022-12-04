@@ -3,6 +3,7 @@ import '../data/categories.dart';
 import '../data/global_variables.dart';
 import '../widget/categorySearch_widget.dart';
 import '../widget/category_header_widget.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -28,6 +29,10 @@ class HomePage extends StatelessWidget {
               icon: Icon(Icons.search),
               onPressed: () {
                 showSearch(context: context, delegate: CategorySearch());
+
+                // Play button sound
+                final player = AudioCache();
+                player.play('Selector_Button_Sound_Forward.mp3');
               },
             )
           ],
