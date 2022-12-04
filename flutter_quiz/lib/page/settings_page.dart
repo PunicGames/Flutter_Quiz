@@ -81,7 +81,6 @@ class SettingsPageState extends State<SettingsPage> {
                 colorID = 0;
                 preferences.setInt("colorID", colorID);
                 setState(() => this.colorID = colorID);
-                print(colorID);
               },
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.1,
@@ -103,7 +102,6 @@ class SettingsPageState extends State<SettingsPage> {
                 colorID = 1;
                 preferences.setInt("colorID", colorID);
                 setState(() => this.colorID = colorID);
-                print(colorID);
               },
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.1,
@@ -125,7 +123,6 @@ class SettingsPageState extends State<SettingsPage> {
                 colorID = 2;
                 preferences.setInt("colorID", colorID);
                 setState(() => this.colorID = colorID);
-                print(colorID);
               },
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.1,
