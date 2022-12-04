@@ -4,6 +4,7 @@ import '../data/favorites.dart';
 import '../classes/category.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'category_page.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class CategoryViewerPage extends StatefulWidget {
   final Category category;
@@ -17,6 +18,7 @@ class CategoryViewerPage extends StatefulWidget {
 
 class _CategoryViewerPageState extends State<CategoryViewerPage> {
   late YoutubePlayerController controller;
+  final player = AudioCache();
 
   @override
   void initState() {
@@ -184,6 +186,8 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
         widget.category.isFavorite = true;
         favorites.add(widget.category);
       }
+
+      player.play('Selector_Button_Sound_Forward.mp3');
     });
   }
 }

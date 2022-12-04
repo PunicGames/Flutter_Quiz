@@ -7,6 +7,7 @@ import '../classes/option.dart';
 import '../classes/question.dart';
 import '../widget/questions_numbers_widget.dart';
 import '../widget/questions_widget.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class CategoryPage extends StatefulWidget {
   final Category category;
@@ -24,6 +25,7 @@ class _CategoryPageState extends State<CategoryPage> {
   Question? question;
   List<Question> questionsPool = List.empty(growable: true);
   var rng = Random();
+  final player = AudioCache();
 
   @override
   void initState() {
@@ -85,6 +87,13 @@ class _CategoryPageState extends State<CategoryPage> {
       setState(() {
         question?.isLocked = true;
         question?.selectedOption = option;
+
+        // Play button sound
+        if (option.isCorrect) {
+          player.play('Selector_Button_Sound_Forward.mp3');
+        } else {
+          player.play('Selector_Button_Sound_Backwards.mp3');
+        }
       });
     }
   }
@@ -99,6 +108,13 @@ class _CategoryPageState extends State<CategoryPage> {
     setState(() {
       //question = widget.category.questions[indexPage];
       question = questionsPool[indexPage];
+
+      // Sound
+      if (indexPage > nextPage.toInt()) {
+        player.play('Turning_Page_Sound_Forward.mp3');
+      } else if (indexPage < nextPage.toInt()) {
+        player.play('Turning_Page_Sound_Backwards.mp3');
+      }
     });
 
     //de esta forma habilitamos que pueda saltar de una pregunta a otra
