@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz/page/results_page.dart';
 import '../data/global_variables.dart';
 import '../classes/category.dart';
 import '../classes/option.dart';
@@ -25,7 +26,10 @@ class _CategoryPageState extends State<CategoryPage> {
   Question? question;
   List<Question> questionsPool = List.empty(growable: true);
   var rng = Random();
+  var answeredQuestions = 0;
+  var correctAnswers = 0;
   final player = AudioCache();
+
 
   @override
   void initState() {
@@ -87,7 +91,8 @@ class _CategoryPageState extends State<CategoryPage> {
       setState(() {
         question?.isLocked = true;
         question?.selectedOption = option;
-
+        answeredQuestions++;
+        if (question?.selectedOption.isCorrect == true) correctAnswers++;
         // Play button sound
         if (option.isCorrect) {
           player.play('Selector_Button_Sound_Forward.mp3');
@@ -95,6 +100,17 @@ class _CategoryPageState extends State<CategoryPage> {
           player.play('Selector_Button_Sound_Backwards.mp3');
         }
       });
+      if (answeredQuestions == TOTAL_QUESTIONS) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(
+            builder: (context) => ResultsPage(
+              success: correctAnswers,
+              totalQuestions: TOTAL_QUESTIONS,
+              categor: widget.category,
+            ),
+          ),
+        );
+      }
     }
   }
 
