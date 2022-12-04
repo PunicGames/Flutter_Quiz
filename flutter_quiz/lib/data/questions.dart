@@ -1474,7 +1474,7 @@ final call_of_duty_questions_en = [
 ];
 
 // SLY COOPER SAGA ENGLISH QUESTIONS
-final zelda_questions_es = [
+final slyCooper_questions_en = [
   // #1
   Question(
     text: 'How did Bentley come to be in a wheel chair?',
@@ -1557,5 +1557,506 @@ final zelda_questions_es = [
       Option(code: 'D', text: 'Steer', isCorrect: false),
     ],
     solution: 'Sucker Punch Productions, the creators of Sekiro.',
+  ),
+
+  // #7
+  Question(
+    text:
+        "Which country Sly and his gang of thieves do NOT visit in the third episode?",
+    options: [
+      Option(code: 'A', text: 'Netherlands', isCorrect: false),
+      Option(code: 'B', text: 'China', isCorrect: false),
+      Option(code: 'C', text: 'Spain', isCorrect: true),
+      Option(code: 'D', text: 'Italy', isCorrect: false),
+    ],
+    solution: "Unfortunately Sly's band never visited Spain.",
+  ),
+
+  // #8
+  Question(
+    text: "What is Sly's mysterious weapon for?",
+    options: [
+      Option(code: 'A', text: 'To scratch your back.', isCorrect: false),
+      Option(
+          code: 'B', text: 'To reach things from the couch.', isCorrect: false),
+      Option(
+          code: 'C',
+          text:
+              'It has no strange function, it is just an oddly shaped weapon.',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'It is an ancient key with unique qualities.',
+          isCorrect: true),
+    ],
+    solution: "Sly's key serves as a KEY to his family vault.",
+  ),
+
+  // # 9
+  Question(
+    text:
+        "Which is the name of the villain who tries to steal the inside of Sly's vault?",
+    options: [
+      Option(code: 'A', text: 'Sr. Monke', isCorrect: false),
+      Option(code: 'B', text: 'Sr. M', isCorrect: false),
+      Option(code: 'C', text: 'Dr. Monkey', isCorrect: false),
+      Option(code: 'D', text: 'Dr. M', isCorrect: true),
+    ],
+    solution: "His first name is unknown, but his henchmen call him Dr. M.",
+  ),
+
+  // # 10
+  Question(
+    text: "Which thief joins the gang first at the start of the third episode?",
+    options: [
+      Option(code: 'A', text: 'Murray', isCorrect: true),
+      Option(code: 'B', text: 'Dimitry', isCorrect: false),
+      Option(code: 'C', text: 'Guru', isCorrect: false),
+      Option(code: 'D', text: 'Panda King', isCorrect: false),
+    ],
+    solution: "Murray, who re-joins the band after clearing Venice.",
+  ),
+
+  // # 11
+  Question(
+    text: "Which is the name of the villain we must defeat in Venice?",
+    options: [
+      Option(code: 'A', text: 'Martino', isCorrect: false),
+      Option(code: 'B', text: 'Octavio', isCorrect: true),
+      Option(code: 'C', text: 'Luciano', isCorrect: false),
+      Option(code: 'D', text: 'Andrea', isCorrect: false),
+    ],
+    solution: "Octavio, the Master of opera.",
+  ),
+
+  // # 12
+  Question(
+    text: "Which is Dmitri's special skill?",
+    options: [
+      Option(code: 'A', text: 'Being Dimitri', isCorrect: false),
+      Option(code: 'B', text: 'Climbing', isCorrect: false),
+      Option(code: 'C', text: 'Sailing', isCorrect: false),
+      Option(code: 'D', text: 'Scuba diving', isCorrect: true),
+    ],
+    solution: "Scuba diving, he is a fish.",
+  ),
+
+  // # 13
+  Question(
+    text: "What is Dr. M's lieutenant's name?",
+    options: [
+      Option(code: 'A', text: 'Donk', isCorrect: false),
+      Option(code: 'B', text: 'Gronk', isCorrect: false),
+      Option(code: 'C', text: 'Folk', isCorrect: false),
+      Option(code: 'D', text: 'None', isCorrect: true),
+    ],
+    solution: "Dr. M has no known lieutenant.",
+  ),
+
+  // # 14
+  Question(
+    text:
+        "How many members does the team have at the end of the third episode?",
+    options: [
+      Option(code: 'A', text: '3', isCorrect: false),
+      Option(code: 'B', text: '7', isCorrect: true),
+      Option(code: 'C', text: '9', isCorrect: false),
+      Option(code: 'D', text: '8', isCorrect: false),
+    ],
+    solution: "Dimitri, Penelope, Bentley, Sly, Murray, Guru, and Panda King",
+  ),
+
+  // # 15
+  Question(
+    text: "What year was Sly Cooper 3 Honor Among Thieves released?",
+    options: [
+      Option(code: 'A', text: '2001', isCorrect: false),
+      Option(code: 'B', text: '2004', isCorrect: false),
+      Option(code: 'C', text: '2005', isCorrect: true),
+      Option(code: 'D', text: '2003', isCorrect: false),
+    ],
+    solution: "26/09/2005 on North America, and 18/11/2005 on Europe.",
+  ),
+];
+final escapeFromTarkov_en = [
+  // #1
+  Question(
+    text: 'What was the first map that appeared in the game?',
+    options: [
+      Option(code: 'A', text: "Customs", isCorrect: true),
+      Option(code: 'B', text: 'Shoreline', isCorrect: false),
+      Option(code: 'C', text: 'Labs', isCorrect: false),
+      Option(code: 'D', text: 'Lighthouse', isCorrect: false),
+    ],
+    solution: "It was Customs.",
+  ),
+
+  // #2
+  Question(
+    text: "In what year was the first version of Escape from Tarkov published?",
+    options: [
+      Option(code: 'A', text: "2020", isCorrect: false),
+      Option(code: 'B', text: '2019', isCorrect: false),
+      Option(code: 'C', text: '2016', isCorrect: true),
+      Option(code: 'D', text: '2021', isCorrect: false),
+    ],
+    solution:
+        "Yes, it sounds incredible but the first time it was released was in 2016.",
+  ),
+
+  // #3
+  Question(
+    text: 'Which NPC is the only one we have to complete a mission to unlock?',
+    options: [
+      Option(code: 'A', text: "Prapor", isCorrect: false),
+      Option(code: 'B', text: 'Threapist', isCorrect: false),
+      Option(code: 'C', text: 'Jaeger', isCorrect: true),
+      Option(code: 'D', text: 'Fence', isCorrect: false),
+    ],
+    solution:
+        "We have to go to Woods to get a message, in order to unlock Jaeger.",
+  ),
+
+  // #4
+  Question(
+    text: 'What trader buys absolutely everything from us?',
+    options: [
+      Option(code: 'A', text: "Peacekeeper", isCorrect: false),
+      Option(code: 'B', text: 'Mechanic', isCorrect: false),
+      Option(code: 'C', text: 'Prapor', isCorrect: false),
+      Option(code: 'D', text: 'Fence', isCorrect: true),
+    ],
+    solution: "Fence, but at a very bad price.",
+  ),
+
+  // #5
+  Question(
+    text: 'On which map does tagila appear?',
+    options: [
+      Option(code: 'A', text: "None of this", isCorrect: false),
+      Option(code: 'B', text: 'Factory', isCorrect: true),
+      Option(code: 'C', text: 'Customs', isCorrect: false),
+      Option(code: 'D', text: 'Shoreline', isCorrect: false),
+    ],
+    solution: "Tagila is the boss of Factory",
+  ),
+
+  // #6
+  Question(
+    text: 'What calibre is the CMMG Mk47 Mutant?',
+    options: [
+      Option(code: 'A', text: "5.45x39mm", isCorrect: false),
+      Option(code: 'B', text: '5.56x45mm NATO', isCorrect: false),
+      Option(code: 'C', text: '7.62x39mm', isCorrect: true),
+      Option(code: 'D', text: '.300', isCorrect: false),
+    ],
+    solution: "Use the 7.62x39mm",
+  ),
+
+  // #7
+  Question(
+    text: 'What calibre is the Kalashnikov AKS-74U?',
+    options: [
+      Option(code: 'A', text: "5.45x39mm", isCorrect: true),
+      Option(code: 'B', text: '5.56x45mm NATO', isCorrect: false),
+      Option(code: 'C', text: '7.62x39mm', isCorrect: false),
+      Option(code: 'D', text: '.300', isCorrect: false),
+    ],
+    solution: "Use the 7.62x39mm",
+  ),
+
+  // #8
+  Question(
+    text: 'What calibre is the Kalashnikov AKS-74U?',
+    options: [
+      Option(code: 'A', text: "5.45x39mm", isCorrect: true),
+      Option(code: 'B', text: '5.56x45mm NATO', isCorrect: false),
+      Option(code: 'C', text: '7.62x39mm', isCorrect: false),
+      Option(code: 'D', text: '.300', isCorrect: false),
+    ],
+    solution: "Use the 5.45x39mm",
+  ),
+
+  // #9
+  Question(
+    text: 'What calibre is the Colt M4A1?',
+    options: [
+      Option(code: 'A', text: "5.45x39mm", isCorrect: false),
+      Option(code: 'B', text: '5.56x45mm NATO', isCorrect: true),
+      Option(code: 'C', text: '7.62x39mm', isCorrect: false),
+      Option(code: 'D', text: '.300', isCorrect: false),
+    ],
+    solution: "Use the 5.56x45mm NATO",
+  ),
+
+  // #10
+  Question(
+    text: 'What calibre is the Kalashnikov AK-101?',
+    options: [
+      Option(code: 'A', text: "5.45x39mm", isCorrect: false),
+      Option(code: 'B', text: '5.56x45mm NATO', isCorrect: true),
+      Option(code: 'C', text: '7.62x39mm', isCorrect: false),
+      Option(code: 'D', text: '.300', isCorrect: false),
+    ],
+    solution: "Use the 5.56x45mm NATO",
+  ),
+
+  // #11
+  Question(
+    text: "Who gives you the mission 'Shooter borned in heaven'?",
+    options: [
+      Option(code: 'A', text: "Fence", isCorrect: false),
+      Option(code: 'B', text: 'Peacekeeper', isCorrect: false),
+      Option(code: 'C', text: 'Prapor', isCorrect: false),
+      Option(code: 'D', text: 'Mechanic', isCorrect: true),
+    ],
+    solution: "This iconic mission is given to us by Mechanic.",
+  ),
+
+  // #12
+  Question(
+    text: "Who gives you the mission 'Collector'?",
+    options: [
+      Option(code: 'A', text: "Fence", isCorrect: true),
+      Option(code: 'B', text: 'Peacekeeper', isCorrect: false),
+      Option(code: 'C', text: 'Prapor', isCorrect: false),
+      Option(code: 'D', text: 'Mechanic', isCorrect: false),
+    ],
+    solution:
+        "This iconic mission is given to us by Fence (It is the only mission he gives).",
+  ),
+
+  // #13
+  Question(
+    text: 'Which is the largest map?',
+    options: [
+      Option(code: 'A', text: "Factory", isCorrect: false),
+      Option(code: 'B', text: 'Lighthouse', isCorrect: false),
+      Option(code: 'C', text: 'Shoreline', isCorrect: false),
+      Option(code: 'D', text: 'Woods', isCorrect: true),
+    ],
+    solution: "It's Woods",
+  ),
+
+  // #14
+  Question(
+    text:
+        'In the weapon, which is what we will have to change if we want to do more damage to the enemy?',
+    options: [
+      Option(code: 'A', text: "Receiver", isCorrect: false),
+      Option(code: 'B', text: 'Bullets', isCorrect: true),
+      Option(code: 'C', text: 'Chamber', isCorrect: false),
+      Option(code: 'D', text: 'Cannon', isCorrect: false),
+    ],
+    solution: "The bullets, of course",
+  ),
+
+  // #15
+  Question(
+    text: 'What happens to you if you self-inject morphine?',
+    options: [
+      Option(code: 'A', text: "It heals you a little", isCorrect: false),
+      Option(code: 'B', text: "It's like taking a painkiller", isCorrect: true),
+      Option(code: 'C', text: 'Makes you take more damage', isCorrect: false),
+      Option(code: 'D', text: 'A and B effects', isCorrect: false),
+    ],
+    solution: "It's like taking such a pro painkiller",
+  ),
+];
+
+final worldOfWarcraft_Classic_en = [
+  // #1
+  Question(
+    text: 'What is the capital of the alliance??',
+    options: [
+      Option(code: 'A', text: "Orgrimmar", isCorrect: false),
+      Option(code: 'B', text: 'Darnassus', isCorrect: false),
+      Option(code: 'C', text: 'Stormwind', isCorrect: true),
+      Option(code: 'D', text: 'Ironforge', isCorrect: false),
+    ],
+    solution: "Stormwind",
+  ),
+
+  // #2
+  Question(
+    text: 'What is the capital of the horde?',
+    options: [
+      Option(code: 'A', text: "Orgrimmar", isCorrect: true),
+      Option(code: 'B', text: 'Undercity', isCorrect: false),
+      Option(code: 'C', text: 'Stormwind', isCorrect: false),
+      Option(code: 'D', text: 'Thunder Bluff', isCorrect: false),
+    ],
+    solution: "Orgrimmar",
+  ),
+
+  // #3
+  Question(
+    text: 'Which class allows you to turn your enemies into sheep?',
+    options: [
+      Option(code: 'A', text: "Wizard", isCorrect: true),
+      Option(code: 'B', text: 'Warlock', isCorrect: false),
+      Option(code: 'C', text: 'Warrior', isCorrect: false),
+      Option(code: 'D', text: 'None', isCorrect: false),
+    ],
+    solution: "Wizard",
+  ),
+
+  // #4
+  Question(
+    text: 'Which class uses fury instead of mana?',
+    options: [
+      Option(code: 'A', text: "Hunter", isCorrect: false),
+      Option(code: 'B', text: 'Warrior', isCorrect: true),
+      Option(code: 'C', text: 'Paladin', isCorrect: false),
+      Option(code: 'D', text: 'Priest', isCorrect: false),
+    ],
+    solution: "Warrior",
+  ),
+
+  // #5
+  Question(
+    text: 'Which class is unique to the horde?',
+    options: [
+      Option(code: 'A', text: "Shaman", isCorrect: true),
+      Option(code: 'B', text: 'Paladin', isCorrect: false),
+      Option(code: 'C', text: 'Warlock', isCorrect: false),
+      Option(code: 'D', text: 'Priest', isCorrect: false),
+    ],
+    solution: "Shaman",
+  ),
+
+  // #6
+  Question(
+    text: 'What is the first dungeon you have access in the horde?',
+    options: [
+      Option(code: 'A', text: "The Deadmines", isCorrect: false),
+      Option(code: 'B', text: 'Scarlet monastery', isCorrect: false),
+      Option(code: 'C', text: 'Wailing Cavers', isCorrect: false),
+      Option(code: 'D', text: 'Ragefire chasm', isCorrect: true),
+    ],
+    solution: "",
+  ),
+
+  // #7
+  Question(
+    text: 'How many copper coins does 1 Gold plus 50 Silver correspond to??',
+    options: [
+      Option(code: 'A', text: "150", isCorrect: false),
+      Option(
+          code: 'B',
+          text: '1 * (100 * 100) + 50 *(100) = 17,500',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: '1 * (100 * 100) + 50 *(100) = 15,000',
+          isCorrect: true),
+      Option(
+          code: 'D',
+          text: '1 * (100 * 100) + 50 *(60) = 10,000',
+          isCorrect: false),
+    ],
+    solution: "15,000",
+  ),
+
+  // #8
+  Question(
+    text: 'Which class can easily become invisible?',
+    options: [
+      Option(code: 'A', text: "Priest", isCorrect: false),
+      Option(code: 'B', text: 'Rogue', isCorrect: true),
+      Option(code: 'C', text: 'Warlock', isCorrect: false),
+      Option(code: 'D', text: 'Paladin', isCorrect: false),
+    ],
+    solution: "Rogue",
+  ),
+
+  // #9
+  Question(
+    text:
+        'What kind of animal can be kept as a pet almost any kind of animal that can be found?',
+    options: [
+      Option(code: 'A', text: "Priest", isCorrect: false),
+      Option(code: 'B', text: 'Shaman', isCorrect: false),
+      Option(code: 'C', text: 'Hunter', isCorrect: true),
+      Option(code: 'D', text: 'Warlock', isCorrect: false),
+    ],
+    solution: "",
+  ),
+
+  // #10
+  Question(
+    text: 'What happens if you lose a duel?',
+    options: [
+      Option(code: 'A', text: "Nothing", isCorrect: true),
+      Option(
+          code: 'B', text: 'They will probably laugh at you', isCorrect: false),
+      Option(code: 'C', text: 'That you break the keyboard', isCorrect: false),
+      Option(code: 'D', text: 'You lose honour and money', isCorrect: false),
+    ],
+    solution: "Nothing",
+  ),
+
+  // #11
+  Question(
+    text: 'Which weapon allows players to attack with ranged magic shoots?',
+    options: [
+      Option(code: 'A', text: "Bow", isCorrect: false),
+      Option(code: 'B', text: 'Rifle', isCorrect: false),
+      Option(code: 'C', text: 'Wand', isCorrect: true),
+      Option(
+          code: 'D',
+          text: 'No existe ningún arma que haga eso',
+          isCorrect: false),
+    ],
+    solution: "Wand",
+  ),
+
+  // #12
+  Question(
+    text:
+        'Where on the map does a daily chest appear for the best PVP player to get it?',
+    options: [
+      Option(code: 'A', text: "Feralas Arena", isCorrect: false),
+      Option(code: 'B', text: 'Durotar Arena', isCorrect: false),
+      Option(code: 'C', text: 'Thunder bluff Stadium', isCorrect: false),
+      Option(code: 'D', text: 'Gurubashi Arena', isCorrect: true),
+    ],
+    solution: "Gurubashi Arena",
+  ),
+
+  // #13
+  Question(
+    text: 'Which is not the name of any mainland island?',
+    options: [
+      Option(code: 'A', text: "Kalimdor", isCorrect: false),
+      Option(code: 'B', text: 'The Maelstorm', isCorrect: false),
+      Option(code: 'C', text: 'Azeroth', isCorrect: false),
+      Option(code: 'D', text: 'Lordaeron', isCorrect: false),
+    ],
+    solution: "",
+  ),
+
+  // #14
+  Question(
+    text: 'What is the maximum range we can obtain in Arena?',
+    options: [
+      Option(code: 'A', text: "14", isCorrect: false),
+      Option(code: 'B', text: '15', isCorrect: true),
+      Option(code: 'C', text: '16', isCorrect: false),
+      Option(code: 'D', text: '17', isCorrect: false),
+    ],
+    solution: "15",
+  ),
+
+  // #15
+  Question(
+    text: 'Which class bases its power on switching between different animals?',
+    options: [
+      Option(code: 'A', text: "Wizard", isCorrect: false),
+      Option(code: 'B', text: 'Warlock', isCorrect: false),
+      Option(code: 'C', text: 'Shaman', isCorrect: false),
+      Option(code: 'D', text: 'Druid', isCorrect: true),
+    ],
+    solution: "",
   ),
 ];
