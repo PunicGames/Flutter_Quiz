@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
 
   Widget buildCategories(context) => Container(
         //numero a tener en cuenta porque no es responsivo
-        height: MediaQuery.of(context).size.height * 0.8,
+        height: MediaQuery.of(context).size.height * 0.75,
         child: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, //numero de quiz por columna

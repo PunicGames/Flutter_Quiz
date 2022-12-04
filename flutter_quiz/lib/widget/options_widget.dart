@@ -52,26 +52,31 @@ class OptionsWidget extends StatelessWidget {
     );
   }
 
-  Widget buildAnswer(Option option) => Container(
-        height: (option.text.length > 75 ? 100 : 50),
-        child: Row(
-          children: [
-            //letra de la opcion
-            Text(
-              option.code,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+  Widget buildAnswer(Option option) {
+    print(option.code + ": " + option.text.length.toString());
+    var a = double.parse(option.text.length.toString());
+    return Container(
+      //problemon con el tamaño
+      height: (option.text.length > 40 ? 75 : 50),
+      child: Row(
+        children: [
+          //letra de la opcion
+          Text(
+            option.code,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          ),
+          SizedBox(width: 12),
+          //mensaje de la opcion
+          Flexible(
+            child: Text(
+              option.text,
+              style: TextStyle(fontSize: 20),
             ),
-            SizedBox(width: 12),
-            //mensaje de la opcion
-            Flexible(
-              child: Text(
-                option.text,
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
+  }
 
   Widget buildSolution(Option solution, Option answer) {
     if (solution == answer) {

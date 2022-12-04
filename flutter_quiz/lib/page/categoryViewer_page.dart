@@ -79,7 +79,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
             icon: (widget.category.isFavorite
                 ? const Icon(Icons.favorite)
                 : Icon(Icons.favorite_border)),
-            color: Colors.red,
+            color: Colors.white,
             onPressed: toggleFavorite,
           )
         ],
