@@ -8,6 +8,7 @@ import '../classes/option.dart';
 import '../classes/question.dart';
 import '../widget/questions_numbers_widget.dart';
 import '../widget/questions_widget.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class CategoryPage extends StatefulWidget {
   final Category category;
@@ -27,6 +28,8 @@ class _CategoryPageState extends State<CategoryPage> {
   var rng = Random();
   var answeredQuestions = 0;
   var correctAnswers = 0;
+  final player = AudioCache();
+
 
   @override
   void initState() {
@@ -90,6 +93,12 @@ class _CategoryPageState extends State<CategoryPage> {
         question?.selectedOption = option;
         answeredQuestions++;
         if (question?.selectedOption.isCorrect == true) correctAnswers++;
+        // Play button sound
+        if (option.isCorrect) {
+          player.play('Selector_Button_Sound_Forward.mp3');
+        } else {
+          player.play('Selector_Button_Sound_Backwards.mp3');
+        }
       });
       if (answeredQuestions == TOTAL_QUESTIONS) {
         Navigator.of(context).pushReplacement(
@@ -115,6 +124,13 @@ class _CategoryPageState extends State<CategoryPage> {
     setState(() {
       //question = widget.category.questions[indexPage];
       question = questionsPool[indexPage];
+
+      // Sound
+      if (indexPage > nextPage.toInt()) {
+        player.play('Turning_Page_Sound_Forward.mp3');
+      } else if (indexPage < nextPage.toInt()) {
+        player.play('Turning_Page_Sound_Backwards.mp3');
+      }
     });
 
     //de esta forma habilitamos que pueda saltar de una pregunta a otra

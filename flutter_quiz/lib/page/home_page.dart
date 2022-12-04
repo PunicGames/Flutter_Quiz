@@ -3,6 +3,7 @@ import '../data/categories.dart';
 import '../data/global_variables.dart';
 import '../widget/categorySearch_widget.dart';
 import '../widget/category_header_widget.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -29,6 +30,10 @@ class HomePage extends StatelessWidget {
               icon: Icon(Icons.search),
               onPressed: () {
                 showSearch(context: context, delegate: CategorySearch());
+
+                // Play button sound
+                final player = AudioCache();
+                player.play('Selector_Button_Sound_Forward.mp3');
               },
             )
           ],
@@ -45,7 +50,7 @@ class HomePage extends StatelessWidget {
 
   Widget buildCategories(context) => Container(
         //numero a tener en cuenta porque no es responsivo
-        height: MediaQuery.of(context).size.height * 0.8,
+        height: MediaQuery.of(context).size.height * 0.75,
         child: GridView(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, //numero de quiz por columna

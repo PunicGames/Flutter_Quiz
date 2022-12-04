@@ -3,11 +3,13 @@ import '../data/categories.dart';
 import '../classes/category.dart';
 import '../page/categoryViewer_page.dart';
 import 'category_header_widget.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class CategorySearch extends SearchDelegate<Category?> {
   final recentCategories = [
     categories[4],
   ];
+  final player = AudioCache();
 
   @override
   List<Widget>? buildActions(BuildContext context) => [
@@ -105,6 +107,7 @@ class CategorySearch extends SearchDelegate<Category?> {
                       CategoryViewerPage(category: suggestion),
                 ),
               );
+              player.play('Selector_Button_Sound_Forward.mp3');
             },
           );
         },

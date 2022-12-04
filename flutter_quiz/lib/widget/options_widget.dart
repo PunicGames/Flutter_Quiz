@@ -29,7 +29,9 @@ class OptionsWidget extends StatelessWidget {
     final color = getColorForOption(option, question);
 
     return GestureDetector(
-      onTap: () => onClickedOption(option), //funcion que ejecuta al hacer click
+      onTap: () {
+        onClickedOption(option);
+      }, //funcion que ejecuta al hacer click
       child: Container(
         //distancia del contenedor de la opcion a los bordes del boton
         padding: EdgeInsets.all(12),
@@ -52,26 +54,31 @@ class OptionsWidget extends StatelessWidget {
     );
   }
 
-  Widget buildAnswer(Option option) => Container(
-        height: (option.text.length > 75 ? 100 : 50),
-        child: Row(
-          children: [
-            //letra de la opcion
-            Text(
-              option.code,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+  Widget buildAnswer(Option option) {
+    //print(option.code + ": " + option.text.length.toString());
+    //var a = double.parse(option.text.length.toString());
+
+    return Container(
+      //no se determina el tamaño para que se adecue al flexible container
+      child: Row(
+        children: [
+          //letra de la opcion
+          Text(
+            option.code,
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          ),
+          SizedBox(width: 12),
+          //mensaje de la opcion
+          Flexible(
+            child: Text(
+              option.text,
+              style: TextStyle(fontSize: 20),
             ),
-            SizedBox(width: 12),
-            //mensaje de la opcion
-            Flexible(
-              child: Text(
-                option.text,
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-          ],
-        ),
-      );
+          ),
+        ],
+      ),
+    );
+  }
 
   Widget buildSolution(Option solution, Option answer) {
     if (solution == answer) {

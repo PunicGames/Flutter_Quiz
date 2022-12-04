@@ -1633,6 +1633,88 @@ final zelda_questions_en = [
     ],
     solution: 'A sword',
   ),
+
+  // #11
+  Question(
+    text: 'What is the main part of a Goron´s diet?',
+    options: [
+      Option(code: 'A', text: 'Rocks', isCorrect: true),
+      Option(code: 'B', text: 'Rubies', isCorrect: false),
+      Option(code: 'C', text: 'Rats', isCorrect: false),
+      Option(code: 'D', text: 'Rubber plants', isCorrect: false),
+    ],
+    solution: 'Rocks',
+  ),
+
+  // #12
+  Question(
+    text:
+        'Chronologically (according to the in-game universe), which game is the first in the series?',
+    options: [
+      Option(code: 'A', text: 'The Legend of Zelda', isCorrect: false),
+      Option(
+          code: 'B', text: 'Zelda II: The Adventure of Link', isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'The Legend of Zelda: Ocarina of Time',
+          isCorrect: false),
+      Option(
+          code: 'D',
+          text: 'The Legend of Zelda: Skyward Sword',
+          isCorrect: true),
+    ],
+    solution: 'The Legend of Zelda: Skyward Sword',
+  ),
+
+  // #13
+  Question(
+    text:
+        'Navi accompanied Link on his adventure in Ocarina of Time, but what´s the name of his fairy companion in Majora´s Mask?',
+    options: [
+      Option(code: 'A', text: 'Titl', isCorrect: false),
+      Option(code: 'B', text: 'Tatl', isCorrect: true),
+      Option(code: 'C', text: 'Tael', isCorrect: false),
+      Option(code: 'D', text: 'Tryp', isCorrect: false),
+    ],
+    solution: 'Tatl',
+  ),
+
+  // #14
+  Question(
+    text:
+        'Which of the following Zelda games has the lovable Tingle NOT appeared in?',
+    options: [
+      Option(code: 'A', text: 'Majora´s Mask', isCorrect: false),
+      Option(code: 'B', text: 'The Minish Cap', isCorrect: false),
+      Option(code: 'C', text: 'Oracle of Ages', isCorrect: false),
+      Option(code: 'D', text: 'Twilight Princess', isCorrect: true),
+    ],
+    solution: 'Twilight Princess',
+  ),
+
+  // #15
+  Question(
+    text: 'What is the name of Link´s talking boat in The Wind Waker?',
+    options: [
+      Option(code: 'A', text: 'King of Blue Fins', isCorrect: false),
+      Option(code: 'B', text: 'King of Golden Sunsets', isCorrect: false),
+      Option(code: 'C', text: 'King of Red Lions', isCorrect: true),
+      Option(code: 'D', text: 'King of White Waves', isCorrect: false),
+    ],
+    solution: 'King of Red Lions',
+  ),
+
+  // #16
+  Question(
+    text: 'What is antagonist Ganondorf´s last name?',
+    options: [
+      Option(code: 'A', text: 'Agahnim', isCorrect: false),
+      Option(code: 'B', text: 'Dragmire', isCorrect: true),
+      Option(code: 'C', text: 'Grimoire', isCorrect: false),
+      Option(code: 'D', text: 'Mandrag', isCorrect: false),
+    ],
+    solution: 'Dragmire',
+  ),
 ];
 
 // CALL OF DUTY ENGLISH QUESTIONS
@@ -1790,6 +1872,65 @@ final call_of_duty_questions_en = [
       Option(code: 'D', text: 'Verrückt', isCorrect: true),
     ],
     solution: 'Verrückt was the first.',
+  ),
+
+  // #13
+  Question(
+    text: 'Which COD has the 44. Magnum?',
+    options: [
+      Option(code: 'A', text: 'CoD Modern Warfare 3', isCorrect: true),
+      Option(code: 'B', text: 'CoD Black Ops', isCorrect: false),
+      Option(code: 'C', text: 'CoD World At War', isCorrect: false),
+      Option(code: 'D', text: 'CoD 1', isCorrect: false),
+    ],
+    solution: 'CoD Modern Warfare 3.',
+  ),
+
+  // #14
+  Question(
+    text: 'Which COD was made by Treyarch?',
+    options: [
+      Option(code: 'A', text: 'CoD Modern Warfare', isCorrect: false),
+      Option(code: 'B', text: 'CoD Black Ops 3', isCorrect: true),
+      Option(code: 'C', text: 'CoD Modern Warfare 3', isCorrect: false),
+      Option(code: 'D', text: 'CoD 2', isCorrect: false),
+    ],
+    solution: 'CoD Black Ops 3.',
+  ),
+
+  // #15
+  Question(
+    text: 'What CoD has juggernauts',
+    options: [
+      Option(code: 'A', text: 'CoD 1', isCorrect: false),
+      Option(code: 'B', text: 'CoD Black Ops', isCorrect: false),
+      Option(code: 'C', text: 'CoD Modern Warfare 3', isCorrect: true),
+    ],
+    solution: 'CoD Modern Warfare 3.',
+  ),
+
+  // #16
+  Question(
+    text: 'What CoD introduced the ray gun?',
+    options: [
+      Option(code: 'A', text: 'CoD Black Ops', isCorrect: false),
+      Option(code: 'B', text: 'CoD Black Ops 2', isCorrect: false),
+      Option(code: 'C', text: 'CoD Cold War', isCorrect: false),
+      Option(code: 'D', text: 'CoD World At War', isCorrect: true),
+    ],
+    solution: 'CoD World At War.',
+  ),
+
+  // #16
+  Question(
+    text: 'Which CoD came first?',
+    options: [
+      Option(code: 'A', text: 'CoD Black Ops', isCorrect: false),
+      Option(code: 'B', text: 'CoD Warzone', isCorrect: false),
+      Option(code: 'C', text: 'CoD Modern Warfare', isCorrect: true),
+      Option(code: 'D', text: 'CoD Advanced Warfare', isCorrect: false),
+    ],
+    solution: 'CoD Modern Warfare.',
   ),
 ];
 
