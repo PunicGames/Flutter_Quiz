@@ -48,14 +48,15 @@ final categories = <Category>[
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
-      questions: GodOfWarIV_questions,
-      categoryName: 'prueba 1',
-      imageUrl: 'assets/GodOfWarIV_Image.jpg',
-      videoUrl: 'https://youtu.be/GQyWIur03aw',
+      questions: PokemonBlackWhite_questions,
+      categoryName: 'Pokemon Black and White',
+      imageUrl: 'assets/PokemonBlackWhite_Image.jpg',
+      videoUrl:
+          'https://www.youtube.com/watch?v=PrYtQMfcyKA&ab_channel=GiancarloParimango',
       description:
-          "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
+          "Similar to previous installments of the series, the two games follow the journey of a young Pokémon trainer through the region of Unova, as they train Pokémon used to compete against other trainers while thwarting the schemes of the criminal organization Team Plasma."),
   Category(
-      questions: Pokemon_questions,
+      questions: PokemonBlackWhite_questions,
       categoryName: 'prueba 2',
       imageUrl: 'assets/Pokemon_Image.jpg',
       videoUrl: 'https://youtu.be/GQyWIur03aw',
@@ -69,7 +70,7 @@ final categories = <Category>[
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
-      questions: Pokemon_questions,
+      questions: PokemonBlackWhite_questions,
       categoryName: 'Pokemon',
       imageUrl: 'assets/Pokemon_Image.jpg',
       videoUrl: 'https://youtu.be/GQyWIur03aw',
@@ -104,7 +105,7 @@ final categories = <Category>[
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
-      questions: Pokemon_questions,
+      questions: PokemonBlackWhite_questions,
       categoryName: 'prueba 2',
       imageUrl: 'assets/Pokemon_Image.jpg',
       videoUrl: 'https://youtu.be/GQyWIur03aw',

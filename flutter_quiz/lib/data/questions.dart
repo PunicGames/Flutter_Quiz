@@ -652,46 +652,173 @@ final Bloodborne_questions = [
   )
 ];
 
-final Pokemon_questions = [
+final PokemonBlackWhite_questions = [
+  //  ---------------------1
   Question(
-    text: 'Cual es el pokemon que mas ha capturado Ash?',
+    text: 'who is the Unova Pokedex number 0?',
     options: [
-      Option(code: 'A', text: 'Pikachu', isCorrect: false),
-      Option(code: 'B', text: 'Tauros', isCorrect: true),
-      Option(code: 'C', text: 'Weedle', isCorrect: false),
-      Option(code: 'D', text: 'Charmander', isCorrect: false),
+      Option(code: 'A', text: 'Victini', isCorrect: true),
+      Option(code: 'B', text: 'Meloetta', isCorrect: false),
+      Option(code: 'C', text: 'Mew', isCorrect: false),
+      Option(code: 'D', text: 'Genesect', isCorrect: false),
     ],
-    solution: 'Tauros',
+    solution: 'Victini',
   ),
+  //  ---------------------2
   Question(
-    text: 'a?',
+    text: 'who is the grass starter pokemon?',
     options: [
-      Option(code: 'A', text: 'Pikachu', isCorrect: false),
-      Option(code: 'B', text: 'Tauros', isCorrect: true),
-      Option(code: 'C', text: 'Weedle', isCorrect: false),
-      Option(code: 'D', text: 'Charmander', isCorrect: false),
+      Option(code: 'A', text: 'Tepig', isCorrect: false),
+      Option(code: 'B', text: 'Snivy', isCorrect: true),
+      Option(code: 'C', text: 'Oshawott', isCorrect: false),
+      Option(code: 'D', text: 'Servine', isCorrect: false),
     ],
-    solution: 'Tauros',
+    solution: 'Snivy',
   ),
+  //  ---------------------3
   Question(
-    text: 'b?',
+    text: 'What can be found on 4F of the Abyssal Ruins??',
     options: [
-      Option(code: 'A', text: 'Pikachu', isCorrect: false),
-      Option(code: 'B', text: 'Tauros', isCorrect: true),
-      Option(code: 'C', text: 'Weedle', isCorrect: false),
-      Option(code: 'D', text: 'Charmander', isCorrect: false),
+      Option(code: 'A', text: 'Lucky Egg', isCorrect: false),
+      Option(code: 'B', text: 'Rocky Helmet', isCorrect: false),
+      Option(code: 'C', text: 'Relic Crown', isCorrect: true),
+      Option(code: 'D', text: 'Kings Rock', isCorrect: false),
     ],
-    solution: 'Tauros',
+    solution: 'In the center of the room is the relic rock',
   ),
+  //  ---------------------4
   Question(
-    text: 'c?',
+    text: 'What is not one of the names of the three leaders of the first gym?',
     options: [
-      Option(code: 'A', text: 'Pikachu', isCorrect: false),
-      Option(code: 'B', text: 'Tauros', isCorrect: true),
-      Option(code: 'C', text: 'Weedle', isCorrect: false),
-      Option(code: 'D', text: 'Charmander', isCorrect: false),
+      Option(code: 'A', text: 'Cilan', isCorrect: false),
+      Option(code: 'B', text: 'Cress', isCorrect: false),
+      Option(code: 'C', text: 'Chris', isCorrect: true),
+      Option(code: 'D', text: 'Chili', isCorrect: false),
     ],
-    solution: 'Tauros',
+    solution:
+        'Cress the water type user, Chili will use a fire type and Cilan will use a grass type',
+  ),
+  //  ---------------------5
+  Question(
+    text:
+        'Who are these two friends who receive a starter Pokemon along with you?',
+    options: [
+      Option(code: 'A', text: 'Ethan and Bianca', isCorrect: false),
+      Option(code: 'B', text: 'Cheren and Lyra', isCorrect: false),
+      Option(code: 'C', text: 'Ethan and Lyra', isCorrect: false),
+      Option(code: 'D', text: 'Cheren and Bianca', isCorrect: true),
+    ],
+    solution: 'Cheren and Bianca',
+  ),
+  //  ---------------------6
+  Question(
+    text: 'who serve as the team antagonists of these games?',
+    options: [
+      Option(code: 'A', text: 'Team Galactic', isCorrect: false),
+      Option(code: 'B', text: 'Team Aqua', isCorrect: false),
+      Option(code: 'C', text: 'Team Flare', isCorrect: false),
+      Option(code: 'D', text: 'Team Plasma', isCorrect: true),
+    ],
+    solution: 'Team Plasma',
+  ),
+  //  ---------------------7
+  Question(
+    text: 'which pokemon does AZ have a special relationship??',
+    options: [
+      Option(code: 'A', text: 'Floette', isCorrect: true),
+      Option(code: 'B', text: 'Flabebe', isCorrect: false),
+      Option(code: 'C', text: 'Forges', isCorrect: false),
+      Option(code: 'D', text: 'Flaebe', isCorrect: false),
+    ],
+    solution: 'The Eternal Flower Floette.',
+  ),
+  //  ---------------------8
+  Question(
+    text: 'What is the name of the city where you can earn your first badge?',
+    options: [
+      Option(code: 'A', text: 'Castelia City', isCorrect: false),
+      Option(code: 'B', text: 'Nacrene City', isCorrect: false),
+      Option(code: 'C', text: 'Icirrus City', isCorrect: false),
+      Option(code: 'D', text: 'Striaton City', isCorrect: true),
+    ],
+    solution: 'Striaton City',
+  ),
+  //  ---------------------9
+  Question(
+    text: 'Which Pokemon learn Sacred Sword?',
+    options: [
+      Option(code: 'A', text: 'Terrakion', isCorrect: false),
+      Option(code: 'B', text: 'Keldeo', isCorrect: true),
+      Option(code: 'C', text: 'Cobalion', isCorrect: false),
+      Option(code: 'D', text: 'Virizion', isCorrect: false),
+    ],
+    solution: 'Keldeo',
+  ),
+  //  ---------------------10
+  Question(
+    text: 'which attack does x4 damage to Liepard?',
+    options: [
+      Option(code: 'A', text: 'fighting attacks', isCorrect: false),
+      Option(code: 'B', text: 'bug attacks', isCorrect: false),
+      Option(code: 'C', text: 'None', isCorrect: true),
+      Option(code: 'D', text: 'psychic attacks', isCorrect: false),
+    ],
+    solution: 'None, is dark only',
+  ),
+  //  ---------------------11
+  Question(
+    text: 'What is Gurdurr holding with his/her hands?',
+    options: [
+      Option(code: 'A', text: 'A Log', isCorrect: false),
+      Option(code: 'B', text: 'A beam', isCorrect: true),
+      Option(code: 'C', text: 'A column', isCorrect: false),
+      Option(code: 'D', text: 'Two columns', isCorrect: false),
+    ],
+    solution: 'Gurdurr holds a beam with both hands',
+  ),
+  //  ---------------------12
+  Question(
+    text: 'What type is Swoobat?',
+    options: [
+      Option(code: 'A', text: 'Flying and Normal', isCorrect: false),
+      Option(code: 'B', text: 'Normal and Psychc', isCorrect: false),
+      Option(code: 'C', text: 'Psychc and Flying', isCorrect: true),
+      Option(code: 'D', text: 'Dark and Normal', isCorrect: false),
+    ],
+    solution: 'Psychc and Flying',
+  ),
+  //  ---------------------13
+  Question(
+    text: 'What is the fisrt evolution of Leavanny?',
+    options: [
+      Option(code: 'A', text: 'Swinub', isCorrect: false),
+      Option(code: 'B', text: 'Sewaddle', isCorrect: true),
+      Option(code: 'C', text: 'Swadloon', isCorrect: false),
+      Option(code: 'D', text: 'Swalot', isCorrect: false),
+    ],
+    solution: 'Sewaddle evolves to Swadloon and Swadloon to Leavanny',
+  ),
+  //  ---------------------14
+  Question(
+    text: 'Which Pokemon has the ability defeatist?',
+    options: [
+      Option(code: 'A', text: 'Archeops', isCorrect: true),
+      Option(code: 'B', text: 'Cofagrigus', isCorrect: false),
+      Option(code: 'C', text: 'Zoroark', isCorrect: false),
+      Option(code: 'D', text: 'Galvantula', isCorrect: false),
+    ],
+    solution: 'Is exclusive to Archeops',
+  ),
+  //  ---------------------15
+  Question(
+    text: 'What type is kyurem-black?',
+    options: [
+      Option(code: 'A', text: 'Dragon and Ice', isCorrect: true),
+      Option(code: 'B', text: 'Ice and Fire', isCorrect: false),
+      Option(code: 'C', text: 'Dragon and Fire', isCorrect: false),
+      Option(code: 'D', text: 'Dragon and electric', isCorrect: false),
+    ],
+    solution: 'Dragon and Ice, the type does not change',
   ),
 ];
 
