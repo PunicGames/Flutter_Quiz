@@ -649,8 +649,76 @@ final Bloodborne_questions = [
       Option(code: 'D', text: '4', isCorrect: false),
     ],
     solution: '3',
-  )
+  ),
+  Question(
+    text: 'Who was the founder of the Healing Church?',
+    options: [
+      Option(
+          code: 'A', text: 'Nicolash, Host of the Nightmare', isCorrect: false),
+      Option(code: 'B', text: 'Laurence, The First Vicar', isCorrect: true),
+      Option(code: 'C', text: 'Master Willem of Byrgenwerth', isCorrect: false),
+      Option(code: 'D', text: 'Martyr Logarius', isCorrect: false),
+    ],
+    solution: 'Laurence, The First Vicar',
+  ),
+  Question(
+    text: 'What are the two upper echelons of the Healing Church?',
+    options: [
+      Option(
+          code: 'A',
+          text: 'The Choir and the School of Mensis',
+          isCorrect: true),
+      Option(
+          code: 'B',
+          text: 'The Choir and Byrgenwerth College',
+          isCorrect: false),
+      Option(
+          code: 'C',
+          text: 'The School of Mensis and Byrgenwerth College',
+          isCorrect: false)
+    ],
+    solution: 'The Choir and the School of Mensis',
+  ),
+  Question(
+    text: 'What was founded inside the Isz Chalice?',
+    options: [
+      Option(
+          code: 'A', text: 'Yharnam, the Pthumerian Queen', isCorrect: false),
+      Option(
+          code: 'B', text: 'Ebrietas, Daughter of the Cosmos', isCorrect: true),
+      Option(code: 'C', text: 'Rom, the Vacuous Spider', isCorrect: false),
+      Option(code: 'D', text: 'Ludwig, the Accursed', isCorrect: false)
+    ],
+    solution: 'Ebrietas, Daughter of the Cosmos',
+  ),
+  Question(
+    text: 'Is the Cleric Beast an optional boss?',
+    options: [
+      Option(code: 'A', text: 'No', isCorrect: false),
+      Option(code: 'B', text: 'Yes', isCorrect: true),
+    ],
+    solution: 'Yes',
+  ),
+  Question(
+    text:
+        'What kind of poison does the Blood Starved Beast spouts from its body?',
+    options: [
+      Option(code: 'A', text: 'Rapid Poison', isCorrect: false),
+      Option(code: 'B', text: 'Slow Poison', isCorrect: true),
+    ],
+    solution: 'Slow Poison',
+  ),
+  Question(
+    text: 'Can you befriend hunter Djura?',
+    options: [
+      Option(code: 'A', text: 'Yes', isCorrect: true),
+      Option(code: 'B', text: 'No', isCorrect: false),
+    ],
+    solution: 'Yes. Long live friendships!',
+  ),
 ];
+
+final Sekiro_questions = [];
 
 final PokemonBlackWhite_questions = [
   //  ---------------------1
