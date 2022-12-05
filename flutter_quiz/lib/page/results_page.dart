@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_quiz/data/global_variables.dart';
 import 'package:flutter_quiz/page/categoryViewer_page.dart';
 import 'package:flutter_quiz/page/home_page.dart';
+import 'package:flutter_quiz/page/main_page.dart';
 
 import '../classes/category.dart';
 
@@ -102,7 +103,7 @@ class ResultsPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Exit Quiz",
+                      "Go fuck yourself",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -118,7 +119,14 @@ class ResultsPage extends StatelessWidget {
 
   PreferredSizeWidget buildAppBar(context) => AppBar(
         automaticallyImplyLeading: false,
-        title: Text(categor.categoryName),
+        leading: BackButton(
+            color: Colors.white,
+            onPressed: (() => Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                ))),
+        title: const Text("Exit Quiz"),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
