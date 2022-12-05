@@ -121,6 +121,64 @@ class _CategoryPageState extends State<CategoryPage> {
         question?.selectedOption = option;
         answeredQuestions++;
         if (question?.selectedOption.isCorrect == true) correctAnswers++;
+        if (answeredQuestions == TOTAL_QUESTIONS) {
+          widget.category.correctAnswer = correctAnswers;
+          showModalBottomSheet<void>(
+            isDismissible: true,
+            enableDrag: false,
+            backgroundColor: Color.fromARGB(0, 1, 1, 1),
+            context: context,
+            builder: (BuildContext context) {
+              return GestureDetector(
+                onTap: () => Navigator.pop(context),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: themeColors,
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Congratulations!",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 35,
+                            color: Colors.white),
+                      ),
+                      SizedBox(height: 15),
+                      ImageIcon(
+                        AssetImage("assets/party-popper.png"),
+                        color: Colors.white,
+                        size: 60,
+                      ),
+                      SizedBox(height: 15),
+                      const Text(
+                        "You completed the quiz!",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25,
+                            color: Colors.white),
+                      ),
+                      SizedBox(height: 35),
+                      const Text(
+                        "You can access results on the top bar",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        }
         // Play button sound
         if (option.isCorrect) {
           player.play('Selector_Button_Sound_Forward.mp3');
