@@ -17,6 +17,8 @@ class ResultsPage extends StatelessWidget {
   final int totalQuestions;
   final Category categor;
   final confetti = ConfettiController();
+  String freakometerResult = "placeholder";
+  int confettiParticles = 0;
   ResultsPage(
       {Key? key,
       required this.success,
@@ -27,7 +29,53 @@ class ResultsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     categor.correctAnswer = success;
-    confetti.play();
+    switch (success) {
+      case 0:
+        freakometerResult =
+            "Have you even heard about ${categor.categoryName}?";
+        break;
+      case 1:
+        freakometerResult = "Have you even played ${categor.categoryName}?";
+        break;
+      case 2:
+        freakometerResult =
+            "Having watched an stream of the game is not enough my friend...";
+        break;
+      case 3:
+        freakometerResult =
+            "A YouTube walkthrough video won´t do the work here";
+        break;
+      case 4:
+        freakometerResult = "Maybe next time my friend";
+        break;
+      case 5:
+        freakometerResult =
+            "At least you bought a copy of the game and played it...";
+        break;
+      case 6:
+        freakometerResult = "You kind of liked ${categor.categoryName}";
+        break;
+      case 7:
+        freakometerResult = "Okey we get it, you like ${categor.categoryName}";
+        break;
+      case 8:
+        freakometerResult =
+            "You have insight about ${categor.categoryName}. Too much time on the wiki maybe?";
+        break;
+      case 9:
+        freakometerResult = "Do you even play other games?";
+        break;
+      case 10:
+        freakometerResult =
+            "Congratulations. You are a ${categor.categoryName} freak";
+        break;
+    }
+    if (success < 7)
+      confettiParticles = 5;
+    else if (success >= 7 && success <= 9)
+      confettiParticles = 15;
+    else if (success > 9) confettiParticles = 30;
+    if (success > 4) confetti.play();
     return Scaffold(
       appBar: buildAppBar(context),
       body: ListView(
@@ -45,37 +93,55 @@ class ResultsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             ConfettiWidget(
+              emissionFrequency: 0.01,
               confettiController: confetti,
               shouldLoop: false,
               blastDirection: pi / 2,
-              numberOfParticles: 30,
+              blastDirectionality: BlastDirectionality.explosive,
+              numberOfParticles: confettiParticles,
             ),
             SfRadialGauge(
               enableLoadingAnimation: true,
               animationDuration: 2500,
               axes: <RadialAxis>[
                 RadialAxis(
+                  showTicks: true,
+                  tickOffset: 0.00,
+                  labelOffset: 0.1,
+                  offsetUnit: GaugeSizeUnit.factor,
+                  axisLabelStyle: GaugeTextStyle(
+                    color: Colors.black54,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                   radiusFactor: 0.95,
                   canScaleToFit: true,
                   axisLineStyle: AxisLineStyle(
-                      thickness: 10, cornerStyle: CornerStyle.bothCurve),
+                      thickness: 15, cornerStyle: CornerStyle.bothFlat),
                   startAngle: 160,
                   endAngle: 20,
                   minimum: 0,
                   maximum: 10,
+                  interval: 1,
                   showLastLabel: true,
                   pointers: <GaugePointer>[
                     NeedlePointer(value: success.toDouble()),
                     RangePointer(
                       value: success.toDouble(),
-                      width: 0.07,
+                      width: 0.1,
                       sizeUnit: GaugeSizeUnit.factor,
-                      gradient: SweepGradient(colors: <MaterialColor>[
-                        themeColors.first,
-                        themeColors.last
+                      gradient: SweepGradient(colors: <Color>[
+                        Colors.black,
+                        Colors.red,
+                        Colors.orange,
+                        Colors.green,
+                        Colors.blue
                       ], stops: <double>[
+                        0.0,
                         0.25,
-                        0.75
+                        0.5,
+                        0.75,
+                        1.0
                       ]),
                     )
                   ],
@@ -94,12 +160,26 @@ class ResultsPage extends StatelessWidget {
               title: GaugeTitle(
                 text: 'Freakometer',
                 textStyle:
-                    TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                    TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
                 borderWidth: 10,
               ),
             ),
 
-            SizedBox(height: 100),
+            SizedBox(height: 70),
+            Container(
+              padding: EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              //no se determina el tamaño para que se adecue al flexible container
+              child: Text(
+                freakometerResult,
+                style: TextStyle(fontSize: 20),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(height: 30),
             //boton de play quiz y estadisticas,
             //texto de sinopsis
             GestureDetector(
@@ -143,7 +223,7 @@ class ResultsPage extends StatelessWidget {
             color: Colors.white,
             onPressed: (() => Navigator.of(context).pushReplacement(
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => MainPage(),
                   ),
                 ))),
         title: const Text("Exit Quiz"),
@@ -158,65 +238,3 @@ class ResultsPage extends StatelessWidget {
         ),
       );
 }
-/*
-Column(
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
-                  height: MediaQuery.of(context).size.height * 0.1,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(0, 255, 255, 255),
-                    borderRadius: BorderRadius.circular(15),
-                    border: Border.all(color: themeColors.first),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "${success}/${totalQuestions}",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 30,
-                            color: themeColors.last),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Divider(
-              thickness: 2,
-              color: Color.fromARGB(255, 70, 70, 70),
-            ),
-
-            GestureDetector(
-              onTap: () => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ),
-              ),
-              child: Container(
-                width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
-                height: MediaQuery.of(context).size.height * 0.1,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: themeColors,
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Go fuck yourself",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                  ],
-                ),
-              ),
-            )*/

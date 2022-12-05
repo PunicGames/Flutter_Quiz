@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
-          title: Text('Videogame Quiz'),
+          title: Text('Freakometer'),
           centerTitle: true,
 
           //decoracion de la parte de arriba de la pagina

@@ -756,9 +756,9 @@ final Sekiro_questions = [
         'How many years into the past are you transported in the Hirata State level?',
     options: [
       Option(code: 'A', text: '1 year', isCorrect: false),
-      Option(code: 'B', text: '2 year', isCorrect: false),
-      Option(code: 'C', text: '3 year', isCorrect: true),
-      Option(code: 'D', text: '4 year', isCorrect: false),
+      Option(code: 'B', text: '2 years', isCorrect: false),
+      Option(code: 'C', text: '3 years', isCorrect: true),
+      Option(code: 'D', text: '4 years', isCorrect: false),
     ],
     solution: 'Three years',
   ),
