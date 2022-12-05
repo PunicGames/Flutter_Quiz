@@ -399,7 +399,7 @@ final Bloodborne_questions = [
   ),
   Question(
     text:
-        'What famous writer works is the atmosphere of Bloodborne greatly inspired by?',
+        'What famous writer is the atmosphere of Bloodborne greatly inspired by?',
     options: [
       Option(code: 'A', text: 'Edgar Allan Poe', isCorrect: false),
       Option(code: 'B', text: 'Howard Philip Lovecraft', isCorrect: true),
@@ -680,7 +680,7 @@ final Bloodborne_questions = [
     solution: 'The Choir and the School of Mensis',
   ),
   Question(
-    text: 'What was founded inside the Isz Chalice?',
+    text: 'What was found inside the Isz Chalice?',
     options: [
       Option(
           code: 'A', text: 'Yharnam, the Pthumerian Queen', isCorrect: false),
@@ -923,7 +923,7 @@ final Sekiro_questions = [
       Option(
           code: 'D', text: 'By messing with his son Roberto', isCorrect: false),
     ],
-    solution: 'By pushing him into the void. This is Sparta!',
+    solution: 'By pushing him into the void. ROBERRRRRRRTTT',
   ),
   //--------------------------18
   Question(
@@ -931,7 +931,7 @@ final Sekiro_questions = [
     options: [
       Option(
           code: 'A',
-          text: 'Impossible. There were no guns at that time',
+          text: 'Impossible. There were no guns at the time',
           isCorrect: false),
       Option(
           code: 'B',

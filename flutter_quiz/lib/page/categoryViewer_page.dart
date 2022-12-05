@@ -160,8 +160,9 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        widget.category.correctAnswer.toString() +
-                            " / " +
+                        "Score: " +
+                            widget.category.correctAnswer.toString() +
+                            "/" +
                             10.toString(),
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
