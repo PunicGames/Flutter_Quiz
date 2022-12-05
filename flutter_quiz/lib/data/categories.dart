@@ -119,4 +119,18 @@ final categories = <Category>[
       videoUrl: 'https://youtu.be/GQyWIur03aw',
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
+  Category(
+      questions: Civilization_VI_questions,
+      categoryName: 'Civilization VI',
+      imageUrl: 'assets/CivilizationVI.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=5KdE0p2joJw',
+      description:
+          "Civilization 6 is a 4X game in which you must lead your civilization to glory"),
+  Category(
+      questions: League_Of_Legends_questions,
+      categoryName: 'League Of Legends',
+      imageUrl: 'assets/Lol.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=mDYqT0_9VR4',
+      description:
+          "League Of Legends is a 5v5 MOBA where you have to destroy the enemy´s nexus"),
 ];

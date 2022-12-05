@@ -182,6 +182,7 @@ class ResultsPage extends StatelessWidget {
             SizedBox(height: 30),
             //boton de play quiz y estadisticas,
             //texto de sinopsis
+
             GestureDetector(
               onTap: () => Navigator.of(context).pushReplacement(
                 MaterialPageRoute(

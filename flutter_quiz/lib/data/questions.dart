@@ -2521,3 +2521,366 @@ final worldOfWarcraft_Classic_en = [
     solution: "",
   ),
 ];
+
+final Civilization_VI_questions = [
+  // #1
+  Question(
+    text: 'How many different eras are there in the base game?',
+    options: [
+      Option(code: 'A', text: "6", isCorrect: false),
+      Option(code: 'B', text: '7', isCorrect: false),
+      Option(code: 'C', text: '8', isCorrect: true),
+      Option(code: 'D', text: '9', isCorrect: false),
+    ],
+    solution: "8",
+  ),
+
+  // #2
+  Question(
+    text: 'In which era can you build the Pyramids?',
+    options: [
+      Option(code: 'A', text: "Ancient Era", isCorrect: true),
+      Option(code: 'B', text: 'Classical Era', isCorrect: false),
+      Option(code: 'C', text: 'Medieval Era', isCorrect: false),
+      Option(code: 'D', text: 'Renaissance Era', isCorrect: false),
+    ],
+    solution: "Ancient Era",
+  ),
+
+  // #3
+  Question(
+    text:
+        'Which tile grants adjacency bonuses to the district Campus Observatory in the base game?',
+    options: [
+      Option(code: 'A', text: "Mountain", isCorrect: false),
+      Option(code: 'B', text: 'Rainforest', isCorrect: false),
+      Option(code: 'C', text: 'Great Barrier Reef', isCorrect: false),
+      Option(code: 'D', text: 'All', isCorrect: true),
+    ],
+    solution: "All",
+  ),
+
+  // #4
+  Question(
+    text: 'Which leader is the first to unlock the spies?',
+    options: [
+      Option(code: 'A', text: "Victoria", isCorrect: false),
+      Option(code: 'B', text: 'Catherine de Medici', isCorrect: true),
+      Option(code: 'C', text: 'Cleopatra', isCorrect: false),
+      Option(code: 'D', text: 'Trajan', isCorrect: false),
+    ],
+    solution: "Catherine de Medici",
+  ),
+
+  // #5
+  Question(
+    text: 'In which era can you build the Eiffel Tower?',
+    options: [
+      Option(code: 'A', text: "Renaissence Era", isCorrect: false),
+      Option(code: 'B', text: 'Industrial Era', isCorrect: false),
+      Option(code: 'C', text: 'Modern Era', isCorrect: true),
+      Option(code: 'D', text: 'Atomic Era', isCorrect: false),
+    ],
+    solution: "Modern Era",
+  ),
+
+  // #6
+  Question(
+    text: 'In which era can you build the Oxford University?',
+    options: [
+      Option(code: 'A', text: "Industrial Era", isCorrect: true),
+      Option(code: 'B', text: 'Modern Era', isCorrect: false),
+      Option(code: 'C', text: 'Atomic Era', isCorrect: false),
+      Option(code: 'D', text: 'Information Era', isCorrect: false),
+    ],
+    solution: "Industrial Era",
+  ),
+
+  // #7
+  Question(
+    text:
+        'Which tile grants adjacency bonuses to the district Industrial Zone in the base game?',
+    options: [
+      Option(code: 'A', text: "Quarry", isCorrect: true),
+      Option(code: 'B', text: 'Lumber Mill', isCorrect: false),
+      Option(code: 'C', text: 'Fort', isCorrect: false),
+      Option(code: 'D', text: 'All', isCorrect: false),
+    ],
+    solution: "Quarry",
+  ),
+
+  // #8
+  Question(
+    text:
+        'Which tile grants adjacency bonuses to the district Commercial Hub in the base game?',
+    options: [
+      Option(code: 'A', text: "Mountain", isCorrect: false),
+      Option(code: 'B', text: 'River', isCorrect: true),
+      Option(code: 'C', text: 'Rainforest', isCorrect: false),
+      Option(code: 'D', text: 'Forest', isCorrect: false),
+    ],
+    solution: "River",
+  ),
+
+  // #9
+  Question(
+    text: 'Which unit is the evolution of Cavalry?',
+    options: [
+      Option(code: 'A', text: "Courser", isCorrect: false),
+      Option(code: 'B', text: 'Horseman', isCorrect: false),
+      Option(code: 'C', text: 'Helicopter', isCorrect: true),
+      Option(code: 'D', text: 'Any', isCorrect: false),
+    ],
+    solution: "Helicopter",
+  ),
+
+  // #10
+  Question(
+    text: 'Which unit is the evolution of Trebuchet?',
+    options: [
+      Option(code: 'A', text: "Bombard", isCorrect: true),
+      Option(code: 'B', text: 'Artillery', isCorrect: false),
+      Option(code: 'C', text: 'Field Cannon', isCorrect: false),
+      Option(code: 'D', text: 'Any', isCorrect: false),
+    ],
+    solution: "Bombard",
+  ),
+
+  // #11
+  Question(
+    text: 'Which unit is the evolution of Gallery?',
+    options: [
+      Option(code: 'A', text: "Caravel", isCorrect: true),
+      Option(code: 'B', text: 'Quadrirreme', isCorrect: false),
+      Option(code: 'C', text: 'Frigate', isCorrect: false),
+      Option(code: 'D', text: 'Any', isCorrect: false),
+    ],
+    solution: "Caravel",
+  ),
+
+  // #12
+  Question(
+    text: 'Which civilization is able to train the special unit Consquistador?',
+    options: [
+      Option(code: 'A', text: "Polish", isCorrect: false),
+      Option(code: 'B', text: 'Persian', isCorrect: false),
+      Option(code: 'C', text: 'Spanish', isCorrect: true),
+      Option(code: 'D', text: 'English', isCorrect: false),
+    ],
+    solution: "Spanish",
+  ),
+
+  // #13
+  Question(
+    text: 'Which civilization is able to build the special district Bath?',
+    options: [
+      Option(code: 'A', text: "Roman", isCorrect: true),
+      Option(code: 'B', text: 'Persian', isCorrect: false),
+      Option(code: 'C', text: 'Egyptian', isCorrect: false),
+      Option(code: 'D', text: 'Arabian', isCorrect: false),
+    ],
+    solution: "Roman",
+  ),
+
+  // #14
+  Question(
+    text: 'Which technology outdates Walls and unlocks Urban Defenses',
+    options: [
+      Option(code: 'A', text: "Steel", isCorrect: true),
+      Option(code: 'B', text: 'Combustion', isCorrect: false),
+      Option(code: 'C', text: 'Electricity', isCorrect: false),
+      Option(code: 'D', text: 'Radio', isCorrect: false),
+    ],
+    solution: "Steel",
+  ),
+
+  // #15
+  Question(
+    text: 'Where can you launch a Nuclear Device from?',
+    options: [
+      Option(code: 'A', text: "Bomber Aircraft", isCorrect: true),
+      Option(code: 'B', text: 'Airport', isCorrect: false),
+      Option(code: 'C', text: 'Rocket Artillery', isCorrect: false),
+      Option(code: 'D', text: 'All', isCorrect: false),
+    ],
+    solution: "Bomber Aircraft",
+  ),
+];
+
+final League_Of_Legends_questions = [
+  // #1
+  Question(
+    text: 'How many champions were there at the beginning in lol',
+    options: [
+      Option(code: 'A', text: "17", isCorrect: true),
+      Option(code: 'B', text: '20', isCorrect: false),
+      Option(code: 'C', text: '23', isCorrect: false),
+      Option(code: 'D', text: '25', isCorrect: false),
+    ],
+    solution: "17",
+  ),
+
+  // #2
+  Question(
+    text: 'How many times can a player reroll champions in Aram?',
+    options: [
+      Option(code: 'A', text: "0", isCorrect: false),
+      Option(code: 'B', text: '1', isCorrect: false),
+      Option(code: 'C', text: '2', isCorrect: true),
+      Option(code: 'D', text: '3', isCorrect: false),
+    ],
+    solution: "2",
+  ),
+
+  // #3
+  Question(
+    text: 'Does Quicksilver Slash removes ignite effects?',
+    options: [
+      Option(code: 'A', text: "True", isCorrect: false),
+      Option(code: 'B', text: 'False', isCorrect: true),
+    ],
+    solution: "False",
+  ),
+
+  // #4
+  Question(
+    text: 'Does Cleanse removes Exhaust effects?',
+    options: [
+      Option(code: 'A', text: "True", isCorrect: true),
+      Option(code: 'B', text: 'False', isCorrect: false),
+    ],
+    solution: "True",
+  ),
+
+  // #5
+  Question(
+    text: 'Which of these champions is not from Noxus?',
+    options: [
+      Option(code: 'A', text: "Darius", isCorrect: false),
+      Option(code: 'B', text: 'Draven', isCorrect: false),
+      Option(code: 'C', text: 'Garen', isCorrect: true),
+      Option(code: 'D', text: 'Swain', isCorrect: false),
+    ],
+    solution: "Modern Era",
+  ),
+
+  // #6
+  Question(
+    text: 'Which of these champions is not from Bilgewater?',
+    options: [
+      Option(code: 'A', text: "Graves", isCorrect: false),
+      Option(code: 'B', text: 'Twisted Fate', isCorrect: false),
+      Option(code: 'C', text: 'Pyke', isCorrect: false),
+      Option(code: 'D', text: 'Kayn', isCorrect: true),
+    ],
+    solution: "Kayn",
+  ),
+
+  // #7
+  Question(
+    text: 'What is the name of kaisa´s w ability?',
+    options: [
+      Option(code: 'A', text: "Void Seeker", isCorrect: true),
+      Option(code: 'B', text: 'Icathian Seeker', isCorrect: false),
+      Option(code: 'C', text: 'Killer Instinct', isCorrect: false),
+      Option(code: 'D', text: 'Void Instinct', isCorrect: false),
+    ],
+    solution: "Void Seeker",
+  ),
+
+  // #8
+  Question(
+    text: 'How much gold does Doran´s Ring cost?',
+    options: [
+      Option(code: 'A', text: "500", isCorrect: false),
+      Option(code: 'B', text: '350', isCorrect: false),
+      Option(code: 'C', text: '400', isCorrect: true),
+      Option(code: 'D', text: '450', isCorrect: false),
+    ],
+    solution: "400",
+  ),
+
+  // #9
+  Question(
+    text: 'At what minute do the plates of the towers fall?',
+    options: [
+      Option(code: 'A', text: "10", isCorrect: false),
+      Option(code: 'B', text: '14', isCorrect: true),
+      Option(code: 'C', text: '18', isCorrect: false),
+      Option(code: 'D', text: '20', isCorrect: false),
+    ],
+    solution: "14",
+  ),
+
+  // #10
+  Question(
+    text: 'How many towers does each team have?',
+    options: [
+      Option(code: 'A', text: "8", isCorrect: false),
+      Option(code: 'B', text: '9', isCorrect: false),
+      Option(code: 'C', text: '10', isCorrect: false),
+      Option(code: 'D', text: '11', isCorrect: true),
+    ],
+    solution: "11",
+  ),
+
+  // #11
+  Question(
+    text: 'How many different weapons does Aphelios have?',
+    options: [
+      Option(code: 'A', text: "4", isCorrect: false),
+      Option(code: 'B', text: '5', isCorrect: true),
+      Option(code: 'C', text: '6', isCorrect: false),
+      Option(code: 'D', text: '7', isCorrect: false),
+    ],
+    solution: "5",
+  ),
+
+  // #12
+  Question(
+    text: 'Which of these champions does not use energy?',
+    options: [
+      Option(code: 'A', text: "Kennen", isCorrect: false),
+      Option(code: 'B', text: 'Akali', isCorrect: false),
+      Option(code: 'C', text: 'Kled', isCorrect: true),
+      Option(code: 'D', text: 'Zed', isCorrect: false),
+    ],
+    solution: "Kled",
+  ),
+
+  // #13
+  Question(
+    text: 'What champion can not buy boots?',
+    options: [
+      Option(code: 'A', text: "Cassiopeia", isCorrect: true),
+      Option(code: 'B', text: 'Nami', isCorrect: false),
+      Option(code: 'C', text: 'Kassadin', isCorrect: false),
+      Option(code: 'D', text: 'Anivia', isCorrect: false),
+    ],
+    solution: "Cassiopeia",
+  ),
+
+  // #14
+  Question(
+    text: 'How many trinkets can a player have placed at the same time',
+    options: [
+      Option(code: 'A', text: "1", isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: "3",
+  ),
+
+  // #15
+  Question(
+    text: 'How many diffrent summoner spells are there in Aram?',
+    options: [
+      Option(code: 'A', text: "7", isCorrect: false),
+      Option(code: 'B', text: '8', isCorrect: false),
+      Option(code: 'C', text: '9', isCorrect: true),
+      Option(code: 'D', text: '10', isCorrect: false),
+    ],
+    solution: "9",
+  ),
+];
