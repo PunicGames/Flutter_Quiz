@@ -12,7 +12,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   final navigationKey = GlobalKey<CurvedNavigationBarState>();
-  int index = 1;
+  int index = indexPage;
   final player = AudioCache();
 
   final screens = [
@@ -48,6 +48,7 @@ class _MainPageState extends State<MainPage> {
           items: items,
           onTap: (index) => setState(() {
             this.index = index;
+            indexPage = index;
             player.play('Selector_Button_Sound_Forward.mp3');
           }),
         ),
