@@ -56,6 +56,20 @@ final categories = <Category>[
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
+      questions: Civilization_VI_questions,
+      categoryName: 'Civilization VI',
+      imageUrl: 'assets/CivilizationVI.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=5KdE0p2joJw',
+      description:
+          "Originally created by legendary game designer Sid Meier, Civilization is a turn-based strategy game in which you attempt to build an empire to stand the test of time. Become Ruler of the World by establishing and leading a civilization from the Stone Age to the Information Age. Wage war, conduct diplomacy, advance your culture, and go head-to-head with history’s greatest leaders as you attempt to build the greatest civilization the world has ever known."),
+  Category(
+      questions: League_Of_Legends_questions,
+      categoryName: 'League Of Legends',
+      imageUrl: 'assets/Lol.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=mDYqT0_9VR4',
+      description:
+          "League of Legends is a multiplayer online battle arena (MOBA) game in which the player controls a character with a set of unique abilities from an isometric perspective. As of 22 September 2022, there are 161 champions available to play. Over the course of a match, champions gain levels by accruing experience points (XP) through killing enemies."),
+  Category(
       questions: PokemonBlackWhite_questions,
       categoryName: 'Pokemon Black and White',
       imageUrl: 'assets/PokemonBlackWhite_Image.jpg',
@@ -72,9 +86,9 @@ final categories = <Category>[
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
       questions: GodOfWarIV_questions,
+      videoUrl: 'https://youtu.be/GQyWIur03aw',
       categoryName: 'God of War IV',
       imageUrl: 'assets/GodOfWarIV_Image.jpg',
-      videoUrl: 'https://youtu.be/GQyWIur03aw',
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
   Category(
@@ -119,18 +133,4 @@ final categories = <Category>[
       videoUrl: 'https://youtu.be/GQyWIur03aw',
       description:
           "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd"),
-  Category(
-      questions: Civilization_VI_questions,
-      categoryName: 'Civilization VI',
-      imageUrl: 'assets/CivilizationVI.jpg',
-      videoUrl: 'https://www.youtube.com/watch?v=5KdE0p2joJw',
-      description:
-          "Civilization 6 is a 4X game in which you must lead your civilization to glory"),
-  Category(
-      questions: League_Of_Legends_questions,
-      categoryName: 'League Of Legends',
-      imageUrl: 'assets/Lol.jpg',
-      videoUrl: 'https://www.youtube.com/watch?v=mDYqT0_9VR4',
-      description:
-          "League Of Legends is a 5v5 MOBA where you have to destroy the enemy´s nexus"),
 ];

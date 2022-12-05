@@ -10,7 +10,7 @@ class FavoritePage extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
-          title: Text('Favorite Quiz'),
+          title: Text('My favourites'),
           centerTitle: true,
 
           //decoracion de la parte de arriba de la pagina
