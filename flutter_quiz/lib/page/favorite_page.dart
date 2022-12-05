@@ -8,8 +8,9 @@ class FavoritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           elevation: 0,
-          title: Text('Videogame Quiz'),
+          title: Text('Favorite Quiz'),
           centerTitle: true,
 
           //decoracion de la parte de arriba de la pagina

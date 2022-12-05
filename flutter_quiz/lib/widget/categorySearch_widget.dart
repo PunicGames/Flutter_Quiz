@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../data/categories.dart';
+import '../data/favorites.dart';
 import '../classes/category.dart';
 import '../page/categoryViewer_page.dart';
 import 'category_header_widget.dart';
