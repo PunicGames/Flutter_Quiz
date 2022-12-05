@@ -37,7 +37,9 @@ class _CategoryPageState extends State<CategoryPage> {
     //Cloning not referencing !!!
     List<Question> auxList = List<Question>.from(widget.category.questions);
     for (int i = 0; i < TOTAL_QUESTIONS; i++) {
-      questionsPool.add(auxList.removeAt(rng.nextInt(auxList.length)));
+      Question q = auxList.removeAt(rng.nextInt(auxList.length));
+      questionsPool.add(
+          Question(text: q.text, options: q.options, solution: q.solution));
     }
     //question = widget.category.questions.first;
     question = questionsPool.first;

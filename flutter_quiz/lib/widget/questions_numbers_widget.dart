@@ -44,8 +44,7 @@ class QuestionNumbersWidget extends StatelessWidget {
       required bool isSelected,
       required bool isCorrect,
       required bool isAnswered}) {
-    final correctionColor =
-        isCorrect ? Colors.green.shade300 : Colors.red.shade300;
+    final correctionColor = isCorrect ? Colors.green : Colors.red;
     final baseColor = isAnswered ? correctionColor : Colors.white;
     final color = isSelected ? Colors.orange.shade300 : baseColor;
 
