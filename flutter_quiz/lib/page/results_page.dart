@@ -122,12 +122,13 @@ class ResultsPage extends StatelessWidget {
   PreferredSizeWidget buildAppBar(context) => AppBar(
         automaticallyImplyLeading: false,
         leading: BackButton(
-            color: Colors.white,
-            onPressed: (() => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => HomePage(),
-                  ),
-                ))),
+          color: Colors.white,
+          onPressed: (() => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => HomePage(),
+                ),
+              )),
+        ),
         title: const Text("Exit Quiz"),
         flexibleSpace: Container(
           decoration: BoxDecoration(
