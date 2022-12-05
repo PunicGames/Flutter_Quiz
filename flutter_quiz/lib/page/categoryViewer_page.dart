@@ -92,7 +92,10 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                 ? const Icon(Icons.favorite)
                 : Icon(Icons.favorite_border)),
             color: Colors.white,
-            onPressed: toggleFavorite,
+            onPressed: () {
+              toggleFavorite();
+              setPreferencesIsFavorite();
+            },
           )
         ],
       );
@@ -189,16 +192,21 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
       );
 
   void toggleFavorite() {
+    print(widget.category.isFavorite);
     setState(() {
       if (widget.category.isFavorite) {
         widget.category.isFavorite = false;
-        favorites.remove(widget.category);
       } else {
         widget.category.isFavorite = true;
-        favorites.add(widget.category);
       }
-
+      setPreferencesIsFavorite();
       player.play('Selector_Button_Sound_Forward.mp3');
     });
+  }
+
+  void setPreferencesIsFavorite() async {
+    preferences.setBool(widget.category.categoryName + "_isFavorite",
+        widget.category.isFavorite);
+    print(widget.category.isFavorite);
   }
 }

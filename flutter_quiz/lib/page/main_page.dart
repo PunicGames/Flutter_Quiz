@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz/data/categories.dart';
+import 'package:flutter_quiz/data/favorites.dart';
 import 'package:flutter_quiz/data/global_variables.dart';
 import 'package:flutter_quiz/page/home_page.dart';
 import 'package:flutter_quiz/page/settings_page.dart';
@@ -13,8 +14,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  late SharedPreferences preferences;
-
   @override
   void initState() {
     super.initState();
@@ -27,17 +26,16 @@ class _MainPageState extends State<MainPage> {
   Future init() async {
     preferences = await SharedPreferences.getInstance();
     print("inicializado");
+    favorites = [];
 
     for (int i = 0; i < categories.length; i++) {
-      if (preferences.getBool(categories[i].categoryName + "_isFavorite") ==
-          null) {
-        print(categories[i].categoryName + "_isFavorite" + ": es null");
-      } else {
-        print(categories[i].categoryName + "_isFavorite" + ": no es null");
-      }
       categories[i].isFavorite = (preferences.getBool("_isFavorite") == null
-          ? false
-          : preferences.getBool("_isFavorite")!);
+          ? preferences.getBool(categories[i].categoryName + "_isFavorite")!
+          : false);
+
+      //se añade a la lista de favoritos
+      if (categories[i].isFavorite) favorites.add(categories[i]);
+      print("hey jude");
     }
   }
 
@@ -59,20 +57,6 @@ class _MainPageState extends State<MainPage> {
       Icon(Icons.settings, size: 30),
     ];
 
-    /*
-    for (int i = 0; i < categories.length; i++) {
-      if (preferences.getBool(categories[i].categoryName + "_isFavorite") ==
-          null) {
-        print(categories[i].categoryName + "_isFavorite" + ": es null");
-      } else {
-        print(categories[i].categoryName + "_isFavorite" + ": no es null");
-      }
-      categories[i].isFavorite = (preferences.getBool("_isFavorite") == null
-          ? false
-          : preferences.getBool("_isFavorite")!);
-    }
-    */
-    print("for");
     return Scaffold(
       //extendBody: true,
       body: screens[index],
