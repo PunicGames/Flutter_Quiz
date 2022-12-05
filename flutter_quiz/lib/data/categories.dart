@@ -1,9 +1,7 @@
 import '../data/questions.dart';
 import '../classes/category.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_quiz/data/global_variables.dart';
 
-final categories = <Category>[
+List<Category> categories = <Category>[
   Category(
     questions: GodOfWarIV_questions,
     categoryName: 'God of War IV',
