@@ -6,8 +6,8 @@ class Category {
   final String imageUrl;
   final String videoUrl;
   final String description;
-  int correctAnswer = 0;
-  bool isFavorite = false;
+  int correctAnswer;
+  bool isFavorite;
 
   Category({
     required this.imageUrl,
@@ -15,5 +15,7 @@ class Category {
     required this.categoryName,
     required this.videoUrl,
     required this.description,
+    required this.correctAnswer,
+    required this.isFavorite,
   });
 }
