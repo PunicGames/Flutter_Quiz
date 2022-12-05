@@ -2706,3 +2706,181 @@ final Civilization_VI_questions = [
     solution: "Bomber Aircraft",
   ),
 ];
+
+final League_Of_Legends_questions = [
+  // #1
+  Question(
+    text: 'How many champions were there at the beginning in lol',
+    options: [
+      Option(code: 'A', text: "17", isCorrect: true),
+      Option(code: 'B', text: '20', isCorrect: false),
+      Option(code: 'C', text: '23', isCorrect: false),
+      Option(code: 'D', text: '25', isCorrect: false),
+    ],
+    solution: "17",
+  ),
+
+  // #2
+  Question(
+    text: 'How many times can a player reroll champions in Aram?',
+    options: [
+      Option(code: 'A', text: "0", isCorrect: false),
+      Option(code: 'B', text: '1', isCorrect: false),
+      Option(code: 'C', text: '2', isCorrect: true),
+      Option(code: 'D', text: '3', isCorrect: false),
+    ],
+    solution: "2",
+  ),
+
+  // #3
+  Question(
+    text: 'Does Quicksilver Slash removes ignite effects?',
+    options: [
+      Option(code: 'A', text: "True", isCorrect: false),
+      Option(code: 'B', text: 'False', isCorrect: true),
+    ],
+    solution: "False",
+  ),
+
+  // #4
+  Question(
+    text: 'Does Cleanse removes Exhaust effects?',
+    options: [
+      Option(code: 'A', text: "True", isCorrect: true),
+      Option(code: 'B', text: 'False', isCorrect: false),
+    ],
+    solution: "True",
+  ),
+
+  // #5
+  Question(
+    text: 'Which of these champions is not from Noxus?',
+    options: [
+      Option(code: 'A', text: "Darius", isCorrect: false),
+      Option(code: 'B', text: 'Draven', isCorrect: false),
+      Option(code: 'C', text: 'Garen', isCorrect: true),
+      Option(code: 'D', text: 'Swain', isCorrect: false),
+    ],
+    solution: "Modern Era",
+  ),
+
+  // #6
+  Question(
+    text: 'Which of these champions is not from Bilgewater?',
+    options: [
+      Option(code: 'A', text: "Graves", isCorrect: false),
+      Option(code: 'B', text: 'Twisted Fate', isCorrect: false),
+      Option(code: 'C', text: 'Pyke', isCorrect: false),
+      Option(code: 'D', text: 'Kayn', isCorrect: true),
+    ],
+    solution: "Kayn",
+  ),
+
+  // #7
+  Question(
+    text: 'What is the name of kaisa´s w ability?',
+    options: [
+      Option(code: 'A', text: "Void Seeker", isCorrect: true),
+      Option(code: 'B', text: 'Icathian Seeker', isCorrect: false),
+      Option(code: 'C', text: 'Killer Instinct', isCorrect: false),
+      Option(code: 'D', text: 'Void Instinct', isCorrect: false),
+    ],
+    solution: "Void Seeker",
+  ),
+
+  // #8
+  Question(
+    text: 'How much gold does Doran´s Ring cost?',
+    options: [
+      Option(code: 'A', text: "500", isCorrect: false),
+      Option(code: 'B', text: '350', isCorrect: false),
+      Option(code: 'C', text: '400', isCorrect: true),
+      Option(code: 'D', text: '450', isCorrect: false),
+    ],
+    solution: "400",
+  ),
+
+  // #9
+  Question(
+    text: 'At what minute do the plates of the towers fall?',
+    options: [
+      Option(code: 'A', text: "10", isCorrect: false),
+      Option(code: 'B', text: '14', isCorrect: true),
+      Option(code: 'C', text: '18', isCorrect: false),
+      Option(code: 'D', text: '20', isCorrect: false),
+    ],
+    solution: "14",
+  ),
+
+  // #10
+  Question(
+    text: 'How many towers does each team have?',
+    options: [
+      Option(code: 'A', text: "8", isCorrect: false),
+      Option(code: 'B', text: '9', isCorrect: false),
+      Option(code: 'C', text: '10', isCorrect: false),
+      Option(code: 'D', text: '11', isCorrect: true),
+    ],
+    solution: "11",
+  ),
+
+  // #11
+  Question(
+    text: 'How many different weapons does Aphelios have?',
+    options: [
+      Option(code: 'A', text: "4", isCorrect: false),
+      Option(code: 'B', text: '5', isCorrect: true),
+      Option(code: 'C', text: '6', isCorrect: false),
+      Option(code: 'D', text: '7', isCorrect: false),
+    ],
+    solution: "5",
+  ),
+
+  // #12
+  Question(
+    text: 'Which of these champions does not use energy?',
+    options: [
+      Option(code: 'A', text: "Kennen", isCorrect: false),
+      Option(code: 'B', text: 'Akali', isCorrect: false),
+      Option(code: 'C', text: 'Kled', isCorrect: true),
+      Option(code: 'D', text: 'Zed', isCorrect: false),
+    ],
+    solution: "Kled",
+  ),
+
+  // #13
+  Question(
+    text: 'What champion can not buy boots?',
+    options: [
+      Option(code: 'A', text: "Cassiopeia", isCorrect: true),
+      Option(code: 'B', text: 'Nami', isCorrect: false),
+      Option(code: 'C', text: 'Kassadin', isCorrect: false),
+      Option(code: 'D', text: 'Anivia', isCorrect: false),
+    ],
+    solution: "Cassiopeia",
+  ),
+
+  // #14
+  Question(
+    text: 'How many trinkets can a player have placed at the same time',
+    options: [
+      Option(code: 'A', text: "1", isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: true),
+      Option(code: 'D', text: '4', isCorrect: false),
+    ],
+    solution: "3",
+  ),
+
+  // #15
+  Question(
+    text: 'How many diffrent summoner spells are there in Aram?',
+    options: [
+      Option(code: 'A', text: "7", isCorrect: false),
+      Option(code: 'B', text: '8', isCorrect: false),
+      Option(code: 'C', text: '9', isCorrect: true),
+      Option(code: 'D', text: '10', isCorrect: false),
+    ],
+    solution: "9",
+  ),
+];
