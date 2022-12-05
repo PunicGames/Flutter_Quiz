@@ -126,7 +126,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
               children: [
                 //boton de quiz
                 GestureDetector(
-                  onTap: () => Navigator.of(context).push(
+                  onTap: () => Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
                       builder: (context) =>
                           CategoryPage(category: widget.category),

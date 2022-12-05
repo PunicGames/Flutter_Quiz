@@ -53,7 +53,7 @@ class ResultsPage extends StatelessWidget {
             "At least you bought a copy of the game and played it...";
         break;
       case 6:
-        freakometerResult = "You kind of liked ${categor.categoryName}";
+        freakometerResult = "You kind of like ${categor.categoryName}";
         break;
       case 7:
         freakometerResult = "Okey we get it, you like ${categor.categoryName}";
