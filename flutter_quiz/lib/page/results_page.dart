@@ -158,7 +158,7 @@ class ResultsPage extends StatelessWidget {
                 )
               ],
               title: GaugeTitle(
-                text: 'Freakometer',
+                text: 'FreakOMeter',
                 textStyle:
                     TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
                 borderWidth: 10,
