@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz/widget/categorySearchFavorite_widget.dart';
 import '../data/favorites.dart';
 import '../data/global_variables.dart';
-import '../widget/categorySearch_widget.dart';
 import '../widget/category_header_widget.dart';
 
 class FavoritePage extends StatelessWidget {
@@ -28,7 +28,8 @@ class FavoritePage extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                showSearch(context: context, delegate: CategorySearch());
+                showSearch(
+                    context: context, delegate: CategorySearchFavorite());
               },
             )
           ],

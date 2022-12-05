@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../data/categories.dart';
+import '../data/favorites.dart';
 import '../classes/category.dart';
 import '../page/categoryViewer_page.dart';
 import 'category_header_widget.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class CategorySearch extends SearchDelegate<Category?> {
+class CategorySearchFavorite extends SearchDelegate<Category?> {
   final List<Category> recentCategories = [];
   final player = AudioCache();
 
@@ -36,7 +36,7 @@ class CategorySearch extends SearchDelegate<Category?> {
   Widget buildResults(BuildContext context) => Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: categories
+          children: favorites
               .map((category) => CategoryHeaderWidget(category: category))
               .toList(),
         ),
@@ -46,7 +46,7 @@ class CategorySearch extends SearchDelegate<Category?> {
   Widget buildSuggestions(BuildContext context) {
     final suggestions = query.isEmpty
         ? recentCategories
-        : categories.where((category) {
+        : favorites.where((category) {
             final categoryLower = category.categoryName.toLowerCase();
             final queryLower = query.toLowerCase();
 

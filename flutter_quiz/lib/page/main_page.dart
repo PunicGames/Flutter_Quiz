@@ -5,6 +5,7 @@ import 'package:flutter_quiz/page/settings_page.dart';
 import 'package:flutter_quiz/page/favorite_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:audioplayers/audioplayers.dart';
+import '../data/global_variables.dart';
 
 class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
