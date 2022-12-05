@@ -52,13 +52,17 @@ class QuestionNumbersWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () => onClickedNumber(index),
       child: CircleAvatar(
-        backgroundColor: color,
-        child: Text(
-          '${index + 1}',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
+        radius: 21, //prueba para que tenga borde negro los circulos
+        backgroundColor: Color.fromARGB(255, 58, 58, 58),
+        child: CircleAvatar(
+          backgroundColor: color,
+          child: Text(
+            '${index + 1}',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
           ),
         ),
       ),

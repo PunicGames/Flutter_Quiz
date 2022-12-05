@@ -66,6 +66,33 @@ class _CategoryPageState extends State<CategoryPage> {
             ),
           ),
         ),
+        actions: [
+          (answeredQuestions == TOTAL_QUESTIONS
+              ? FloatingActionButton.extended(
+                  label: const Text(
+                    "Results",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      letterSpacing: -0.2,
+                    ),
+                  ),
+                  icon: Icon(Icons.add_chart_rounded),
+                  backgroundColor: Color.fromARGB(0, 255, 255, 255),
+                  elevation: 0,
+                  highlightElevation: 0,
+                  onPressed: () => Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => ResultsPage(
+                        success: correctAnswers,
+                        totalQuestions: TOTAL_QUESTIONS,
+                        categor: widget.category,
+                      ),
+                    ),
+                  ),
+                )
+              : Container()),
+        ],
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(80),
           child: Container(
@@ -99,6 +126,8 @@ class _CategoryPageState extends State<CategoryPage> {
           player.play('Selector_Button_Sound_Backwards.mp3');
         }
       });
+
+      /*
       if (answeredQuestions == TOTAL_QUESTIONS) {
         showModalBottomSheet<void>(
           isDismissible: false,
@@ -115,14 +144,15 @@ class _CategoryPageState extends State<CategoryPage> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     GestureDetector(
-                      onTap: () => Navigator.of(context)
-                          .pushReplacement(MaterialPageRoute(
-                        builder: (context) => ResultsPage(
-                          success: correctAnswers,
-                          totalQuestions: TOTAL_QUESTIONS,
-                          categor: widget.category,
+                      onTap: () => Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (context) => ResultsPage(
+                            success: correctAnswers,
+                            totalQuestions: TOTAL_QUESTIONS,
+                            categor: widget.category,
+                          ),
                         ),
-                      )),
+                      ),
                       child: Container(
                         width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
                         height: MediaQuery.of(context).size.height * 0.1,
@@ -153,7 +183,8 @@ class _CategoryPageState extends State<CategoryPage> {
             );
           },
         );
-        /*
+        
+        
         setState(() {
           List<Question> auxList =
               List<Question>.from(widget.category.questions);
@@ -164,7 +195,7 @@ class _CategoryPageState extends State<CategoryPage> {
           question = questionsPool.first;
         });
         */
-        /*
+      /*
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => ResultsPage(
@@ -174,8 +205,8 @@ class _CategoryPageState extends State<CategoryPage> {
             ),
           ),
         );
-        */
       }
+        */
     }
   }
 
