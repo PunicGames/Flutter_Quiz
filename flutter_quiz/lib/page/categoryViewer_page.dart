@@ -6,6 +6,8 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'category_page.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+import 'main_page.dart';
+
 class CategoryViewerPage extends StatefulWidget {
   final Category category;
 
@@ -66,6 +68,14 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
       );
 
   PreferredSizeWidget buildAppBar(context) => AppBar(
+        leading: BackButton(
+          color: Colors.white,
+          onPressed: (() => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(
+                  builder: (context) => MainPage(),
+                ),
+              )),
+        ),
         title: Text(widget.category.categoryName),
         flexibleSpace: Container(
           decoration: BoxDecoration(

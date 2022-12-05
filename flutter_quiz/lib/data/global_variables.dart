@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-final username = 'Alvaro';
+int indexPage = 1;
+
 final themeColors = [Colors.green, Colors.blue];
 final themeColors2 = [
   Color.fromARGB(255, 62, 0, 97),

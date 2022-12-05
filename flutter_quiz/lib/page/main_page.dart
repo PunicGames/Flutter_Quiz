@@ -5,7 +5,6 @@ import 'package:flutter_quiz/page/settings_page.dart';
 import 'package:flutter_quiz/page/favorite_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:audioplayers/audioplayers.dart';
-import '../data/global_variables.dart';
 
 class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
@@ -13,7 +12,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   final navigationKey = GlobalKey<CurvedNavigationBarState>();
-  int index = 1;
+  int index = indexPage;
   final player = AudioCache();
 
   final screens = [
@@ -49,6 +48,7 @@ class _MainPageState extends State<MainPage> {
           items: items,
           onTap: (index) => setState(() {
             this.index = index;
+            indexPage = index;
             player.play('Selector_Button_Sound_Forward.mp3');
           }),
         ),
