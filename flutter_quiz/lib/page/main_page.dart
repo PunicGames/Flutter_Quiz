@@ -13,21 +13,32 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  late SharedPreferences preferences;
+
   @override
   void initState() {
     super.initState();
 
     init();
 
-    for (int i = 0; i < categories.length; i++) {
-      categories[i].isFavorite = (preferences.getBool("_isFavorite") == null
-          ? false
-          : preferences.getBool("God of War IV_isFavorite")!);
-    }
+    print("por aqui");
   }
 
   Future init() async {
     preferences = await SharedPreferences.getInstance();
+    print("inicializado");
+
+    for (int i = 0; i < categories.length; i++) {
+      if (preferences.getBool(categories[i].categoryName + "_isFavorite") ==
+          null) {
+        print(categories[i].categoryName + "_isFavorite" + ": es null");
+      } else {
+        print(categories[i].categoryName + "_isFavorite" + ": no es null");
+      }
+      categories[i].isFavorite = (preferences.getBool("_isFavorite") == null
+          ? false
+          : preferences.getBool("_isFavorite")!);
+    }
   }
 
   final navigationKey = GlobalKey<CurvedNavigationBarState>();
@@ -48,6 +59,20 @@ class _MainPageState extends State<MainPage> {
       Icon(Icons.settings, size: 30),
     ];
 
+    /*
+    for (int i = 0; i < categories.length; i++) {
+      if (preferences.getBool(categories[i].categoryName + "_isFavorite") ==
+          null) {
+        print(categories[i].categoryName + "_isFavorite" + ": es null");
+      } else {
+        print(categories[i].categoryName + "_isFavorite" + ": no es null");
+      }
+      categories[i].isFavorite = (preferences.getBool("_isFavorite") == null
+          ? false
+          : preferences.getBool("_isFavorite")!);
+    }
+    */
+    print("for");
     return Scaffold(
       //extendBody: true,
       body: screens[index],
