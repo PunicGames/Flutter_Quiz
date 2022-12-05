@@ -4,6 +4,8 @@ import 'package:flutter_quiz/page/categoryViewer_page.dart';
 import 'package:flutter_quiz/page/home_page.dart';
 import 'package:flutter_quiz/page/main_page.dart';
 
+import 'package:syncfusion_flutter_gauges/gauges.dart';
+
 import '../classes/category.dart';
 
 class ResultsPage extends StatelessWidget {
@@ -36,23 +38,110 @@ class ResultsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            //texto de sinopsis
-            Text(
-              "Results",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 34),
-              textAlign: TextAlign.justify,
+            SfRadialGauge(
+              enableLoadingAnimation: true,
+              animationDuration: 2500,
+              axes: <RadialAxis>[
+                RadialAxis(
+                    startAngle: 160,
+                    endAngle: 20,
+                    minimum: 0,
+                    maximum: 10,
+                    showLastLabel: true,
+                    pointers: <GaugePointer>[
+                      NeedlePointer(value: success.toDouble())
+                    ],
+                    annotations: <GaugeAnnotation>[
+                      GaugeAnnotation(
+                          widget: Container(
+                              child: Text("Score: ${success}/${totalQuestions}",
+                                  style: TextStyle(
+                                      fontSize: 35,
+                                      fontWeight: FontWeight.bold))),
+                          angle: 90,
+                          positionFactor: 0.85)
+                    ],
+                    ranges: <GaugeRange>[
+                      GaugeRange(
+                          startValue: 8,
+                          endValue: 10,
+                          color: Colors.blue,
+                          startWidth: 10,
+                          endWidth: 10),
+                      GaugeRange(
+                          startValue: 6,
+                          endValue: 8,
+                          color: Colors.green,
+                          startWidth: 10,
+                          endWidth: 10),
+                      GaugeRange(
+                          startValue: 4,
+                          endValue: 6,
+                          color: Colors.orange,
+                          startWidth: 10,
+                          endWidth: 10),
+                      GaugeRange(
+                          startValue: 2,
+                          endValue: 4,
+                          color: Colors.red,
+                          startWidth: 10,
+                          endWidth: 10),
+                      GaugeRange(
+                          startValue: 0,
+                          endValue: 2,
+                          color: Colors.black,
+                          startWidth: 10,
+                          endWidth: 10)
+                    ])
+              ],
+              title: GaugeTitle(
+                text: 'Freakometer',
+                textStyle:
+                    TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                borderWidth: 10,
+              ),
             ),
-            SizedBox(height: 10),
-            //texto de la descripcion
-
             SizedBox(height: 10),
             Divider(
               thickness: 2,
               color: Color.fromARGB(255, 70, 70, 70),
             ),
-            SizedBox(height: 10),
-            //boton de play quiz y estadisticas
-            Column(
+            SizedBox(height: 15),
+            //boton de play quiz y estadisticas,
+            //texto de sinopsis
+            Text(
+              "Placeholder",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              textAlign: TextAlign.justify,
+            ),
+            //texto de la descripcion
+          ],
+        ),
+      );
+
+  PreferredSizeWidget buildAppBar(context) => AppBar(
+        automaticallyImplyLeading: false,
+        leading: BackButton(
+            color: Colors.white,
+            onPressed: (() => Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => HomePage(),
+                  ),
+                ))),
+        title: const Text("Exit Quiz"),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: themeColors,
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+            ),
+          ),
+        ),
+      );
+}
+/*
+Column(
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
@@ -112,29 +201,4 @@ class ResultsPage extends StatelessWidget {
                   ],
                 ),
               ),
-            )
-          ],
-        ),
-      );
-
-  PreferredSizeWidget buildAppBar(context) => AppBar(
-        automaticallyImplyLeading: false,
-        leading: BackButton(
-            color: Colors.white,
-            onPressed: (() => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => HomePage(),
-                  ),
-                ))),
-        title: const Text("Exit Quiz"),
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: themeColors,
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-            ),
-          ),
-        ),
-      );
-}
+            )*/
