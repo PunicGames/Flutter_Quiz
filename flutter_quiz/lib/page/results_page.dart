@@ -28,7 +28,12 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    categor.correctAnswer = success;
+    print("antes: " + categor.correctAnswer.toString());
+    print("actual: " + success.toString());
+    if (success > categor.correctAnswer) {
+      categor.correctAnswer = success;
+      print("se printeo");
+    }
     setPreferencesCorrectAnswer();
 
     switch (success) {
