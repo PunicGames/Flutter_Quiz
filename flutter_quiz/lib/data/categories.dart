@@ -47,16 +47,6 @@ List<Category> categories = <Category>[
     isFavorite: false,
   ),
   Category(
-    questions: MetalGear_questions,
-    categoryName: 'Metal Gear',
-    imageUrl: 'assets/MetalGear_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
     questions: Sekiro_questions,
     categoryName: 'Sekiro: Shadows Die Twice',
     imageUrl: 'assets/sekiro.jpg',
@@ -89,86 +79,6 @@ List<Category> categories = <Category>[
     isFavorite: false,
   ),
   Category(
-    questions: PokemonBlackWhite_questions,
-    categoryName: 'prueba 2',
-    imageUrl: 'assets/Pokemon_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GodOfWarIV_questions,
-    categoryName: 'God of War IV',
-    imageUrl: 'assets/GodOfWarIV_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: PokemonBlackWhite_questions,
-    categoryName: 'Pokemon',
-    imageUrl: 'assets/Pokemon_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: Fifa_questions,
-    categoryName: 'Fifa',
-    imageUrl: 'assets/Fifa23_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: MetalGear_questions,
-    categoryName: 'Metal Gear',
-    imageUrl: 'assets/MetalGear_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GearsOfHell_questions,
-    categoryName: 'Gears of Hell',
-    imageUrl: 'assets/GearsOfHell_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GodOfWarIV_questions,
-    categoryName: 'prueba 1',
-    imageUrl: 'assets/GodOfWarIV_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: PokemonBlackWhite_questions,
-    categoryName: 'prueba 2',
-    imageUrl: 'assets/Pokemon_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
     questions: Civilization_VI_questions,
     categoryName: 'Civilization VI',
     imageUrl: 'assets/CivilizationVI.jpg',
@@ -185,6 +95,16 @@ List<Category> categories = <Category>[
     videoUrl: 'https://www.youtube.com/watch?v=mDYqT0_9VR4',
     description:
         "League of Legends is a multiplayer online battle arena (MOBA) game in which the player controls a character with a set of unique abilities from an isometric perspective. As of 22 September 2022, there are 161 champions available to play. Over the course of a match, champions gain levels by accruing experience points (XP) through killing enemies.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: MetalGear_questions,
+    categoryName: 'Metal Gear',
+    imageUrl: 'assets/MetalGear_Image.jpg',
+    videoUrl: 'https://youtu.be/GQyWIur03aw',
+    description:
+        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
     correctAnswer: 0,
     isFavorite: false,
   ),

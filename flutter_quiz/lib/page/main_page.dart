@@ -39,18 +39,26 @@ class _MainPageState extends State<MainPage> {
         if (categories[i].isFavorite) favorites.add(categories[i]);
       }
 
-      //debugeador
-      if (preferences.getBool(categories[i].categoryName + "_isFavorite") ==
+      //establezco con persistencia el numero de correctAnswer
+      if (preferences.getInt(categories[i].categoryName + "_correctAnswer") !=
           null) {
-        print(categories[i].categoryName + "_isFavorite" + ": es null");
+        categories[i].correctAnswer =
+            preferences.getInt(categories[i].categoryName + "_correctAnswer")!;
+      }
+
+      /*debugeador
+      if (preferences.getInt(categories[i].categoryName + "_correctAnswer") ==
+          null) {
+        print(categories[i].categoryName + "_correctAnswer" + ": es null");
       } else {
         print(categories[i].categoryName +
-            "_isFavorite" +
+            "_correctAnswer" +
             ": NONONO es null, es: " +
             preferences
-                .getBool(categories[i].categoryName + "_isFavorite")
+                .getInt(categories[i].categoryName + "_correctAnswer")
                 .toString());
       }
+      */
     }
   }
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../data/global_variables.dart';
-import '../data/favorites.dart';
 import '../classes/category.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'category_page.dart';
