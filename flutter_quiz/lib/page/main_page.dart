@@ -29,13 +29,28 @@ class _MainPageState extends State<MainPage> {
     favorites = [];
 
     for (int i = 0; i < categories.length; i++) {
-      categories[i].isFavorite = (preferences.getBool("_isFavorite") == null
-          ? preferences.getBool(categories[i].categoryName + "_isFavorite")!
-          : false);
+      //establezco con persistencia si es favorito
+      if (preferences.getBool(categories[i].categoryName + "_isFavorite") !=
+          null) {
+        categories[i].isFavorite =
+            preferences.getBool(categories[i].categoryName + "_isFavorite")!;
 
-      //se añade a la lista de favoritos
-      if (categories[i].isFavorite) favorites.add(categories[i]);
-      print("hey jude");
+        //meto en el array de favoritos si es favorito
+        if (categories[i].isFavorite) favorites.add(categories[i]);
+      }
+
+      //debugeador
+      if (preferences.getBool(categories[i].categoryName + "_isFavorite") ==
+          null) {
+        print(categories[i].categoryName + "_isFavorite" + ": es null");
+      } else {
+        print(categories[i].categoryName +
+            "_isFavorite" +
+            ": NONONO es null, es: " +
+            preferences
+                .getBool(categories[i].categoryName + "_isFavorite")
+                .toString());
+      }
     }
   }
 
