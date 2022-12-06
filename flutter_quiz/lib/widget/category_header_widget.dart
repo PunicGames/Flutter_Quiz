@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import '../classes/category.dart';
 import '../page/category_page.dart';
@@ -13,11 +14,17 @@ class CategoryHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-        onTap: () => Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => CategoryViewerPage(category: category),
-          ),
-        ),
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => CategoryViewerPage(category: category),
+            ),
+          );
+
+          // Sound when selecting game from carousel
+          final player = AudioCache();
+          player.play('Selector_Button_Sound_Forward.mp3');
+        },
         child: Container(
           padding: EdgeInsets.all(12),
           decoration: BoxDecoration(

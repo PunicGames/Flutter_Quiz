@@ -83,15 +83,20 @@ class _CategoryPageState extends State<CategoryPage> {
                   backgroundColor: Color.fromARGB(0, 255, 255, 255),
                   elevation: 0,
                   highlightElevation: 0,
-                  onPressed: () => Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => ResultsPage(
-                        success: correctAnswers,
-                        totalQuestions: TOTAL_QUESTIONS,
-                        categor: widget.category,
+                  onPressed: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => ResultsPage(
+                          success: correctAnswers,
+                          totalQuestions: TOTAL_QUESTIONS,
+                          categor: widget.category,
+                        ),
                       ),
-                    ),
-                  ),
+                    );
+
+                    // Sound to get to the results page
+                    player.play('Selector_Button_Sound_Forward.mp3');
+                  },
                 )
               : Container()),
         ],
@@ -122,6 +127,9 @@ class _CategoryPageState extends State<CategoryPage> {
         answeredQuestions++;
         if (question?.selectedOption.isCorrect == true) correctAnswers++;
         if (answeredQuestions == TOTAL_QUESTIONS) {
+          // Sound when quiz completed. Put a retard in sound.
+          player.play('Completed_Quiz_Sound.mp3');
+
           showModalBottomSheet<void>(
             isDismissible: true,
             enableDrag: false,
