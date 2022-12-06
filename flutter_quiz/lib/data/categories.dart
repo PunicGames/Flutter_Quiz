@@ -26,16 +26,6 @@ List<Category> categories = <Category>[
     isFavorite: false,
   ),
   Category(
-    questions: Fifa_questions,
-    categoryName: 'Fifa',
-    imageUrl: 'assets/Fifa23_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
     questions: Bloodborne_questions,
     categoryName: 'Bloodborne',
     imageUrl: 'assets/bloodborne.jpg',
@@ -54,16 +44,6 @@ List<Category> categories = <Category>[
         'https://www.youtube.com/watch?v=rXMX4YJ7Lks&ab_channel=PlayStation',
     description:
         "Explore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face-to-face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head-to-head combat in a bloody confrontation. Take Revenge. Restore Your Honor. Kill Ingeniously.",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GearsOfHell_questions,
-    categoryName: 'Gears of Hell',
-    imageUrl: 'assets/GearsOfHell_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
     correctAnswer: 0,
     isFavorite: false,
   ),
@@ -105,6 +85,66 @@ List<Category> categories = <Category>[
     videoUrl: 'https://www.youtube.com/watch?v=e_E9W2vsRbQ',
     description:
         "Valorant is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, characters based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: mario_bros_questions_en,
+    categoryName: 'Mario Bros',
+    imageUrl: 'assets/Mario.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=0LbHBMtHUw0',
+    description:
+        "A plumber named Mario travels through an underground maze with his brother, Luigi, trying to save a captured princess.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: zelda_questions_en,
+    categoryName: 'Legend of Zelda',
+    imageUrl: 'assets/Zelda.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=zw47_q9wbBE',
+    description:
+        "A young boy named Link must travel to Death Mountain and defeat the pig-like monster, Ganon, to restore peace to the kingdom of Hyrule. A teenage Link embarks on a journey to awaken the sleeping maiden, Zelda, and learn the origin of the Triforce.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: call_of_duty_questions_en,
+    categoryName: 'Call of Duty',
+    imageUrl: 'assets/Cod.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=VWqqQUhzSDg',
+    description:
+        "Call of Duty is a series of war-style first-person shooter video games primarily and initially developed by Infinity Ward, Treyarch, Sledgehammer Games and to a lesser extent Raven Software and distributed by Activision.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: slyCooper_questions_en,
+    categoryName: 'Sly Cooper',
+    imageUrl: 'assets/Sly.jpeg',
+    videoUrl: 'https://www.youtube.com/watch?v=5w_AZ5GTojY',
+    description:
+        "Sly Cooper is a saga of platform, action and stealth video game homonymous to its main character for PlayStation 2, PlayStation 3 and PlayStation Vita developed and created by Sucker Punch Productions at the end of 2002, whose games have been created by this company and Sanzaru Games.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: escapeFromTarkov_en,
+    categoryName: 'Escape from Tarkov',
+    imageUrl: 'assets/Tarkov.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=IPlnHe9l34E',
+    description:
+        "Escape from Tarkov is a combat simulator that mixes first-person action with RPG elements within a narrative-based MMO. There are also those who consider it a suspense video game due to the characteristic tension of this game, similar to that caused by horror games.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
+  Category(
+    questions: worldOfWarcraft_Classic_en,
+    categoryName: 'World of Warcraft Classic',
+    imageUrl: 'assets/Wow.jpg',
+    videoUrl: 'https://www.youtube.com/watch?v=TcZyiYOzsSw',
+    description:
+        "World of Warcraft Classic, usually abbreviated as Classic Wow, is a video game belonging to the MMORPG genre based on the original material of World of Warcraft.",
     correctAnswer: 0,
     isFavorite: false,
   ),
