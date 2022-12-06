@@ -7,7 +7,7 @@ import 'package:flutter_quiz/page/categoryViewer_page.dart';
 import 'package:flutter_quiz/page/category_page.dart';
 import 'package:flutter_quiz/page/home_page.dart';
 import 'package:flutter_quiz/page/main_page.dart';
-
+import 'package:audioplayers/audioplayers.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 import '../classes/category.dart';
@@ -19,6 +19,8 @@ class ResultsPage extends StatelessWidget {
   final confetti = ConfettiController();
   String freakometerResult = "placeholder";
   int confettiParticles = 0;
+  final player = AudioCache();
+
   ResultsPage(
       {Key? key,
       required this.success,
@@ -74,11 +76,25 @@ class ResultsPage extends StatelessWidget {
             "Congratulations. You are a ${categor.categoryName} freak";
         break;
     }
-    if (success < 7)
+
+    if (success <= 4) {
+      // Bad
+      player.play('Goofy_At_The_Game_Sound.mp3');
+      confettiParticles = 1;
+    } else if (success <= 6) {
       confettiParticles = 5;
-    else if (success >= 7 && success <= 9)
+      // Nerd Sound
+      player.play('Nerd_At_The_Game_Sound.mp3');
+    } else if (success <= 9) {
       confettiParticles = 15;
-    else if (success > 9) confettiParticles = 30;
+      // Freak Sound
+      player.play('Freak_At_The_Game_Sound.mp3');
+    } else {
+      confettiParticles = 30;
+      // Master Sound
+      player.play('Master_At_The_Game_Sound.mp3');
+    }
+
     if (success > 4) confetti.play();
     return Scaffold(
       appBar: buildAppBar(context),
@@ -188,11 +204,14 @@ class ResultsPage extends StatelessWidget {
             //texto de sinopsis
 
             GestureDetector(
-              onTap: () => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => CategoryPage(category: categor),
-                ),
-              ),
+              onTap: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => CategoryPage(category: categor),
+                  ),
+                );
+                player.play('Selector_Button_Sound_Forward.mp3');
+              },
               child: Container(
                 width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
                 height: MediaQuery.of(context).size.height * 0.1,

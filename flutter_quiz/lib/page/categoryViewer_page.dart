@@ -128,12 +128,17 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
               children: [
                 //boton de quiz
                 GestureDetector(
-                  onTap: () => Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) =>
-                          CategoryPage(category: widget.category),
-                    ),
-                  ),
+                  onTap: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            CategoryPage(category: widget.category),
+                      ),
+                    );
+                    // Sound when accesing the quiz from resume page.
+                    final player = AudioCache();
+                    player.play('Selector_Button_Sound_Forward.mp3');
+                  },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
                     height: MediaQuery.of(context).size.height * 0.1,
@@ -195,11 +200,12 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
     setState(() {
       if (widget.category.isFavorite) {
         widget.category.isFavorite = false;
+        player.play('Dislike_Sound.mp3');
       } else {
         widget.category.isFavorite = true;
+        player.play('Like_Sound.mp3');
       }
       setPreferencesIsFavorite();
-      player.play('Selector_Button_Sound_Forward.mp3');
     });
   }
 
