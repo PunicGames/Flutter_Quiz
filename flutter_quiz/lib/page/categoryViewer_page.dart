@@ -69,11 +69,14 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
   PreferredSizeWidget buildAppBar(context) => AppBar(
         leading: BackButton(
           color: Colors.white,
-          onPressed: (() => Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => MainPage(),
-                ),
-              )),
+          onPressed: (() {
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => MainPage(),
+              ),
+            );
+            player.play('Selector_Button_Sound_Backwards.mp3');
+          }),
         ),
         title: Text(widget.category.categoryName),
         flexibleSpace: Container(
