@@ -47,16 +47,6 @@ List<Category> categories = <Category>[
     isFavorite: false,
   ),
   Category(
-    questions: MetalGear_questions,
-    categoryName: 'Metal Gear',
-    imageUrl: 'assets/MetalGear_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
     questions: Sekiro_questions,
     categoryName: 'Sekiro: Shadows Die Twice',
     imageUrl: 'assets/sekiro.jpg',
@@ -85,86 +75,6 @@ List<Category> categories = <Category>[
         'https://www.youtube.com/watch?v=PrYtQMfcyKA&ab_channel=GiancarloParimango',
     description:
         "Similar to previous installments of the series, the two games follow the journey of a young Pokémon trainer through the region of Unova, as they train Pokémon used to compete against other trainers while thwarting the schemes of the criminal organization Team Plasma.",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: PokemonBlackWhite_questions,
-    categoryName: 'prueba 2',
-    imageUrl: 'assets/Pokemon_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GodOfWarIV_questions,
-    categoryName: 'God of War IV',
-    imageUrl: 'assets/GodOfWarIV_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: PokemonBlackWhite_questions,
-    categoryName: 'Pokemon',
-    imageUrl: 'assets/Pokemon_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: Fifa_questions,
-    categoryName: 'Fifa',
-    imageUrl: 'assets/Fifa23_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: MetalGear_questions,
-    categoryName: 'Metal Gear',
-    imageUrl: 'assets/MetalGear_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GearsOfHell_questions,
-    categoryName: 'Gears of Hell',
-    imageUrl: 'assets/GearsOfHell_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: GodOfWarIV_questions,
-    categoryName: 'prueba 1',
-    imageUrl: 'assets/GodOfWarIV_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
-    correctAnswer: 0,
-    isFavorite: false,
-  ),
-  Category(
-    questions: PokemonBlackWhite_questions,
-    categoryName: 'prueba 2',
-    imageUrl: 'assets/Pokemon_Image.jpg',
-    videoUrl: 'https://youtu.be/GQyWIur03aw',
-    description:
-        "en este texto se pondria la sinopsis oficial del juego para que los jugadores puedan conocer de que va y cuano texto estoy poniendo de prueba xd",
     correctAnswer: 0,
     isFavorite: false,
   ),

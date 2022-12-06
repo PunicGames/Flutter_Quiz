@@ -28,7 +28,11 @@ class ResultsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    categor.correctAnswer = success;
+    if (success > categor.correctAnswer) {
+      categor.correctAnswer = success;
+    }
+    setPreferencesCorrectAnswer();
+
     switch (success) {
       case 0:
         freakometerResult =
@@ -238,4 +242,10 @@ class ResultsPage extends StatelessWidget {
           ),
         ),
       );
+
+  void setPreferencesCorrectAnswer() async {
+    preferences.setInt(
+        categor.categoryName + "_correctAnswer", categor.correctAnswer);
+    print(categor.correctAnswer);
+  }
 }

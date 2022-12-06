@@ -122,7 +122,6 @@ class _CategoryPageState extends State<CategoryPage> {
         answeredQuestions++;
         if (question?.selectedOption.isCorrect == true) correctAnswers++;
         if (answeredQuestions == TOTAL_QUESTIONS) {
-          widget.category.correctAnswer = correctAnswers;
           showModalBottomSheet<void>(
             isDismissible: true,
             enableDrag: false,
