@@ -2884,3 +2884,157 @@ final League_Of_Legends_questions = [
     solution: "9",
   ),
 ];
+
+final Valorant_questions = [
+  // #1
+  Question(
+    text: 'How many agents were there at the beginning in Valorant?',
+    options: [
+      Option(code: 'A', text: "8", isCorrect: false),
+      Option(code: 'B', text: '9', isCorrect: false),
+      Option(code: 'C', text: '10', isCorrect: true),
+      Option(code: 'D', text: '11', isCorrect: false),
+    ],
+    solution: "10",
+  ),
+
+  // #2
+  Question(
+    text: 'How many maps were there at the beginning in Valorant?',
+    options: [
+      Option(code: 'A', text: "3", isCorrect: false),
+      Option(code: 'B', text: '4', isCorrect: true),
+      Option(code: 'C', text: '5', isCorrect: false),
+      Option(code: 'D', text: '6', isCorrect: false),
+    ],
+    solution: "4",
+  ),
+
+  // #3
+  Question(
+    text: 'Can Astra´s pull cancel planting/defusing the spike?',
+    options: [
+      Option(code: 'A', text: "True", isCorrect: true),
+      Option(code: 'B', text: 'False', isCorrect: false),
+    ],
+    solution: "True",
+  ),
+
+  // #4
+  Question(
+    text: 'Can Sage heal above 100 hp?',
+    options: [
+      Option(code: 'A', text: "True", isCorrect: false),
+      Option(code: 'B', text: 'False', isCorrect: true),
+    ],
+    solution: "False",
+  ),
+
+  // #5
+  Question(
+    text: 'Which of these agents is the leader of the VALORANT PROTOCOL?',
+    options: [
+      Option(code: 'A', text: "Brimstone", isCorrect: true),
+      Option(code: 'B', text: 'Breach', isCorrect: false),
+      Option(code: 'C', text: 'Viper', isCorrect: false),
+      Option(code: 'D', text: 'Kay/O', isCorrect: false),
+    ],
+    solution: "Brimstone",
+  ),
+
+  // #6
+  Question(
+    text: 'Which of these agents is from Morocco?',
+    options: [
+      Option(code: 'A', text: "Reyna", isCorrect: false),
+      Option(code: 'B', text: 'Astra', isCorrect: false),
+      Option(code: 'C', text: 'Phoenix', isCorrect: false),
+      Option(code: 'D', text: 'Cypher', isCorrect: true),
+    ],
+    solution: "Cypher",
+  ),
+
+  // #7
+  Question(
+    text: 'Which of these maps has three spike sites?',
+    options: [
+      Option(code: 'A', text: "Haven", isCorrect: true),
+      Option(code: 'B', text: 'Split', isCorrect: false),
+      Option(code: 'C', text: 'Icebox', isCorrect: false),
+      Option(code: 'D', text: 'Ascent', isCorrect: false),
+    ],
+    solution: "Haven",
+  ),
+
+  // #8
+  Question(
+    text: 'How much hp gives the light shield?',
+    options: [
+      Option(code: 'A', text: "15", isCorrect: false),
+      Option(code: 'B', text: '25', isCorrect: true),
+      Option(code: 'C', text: '30', isCorrect: false),
+      Option(code: 'D', text: '35', isCorrect: false),
+    ],
+    solution: "25",
+  ),
+
+  // #9
+  Question(
+    text: 'How long does the spike take to exploit after planting it?',
+    options: [
+      Option(code: 'A', text: "35", isCorrect: false),
+      Option(code: 'B', text: '40', isCorrect: true),
+      Option(code: 'C', text: '45', isCorrect: false),
+      Option(code: 'D', text: '50', isCorrect: false),
+    ],
+    solution: "45",
+  ),
+
+  // #10
+  Question(
+    text: 'How many rounds should you win in Spike Rush to win the game?',
+    options: [
+      Option(code: 'A', text: "2", isCorrect: false),
+      Option(code: 'B', text: '3', isCorrect: false),
+      Option(code: 'C', text: '4', isCorrect: true),
+      Option(code: 'D', text: '5', isCorrect: false),
+    ],
+    solution: "4",
+  ),
+
+  // #11
+  Question(
+    text: 'How many different weapons can you buy in the preparation phase?',
+    options: [
+      Option(code: 'A', text: "13", isCorrect: false),
+      Option(code: 'B', text: '15', isCorrect: false),
+      Option(code: 'C', text: '17', isCorrect: true),
+      Option(code: 'D', text: '19', isCorrect: false),
+    ],
+    solution: "17",
+  ),
+
+  // #12
+  Question(
+    text: 'How many definitive orbs are in fracture?',
+    options: [
+      Option(code: 'A', text: "1", isCorrect: false),
+      Option(code: 'B', text: '2', isCorrect: false),
+      Option(code: 'C', text: '3', isCorrect: false),
+      Option(code: 'D', text: '4', isCorrect: true),
+    ],
+    solution: "4",
+  ),
+
+  // #13
+  Question(
+    text: 'In which of these maps can you teleport?',
+    options: [
+      Option(code: 'A', text: "Bind", isCorrect: true),
+      Option(code: 'B', text: 'Split', isCorrect: false),
+      Option(code: 'C', text: 'Breeze', isCorrect: false),
+      Option(code: 'D', text: 'Pearl', isCorrect: false),
+    ],
+    solution: "Bind",
+  ),
+];

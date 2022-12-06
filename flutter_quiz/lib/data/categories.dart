@@ -188,4 +188,14 @@ List<Category> categories = <Category>[
     correctAnswer: 0,
     isFavorite: false,
   ),
+  Category(
+    questions: Valorant_questions,
+    categoryName: 'Valorant',
+    imageUrl: 'assets/Valorant.jpeg',
+    videoUrl: 'https://www.youtube.com/watch?v=e_E9W2vsRbQ',
+    description:
+        "Valorant is a team-based first-person tactical hero shooter set in the near future. Players play as one of a set of Agents, characters based on several countries and cultures around the world. In the main game mode, players are assigned to either the attacking or defending team with each team having five players on it.",
+    correctAnswer: 0,
+    isFavorite: false,
+  ),
 ];
