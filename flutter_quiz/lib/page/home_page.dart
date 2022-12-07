@@ -33,7 +33,9 @@ class HomePage extends StatelessWidget {
 
                 // Play button sound
                 final player = AudioCache();
-                player.play('Selector_Button_Sound_Forward.mp3');
+                if (!mute) {
+                  player.play('Selector_Button_Sound_Forward.mp3');
+                }
               },
             )
           ],

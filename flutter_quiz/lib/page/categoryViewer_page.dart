@@ -75,7 +75,9 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                 builder: (context) => MainPage(),
               ),
             );
-            player.play('Selector_Button_Sound_Backwards.mp3');
+            if (!mute) {
+              player.play('Selector_Button_Sound_Backwards.mp3');
+            }
           }),
         ),
         title: Text(widget.category.categoryName),
@@ -140,7 +142,9 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                     );
                     // Sound when accesing the quiz from resume page.
                     final player = AudioCache();
-                    player.play('Selector_Button_Sound_Forward.mp3');
+                    if (!mute) {
+                      player.play('Selector_Button_Sound_Forward.mp3');
+                    }
                   },
                   child: Container(
                     width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
@@ -203,10 +207,14 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
     setState(() {
       if (widget.category.isFavorite) {
         widget.category.isFavorite = false;
-        player.play('Dislike_Sound.mp3');
+        if (!mute) {
+          player.play('Dislike_Sound.mp3');
+        }
       } else {
         widget.category.isFavorite = true;
-        player.play('Like_Sound.mp3');
+        if (!mute) {
+          player.play('Like_Sound.mp3');
+        }
       }
       setPreferencesIsFavorite();
     });

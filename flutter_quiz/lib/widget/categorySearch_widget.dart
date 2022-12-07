@@ -4,6 +4,7 @@ import '../classes/category.dart';
 import '../page/categoryViewer_page.dart';
 import 'category_header_widget.dart';
 import 'package:audioplayers/audioplayers.dart';
+import '../data/global_variables.dart';
 
 class CategorySearch extends SearchDelegate<Category?> {
   final List<Category> recentCategories = [];
@@ -96,7 +97,9 @@ class CategorySearch extends SearchDelegate<Category?> {
                       CategoryViewerPage(category: suggestion),
                 ),
               );
-              player.play('Selector_Button_Sound_Forward.mp3');
+              if (!mute) {
+                player.play('Selector_Button_Sound_Forward.mp3');
+              }
             },
           );
         },

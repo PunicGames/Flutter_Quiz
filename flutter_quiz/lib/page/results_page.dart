@@ -77,20 +77,29 @@ class ResultsPage extends StatelessWidget {
 
     if (success <= 4) {
       // Bad
-      player.play('Goofy_At_The_Game_Sound.mp3');
+      if (!mute) {
+        player.play('Goofy_At_The_Game_Sound.mp3');
+      }
+
       confettiParticles = 1;
     } else if (success <= 6) {
       confettiParticles = 5;
       // Nerd Sound
-      player.play('Nerd_At_The_Game_Sound.mp3');
+      if (!mute) {
+        player.play('Nerd_At_The_Game_Sound.mp3');
+      }
     } else if (success <= 9) {
       confettiParticles = 15;
       // Freak Sound
-      player.play('Freak_At_The_Game_Sound.mp3');
+      if (!mute) {
+        player.play('Freak_At_The_Game_Sound.mp3');
+      }
     } else {
       confettiParticles = 30;
       // Master Sound
-      player.play('Master_At_The_Game_Sound.mp3');
+      if (!mute) {
+        player.play('Master_At_The_Game_Sound.mp3');
+      }
     }
 
     if (success > 4) confetti.play();
@@ -208,7 +217,9 @@ class ResultsPage extends StatelessWidget {
                     builder: (context) => CategoryPage(category: categor),
                   ),
                 );
-                player.play('Selector_Button_Sound_Forward.mp3');
+                if (!mute) {
+                  player.play('Selector_Button_Sound_Forward.mp3');
+                }
               },
               child: Container(
                 width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
@@ -242,12 +253,18 @@ class ResultsPage extends StatelessWidget {
   PreferredSizeWidget buildAppBar(context) => AppBar(
         automaticallyImplyLeading: false,
         leading: BackButton(
-            color: Colors.white,
-            onPressed: (() => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => MainPage(),
-                  ),
-                ))),
+          color: Colors.white,
+          onPressed: (() {
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (context) => MainPage(),
+              ),
+            );
+            if (!mute) {
+              player.play('Selector_Button_Sound_Backwards.mp3');
+            }
+          }),
+        ),
         title: const Text("Exit Quiz"),
         flexibleSpace: Container(
           decoration: BoxDecoration(
