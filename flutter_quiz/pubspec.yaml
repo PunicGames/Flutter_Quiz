@@ -10,14 +10,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  audioplayers: ^0.20.1
-  syncfusion_flutter_gauges: ^20.3.59
-  confetti: ^0.6.0
-  cupertino_icons: ^1.0.2
 
   curved_navigation_bar: ^1.0.3
   youtube_player_flutter: ^8.1.1
   shared_preferences: ^2.0.15
+  font_awesome_flutter: ^10.3.0
+  audioplayers: ^0.20.1
+  syncfusion_flutter_gauges: ^20.3.59
+  confetti: ^0.6.0
+  cupertino_icons: ^1.0.2
 
 dev_dependencies:
   flutter_test:
