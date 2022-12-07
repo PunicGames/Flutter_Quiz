@@ -104,7 +104,9 @@ class _MainPageState extends State<MainPage> {
           onTap: (index) => setState(() {
             this.index = index;
             indexPage = index;
-            player.play('Selector_Button_Sound_Forward.mp3');
+            if (!mute) {
+              player.play('Selector_Button_Sound_Forward.mp3');
+            }
           }),
         ),
       ),

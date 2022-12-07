@@ -9,6 +9,7 @@ import '../classes/question.dart';
 import '../widget/questions_numbers_widget.dart';
 import '../widget/questions_widget.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'main_page.dart';
 
 class CategoryPage extends StatefulWidget {
   final Category category;
@@ -58,6 +59,14 @@ class _CategoryPageState extends State<CategoryPage> {
       );
 
   PreferredSizeWidget buildAppBar(context) => AppBar(
+        leading: BackButton(onPressed: () {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) => MainPage(),
+            ),
+          );
+          player.play("Selector_Button_Sound_Backwards.mp3");
+        }),
         title: Text(widget.category.categoryName),
         flexibleSpace: Container(
           decoration: BoxDecoration(
@@ -95,7 +104,9 @@ class _CategoryPageState extends State<CategoryPage> {
                     );
 
                     // Sound to get to the results page
-                    player.play('Selector_Button_Sound_Forward.mp3');
+                    if (!mute) {
+                      player.play('Selector_Button_Sound_Forward.mp3');
+                    }
                   },
                 )
               : Container()),
@@ -128,7 +139,9 @@ class _CategoryPageState extends State<CategoryPage> {
         if (question?.selectedOption.isCorrect == true) correctAnswers++;
         if (answeredQuestions == TOTAL_QUESTIONS) {
           // Sound when quiz completed. Put a retard in sound.
-          player.play('Completed_Quiz_Sound.mp3');
+          if (!mute) {
+            player.play('Completed_Quiz_Sound.mp3');
+          }
 
           showModalBottomSheet<void>(
             isDismissible: true,
@@ -187,10 +200,12 @@ class _CategoryPageState extends State<CategoryPage> {
           );
         }
         // Play button sound
-        if (option.isCorrect) {
-          player.play('Selector_Button_Sound_Forward.mp3');
-        } else {
-          player.play('Selector_Button_Sound_Backwards.mp3');
+        if (!mute) {
+          if (option.isCorrect) {
+            player.play('Selector_Button_Sound_Forward.mp3');
+          } else {
+            player.play('Selector_Button_Sound_Backwards.mp3');
+          }
         }
       });
     }
@@ -208,10 +223,12 @@ class _CategoryPageState extends State<CategoryPage> {
       question = questionsPool[indexPage];
 
       // Sound
-      if (indexPage > nextPage.toInt()) {
-        player.play('Turning_Page_Sound_Forward.mp3');
-      } else if (indexPage < nextPage.toInt()) {
-        player.play('Turning_Page_Sound_Backwards.mp3');
+      if (!mute) {
+        if (indexPage > nextPage.toInt()) {
+          player.play('Next_Question_Sound.mp3');
+        } else if (indexPage < nextPage.toInt()) {
+          player.play('Next_Question_Sound.mp3');
+        }
       }
     });
 

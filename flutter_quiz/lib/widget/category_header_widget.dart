@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../classes/category.dart';
 import '../page/category_page.dart';
 import '../page/categoryViewer_page.dart';
+import '../data/global_variables.dart';
 
 class CategoryHeaderWidget extends StatelessWidget {
   final Category category;
@@ -23,7 +24,9 @@ class CategoryHeaderWidget extends StatelessWidget {
 
           // Sound when selecting game from carousel
           final player = AudioCache();
-          player.play('Selector_Button_Sound_Forward.mp3');
+          if (!mute) {
+            player.play('Selector_Button_Sound_Forward.mp3');
+          }
         },
         child: Container(
           padding: EdgeInsets.all(12),
