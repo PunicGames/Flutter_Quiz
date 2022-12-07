@@ -3,6 +3,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences preferences;
 
+bool mute = false;
+
 int indexPage = 1;
 
 var themeColors = [

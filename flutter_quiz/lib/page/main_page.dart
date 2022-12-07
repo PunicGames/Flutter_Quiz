@@ -28,6 +28,10 @@ class _MainPageState extends State<MainPage> {
     print("inicializado");
     favorites = [];
 
+    if (preferences.getBool("Mute") != null) {
+      mute = preferences.getBool("Mute")!;
+    }
+
     for (int i = 0; i < categories.length; i++) {
       //establezco con persistencia si es favorito
       if (preferences.getBool(categories[i].categoryName + "_isFavorite") !=
