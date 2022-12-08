@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import '../data/global_variables.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -37,7 +38,7 @@ class SettingsPageState extends State<SettingsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            //Seccion 1
+            //Seccion 1 Opciones
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -69,7 +70,7 @@ class SettingsPageState extends State<SettingsPage> {
               ],
             ),
 
-            //Seccion 2
+            //Seccion 2 Paleta de Colores
             SizedBox(height: 10),
             Divider(
               thickness: 2,
@@ -121,7 +122,7 @@ class SettingsPageState extends State<SettingsPage> {
               ],
             ),
 
-            //Seccion 3
+            //Seccion Social Media
             SizedBox(height: 20),
             Divider(
               thickness: 2,
@@ -141,9 +142,10 @@ class SettingsPageState extends State<SettingsPage> {
                       FontAwesomeIcons.github,
                       color: Colors.purple,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.1,
+                    iconSize: MediaQuery.of(context).size.height * 0.08,
                     onPressed: () {
-                      print("github");
+                      launchUrl(Uri.parse(
+                          "https://github.com/orgs/PunicGames/repositories"));
                     },
                   ),
                 ),
@@ -153,9 +155,9 @@ class SettingsPageState extends State<SettingsPage> {
                       FontAwesomeIcons.twitter,
                       color: Colors.blue,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.1,
+                    iconSize: MediaQuery.of(context).size.height * 0.08,
                     onPressed: () {
-                      print("twiter");
+                      launchUrl(Uri.parse("https://twitter.com/PunicGames"));
                     },
                   ),
                 ),
@@ -165,21 +167,22 @@ class SettingsPageState extends State<SettingsPage> {
                       FontAwesomeIcons.youtube,
                       color: Colors.red,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.1,
+                    iconSize: MediaQuery.of(context).size.height * 0.08,
                     onPressed: () {
-                      print("yutub");
+                      launchUrl(Uri.parse(
+                          "https://www.youtube.com/channel/UCV3q-cBOejtMXlt6WJ3WFFQ"));
                     },
                   ),
                 ),
                 Expanded(
                   child: IconButton(
                     icon: FaIcon(
-                      FontAwesomeIcons.pager,
-                      color: Color.fromARGB(255, 31, 5, 35),
+                      FontAwesomeIcons.itchIo,
+                      color: Colors.orange,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.1,
+                    iconSize: MediaQuery.of(context).size.height * 0.08,
                     onPressed: () {
-                      print("page");
+                      launchUrl(Uri.parse("https://punicgames.itch.io/"));
                     },
                   ),
                 ),
