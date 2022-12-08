@@ -28,6 +28,14 @@ class _MainPageState extends State<MainPage> {
     print("inicializado");
     favorites = [];
 
+    if (preferences.getBool("DarkMode") != null) {
+      darkMode = preferences.getBool("DarkMode")!;
+      setState(() {
+        themeColors = (darkMode ? darkTheme : lightTheme);
+      });
+      print(darkMode);
+    }
+
     if (preferences.getBool("Mute") != null) {
       mute = preferences.getBool("Mute")!;
     }
@@ -85,7 +93,6 @@ class _MainPageState extends State<MainPage> {
     ];
 
     return Scaffold(
-      //extendBody: true,
       body: screens[index],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
@@ -95,10 +102,12 @@ class _MainPageState extends State<MainPage> {
           key: navigationKey,
           color: themeColors[1],
           buttonBackgroundColor: themeColors[0],
-          backgroundColor: Colors.transparent,
+          backgroundColor: themeColors[2],
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 300),
-          height: MediaQuery.of(context).size.height * 0.08,
+          height: (MediaQuery.of(context).size.height * 0.08 > 74
+              ? 75
+              : MediaQuery.of(context).size.height * 0.08),
           index: index,
           items: items,
           onTap: (index) => setState(() {

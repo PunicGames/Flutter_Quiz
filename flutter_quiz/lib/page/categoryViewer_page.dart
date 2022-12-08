@@ -56,12 +56,15 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
         ),
         builder: (context, player) => Scaffold(
           appBar: buildAppBar(context),
-          body: ListView(
-            padding: const EdgeInsets.all(16),
-            children: [
-              player,
-              buildStructure(),
-            ],
+          body: Container(
+            color: themeColors[2],
+            child: ListView(
+              padding: const EdgeInsets.all(16),
+              children: [
+                player,
+                buildStructure(),
+              ],
+            ),
           ),
         ),
       );
@@ -84,7 +87,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: themeColors,
+              colors: [themeColors[0], themeColors[1]],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),
@@ -112,14 +115,20 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
             //texto de sinopsis
             Text(
               "Description",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  color: themeColors[3]),
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 10),
             //texto de la descripcion
             Text(
               widget.category.description,
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(
+                fontSize: 16,
+                color: themeColors[3],
+              ),
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 10),
@@ -151,7 +160,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                     height: MediaQuery.of(context).size.height * 0.1,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
-                          colors: themeColors,
+                          colors: [themeColors[0], themeColors[1]],
                           begin: Alignment.topRight,
                           end: Alignment.bottomLeft),
                       borderRadius: BorderRadius.circular(15),
@@ -171,12 +180,13 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                   ),
                 ),
                 SizedBox(width: 16),
+
                 //estadisticas del quiz
                 Container(
                   height: MediaQuery.of(context).size.height * 0.1,
                   width: MediaQuery.of(context).size.width / 2 - 16 * 1.5,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: themeColors[2],
                     borderRadius: BorderRadius.circular(15),
                     border: Border.all(color: Colors.black),
                   ),
@@ -191,7 +201,7 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
-                            color: Colors.black),
+                            color: themeColors[3]),
                       ),
                     ],
                   ),

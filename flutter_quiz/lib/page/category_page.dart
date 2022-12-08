@@ -71,7 +71,7 @@ class _CategoryPageState extends State<CategoryPage> {
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: themeColors,
+              colors: [themeColors[0], themeColors[1]],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),
@@ -156,7 +156,7 @@ class _CategoryPageState extends State<CategoryPage> {
                   height: MediaQuery.of(context).size.height * 0.4,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                        colors: themeColors,
+                        colors: [themeColors[0], themeColors[1]],
                         begin: Alignment.topRight,
                         end: Alignment.bottomLeft),
                   ),

@@ -17,7 +17,7 @@ class FavoritePage extends StatelessWidget {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: themeColors,
+                  colors: [themeColors[0], themeColors[1]],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft),
             ),
@@ -34,13 +34,16 @@ class FavoritePage extends StatelessWidget {
             )
           ],
         ),
-        body: ListView(
-          physics: BouncingScrollPhysics(),
-          padding: const EdgeInsets.all(16),
-          children: [
-            //SizedBox(height: 8),
-            buildCategories(context),
-          ],
+        body: Container(
+          color: themeColors[2],
+          child: ListView(
+            physics: BouncingScrollPhysics(),
+            padding: const EdgeInsets.all(16),
+            children: [
+              //SizedBox(height: 8),
+              buildCategories(context),
+            ],
+          ),
         ),
       );
 

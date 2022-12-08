@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../data/favorites.dart';
 import '../classes/category.dart';
 import '../page/categoryViewer_page.dart';
@@ -9,6 +10,33 @@ import '../data/global_variables.dart';
 class CategorySearchFavorite extends SearchDelegate<Category?> {
   final List<Category> recentCategories = [];
   final player = AudioCache();
+  TextInputAction get textInputAction => super.textInputAction;
+
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    return ThemeData(
+      textTheme: TextTheme(
+        headline6: TextStyle(
+          color: themeColors[3],
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+      ),
+      textSelectionTheme: TextSelectionThemeData(
+        cursorColor: themeColors[3],
+      ),
+      hintColor: themeColors[3],
+      appBarTheme: AppBarTheme(
+        color: themeColors[6],
+        foregroundColor: themeColors[3],
+      ),
+    );
+  }
 
   @override
   List<Widget>? buildActions(BuildContext context) => [
@@ -34,13 +62,14 @@ class CategorySearchFavorite extends SearchDelegate<Category?> {
       );
 
   @override
-  Widget buildResults(BuildContext context) => Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: favorites
-              .map((category) => CategoryHeaderWidget(category: category))
-              .toList(),
-        ),
+  Widget buildResults(BuildContext context) => Container(
+        color: themeColors[2],
+        // child: Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: favorites
+        //       .map((category) => CategoryHeaderWidget(category: category))
+        //       .toList(),
+        // ),
       );
 
   @override
@@ -57,51 +86,55 @@ class CategorySearchFavorite extends SearchDelegate<Category?> {
     return buildSuggestionsSuccess(suggestions);
   }
 
-  Widget buildSuggestionsSuccess(List<Category> suggestions) =>
-      ListView.builder(
-        itemCount: suggestions.length,
-        itemBuilder: (context, index) {
-          final suggestion = suggestions[index];
-          final queryText = suggestion.categoryName.substring(0, query.length);
-          final remainingText = suggestion.categoryName.substring(query.length);
+  Widget buildSuggestionsSuccess(List<Category> suggestions) => Container(
+        color: themeColors[2],
+        child: ListView.builder(
+          itemCount: suggestions.length,
+          itemBuilder: (context, index) {
+            final suggestion = suggestions[index];
+            final queryText =
+                suggestion.categoryName.substring(0, query.length);
+            final remainingText =
+                suggestion.categoryName.substring(query.length);
 
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(suggestion.imageUrl),
-            ),
-            //title: Text(suggestion.categoryName),
-            title: RichText(
-              text: TextSpan(
-                  text: queryText,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: remainingText,
-                      style: TextStyle(
-                        color: Colors.grey,
-                        fontSize: 18,
-                      ),
+            return ListTile(
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(suggestion.imageUrl),
+              ),
+              //title: Text(suggestion.categoryName),
+              title: RichText(
+                text: TextSpan(
+                    text: queryText,
+                    style: TextStyle(
+                      color: themeColors[3],
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
-                  ]),
-            ),
-            onTap: () {
-              query = suggestion.categoryName;
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      CategoryViewerPage(category: suggestion),
-                ),
-              );
-              if (!mute) {
-                player.play('Selector_Button_Sound_Forward.mp3');
-              }
-            },
-          );
-        },
+                    children: [
+                      TextSpan(
+                        text: remainingText,
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ]),
+              ),
+              onTap: () {
+                query = suggestion.categoryName;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        CategoryViewerPage(category: suggestion),
+                  ),
+                );
+                if (!mute) {
+                  player.play('Selector_Button_Sound_Forward.mp3');
+                }
+              },
+            );
+          },
+        ),
       );
 }

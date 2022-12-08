@@ -4,8 +4,35 @@ import '../data/global_variables.dart';
 import '../widget/categorySearch_widget.dart';
 import '../widget/category_header_widget.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  HomePageState createState() => HomePageState();
+}
+
+class HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+
+    init();
+
+    print("por aqui en home");
+  }
+
+  Future init() async {
+    preferences = await SharedPreferences.getInstance();
+
+    print("inicializado en home");
+    if (preferences.getBool("DarkMode") != null) {
+      darkMode = preferences.getBool("DarkMode")!;
+      setState(() {
+        themeColors = (darkMode ? darkTheme : lightTheme);
+      });
+      print(darkMode);
+    }
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -18,7 +45,7 @@ class HomePage extends StatelessWidget {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: themeColors,
+                  colors: [themeColors[0], themeColors[1]],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft),
             ),
@@ -29,7 +56,10 @@ class HomePage extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                showSearch(context: context, delegate: CategorySearch());
+                showSearch(
+                  context: context,
+                  delegate: CategorySearch(),
+                );
 
                 // Play button sound
                 final player = AudioCache();
@@ -40,13 +70,15 @@ class HomePage extends StatelessWidget {
             )
           ],
         ),
-        body: ListView(
-          physics: BouncingScrollPhysics(),
-          padding: const EdgeInsets.all(16),
-          children: [
-            //SizedBox(height: 8),
-            buildCategories(context),
-          ],
+        body: Container(
+          color: themeColors[2],
+          child: ListView(
+            physics: BouncingScrollPhysics(),
+            padding: const EdgeInsets.all(16),
+            children: [
+              buildCategories(context),
+            ],
+          ),
         ),
       );
 

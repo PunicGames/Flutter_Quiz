@@ -1,5 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz/page/main_page.dart';
 import '../data/global_variables.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -23,13 +24,13 @@ class SettingsPageState extends State<SettingsPage> {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: themeColors,
+                  colors: [themeColors[0], themeColors[1]],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft),
             ),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: themeColors[2],
         body: buildStructure(context),
       );
 
@@ -47,8 +48,11 @@ class SettingsPageState extends State<SettingsPage> {
                   children: [
                     Text(
                       "Mute",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                        color: themeColors[3],
+                      ),
                       textAlign: TextAlign.justify,
                     ),
                     IconButton(
@@ -60,6 +64,7 @@ class SettingsPageState extends State<SettingsPage> {
                               FontAwesomeIcons.volumeHigh,
                             )),
                       iconSize: MediaQuery.of(context).size.height * 0.1,
+                      color: themeColors[3],
                       onPressed: () {
                         toggleMute();
                         setPreferencesMute();
@@ -78,7 +83,11 @@ class SettingsPageState extends State<SettingsPage> {
             SizedBox(height: 10),
             Text(
               "Theme Colors",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                color: themeColors[3],
+              ),
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 20),
@@ -86,13 +95,28 @@ class SettingsPageState extends State<SettingsPage> {
               children: [
                 Expanded(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      //lightTheme
+                      darkMode = false;
+                      themeColors = lightTheme;
+
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(),
+                        ),
+                      );
+                      setPreferencesDarkMode();
+
+                      if (!mute) {
+                        player.play('Like_Sound.mp3');
+                      }
+                    },
                     child: Container(
                       height: MediaQuery.of(context).size.height * 0.1,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: themeColors0,
+                            colors: [lightTheme[0], lightTheme[1]],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft),
                         borderRadius: BorderRadius.circular(15),
@@ -105,13 +129,28 @@ class SettingsPageState extends State<SettingsPage> {
                 ),
                 Expanded(
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      //darkTheme
+                      darkMode = true;
+                      themeColors = darkTheme;
+                      //apaño navigator
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(),
+                        ),
+                      );
+                      setPreferencesDarkMode();
+
+                      if (!mute) {
+                        player.play('Like_Sound.mp3');
+                      }
+                    },
                     child: Container(
                       height: MediaQuery.of(context).size.height * 0.1,
                       padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: themeColors1,
+                            colors: [darkTheme[0], darkTheme[1]],
                             begin: Alignment.topRight,
                             end: Alignment.bottomLeft),
                         borderRadius: BorderRadius.circular(15),
@@ -130,10 +169,14 @@ class SettingsPageState extends State<SettingsPage> {
             SizedBox(height: 10),
             Text(
               "Check our social media",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                color: themeColors[3],
+              ),
               textAlign: TextAlign.justify,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Row(
               children: [
                 Expanded(
@@ -141,8 +184,9 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.github,
                       color: Colors.purple,
+                      size: MediaQuery.of(context).size.height * 0.08,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.08,
+                    iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
                       launchUrl(Uri.parse(
                           "https://github.com/orgs/PunicGames/repositories"));
@@ -154,8 +198,9 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.twitter,
                       color: Colors.blue,
+                      size: MediaQuery.of(context).size.height * 0.08,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.08,
+                    iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
                       launchUrl(Uri.parse("https://twitter.com/PunicGames"));
                     },
@@ -166,8 +211,9 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.youtube,
                       color: Colors.red,
+                      size: MediaQuery.of(context).size.height * 0.08,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.08,
+                    iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
                       launchUrl(Uri.parse(
                           "https://www.youtube.com/channel/UCV3q-cBOejtMXlt6WJ3WFFQ"));
@@ -179,8 +225,9 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.itchIo,
                       color: Colors.orange,
+                      size: MediaQuery.of(context).size.height * 0.08,
                     ),
-                    iconSize: MediaQuery.of(context).size.height * 0.08,
+                    iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
                       launchUrl(Uri.parse("https://punicgames.itch.io/"));
                     },
@@ -212,5 +259,10 @@ class SettingsPageState extends State<SettingsPage> {
   void setPreferencesMute() async {
     preferences.setBool("Mute", mute);
     print(mute);
+  }
+
+  void setPreferencesDarkMode() async {
+    preferences.setBool("DarkMode", darkMode);
+    print(darkMode);
   }
 }
