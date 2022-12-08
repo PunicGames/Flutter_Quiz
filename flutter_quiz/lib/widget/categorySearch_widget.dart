@@ -11,6 +11,32 @@ class CategorySearch extends SearchDelegate<Category?> {
   final player = AudioCache();
 
   @override
+  ThemeData appBarTheme(BuildContext context) {
+    return ThemeData(
+      textTheme: TextTheme(
+        headline6: TextStyle(
+          color: themeColors[3],
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+      ),
+      textSelectionTheme: TextSelectionThemeData(
+        cursorColor: themeColors[3],
+      ),
+      hintColor: themeColors[3],
+      appBarTheme: AppBarTheme(
+        color: themeColors[6],
+        foregroundColor: themeColors[3],
+      ),
+    );
+  }
+
+  @override
   List<Widget>? buildActions(BuildContext context) => [
         IconButton(
           icon: Icon(Icons.clear),
@@ -57,51 +83,58 @@ class CategorySearch extends SearchDelegate<Category?> {
     return buildSuggestionsSuccess(suggestions);
   }
 
-  Widget buildSuggestionsSuccess(List<Category> suggestions) =>
-      ListView.builder(
-        itemCount: suggestions.length,
-        itemBuilder: (context, index) {
-          final suggestion = suggestions[index];
-          final queryText = suggestion.categoryName.substring(0, query.length);
-          final remainingText = suggestion.categoryName.substring(query.length);
+  Widget buildSuggestionsSuccess(List<Category> suggestions) => Container(
+        color: themeColors[2],
+        child: ListView.builder(
+          itemCount: suggestions.length,
+          itemBuilder: (context, index) {
+            final suggestion = suggestions[index];
+            final queryText =
+                suggestion.categoryName.substring(0, query.length);
+            final remainingText =
+                suggestion.categoryName.substring(query.length);
 
-          return ListTile(
-            leading: CircleAvatar(
-              backgroundImage: AssetImage(suggestion.imageUrl),
-            ),
-            //title: Text(suggestion.categoryName),
-            title: RichText(
-              text: TextSpan(
-                  text: queryText,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                  children: [
-                    TextSpan(
-                      text: remainingText,
+            return Container(
+              //color: themeColors[6],
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage(suggestion.imageUrl),
+                ),
+                //title: Text(suggestion.categoryName),
+                title: RichText(
+                  text: TextSpan(
+                      text: queryText,
                       style: TextStyle(
-                        color: Colors.grey,
+                        color: themeColors[3],
+                        fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
-                    ),
-                  ]),
-            ),
-            onTap: () {
-              query = suggestion.categoryName;
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) =>
-                      CategoryViewerPage(category: suggestion),
+                      children: [
+                        TextSpan(
+                          text: remainingText,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 18,
+                          ),
+                        ),
+                      ]),
                 ),
-              );
-              if (!mute) {
-                player.play('Selector_Button_Sound_Forward.mp3');
-              }
-            },
-          );
-        },
+                onTap: () {
+                  query = suggestion.categoryName;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          CategoryViewerPage(category: suggestion),
+                    ),
+                  );
+                  if (!mute) {
+                    player.play('Selector_Button_Sound_Forward.mp3');
+                  }
+                },
+              ),
+            );
+          },
+        ),
       );
 }
