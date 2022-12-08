@@ -48,8 +48,11 @@ class SettingsPageState extends State<SettingsPage> {
                   children: [
                     Text(
                       "Mute",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                        color: themeColors[3],
+                      ),
                       textAlign: TextAlign.justify,
                     ),
                     IconButton(
@@ -61,6 +64,7 @@ class SettingsPageState extends State<SettingsPage> {
                               FontAwesomeIcons.volumeHigh,
                             )),
                       iconSize: MediaQuery.of(context).size.height * 0.1,
+                      color: themeColors[3],
                       onPressed: () {
                         toggleMute();
                         setPreferencesMute();
@@ -79,7 +83,11 @@ class SettingsPageState extends State<SettingsPage> {
             SizedBox(height: 10),
             Text(
               "Theme Colors",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                color: themeColors[3],
+              ),
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 20),
@@ -161,7 +169,11 @@ class SettingsPageState extends State<SettingsPage> {
             SizedBox(height: 10),
             Text(
               "Check our social media",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                color: themeColors[3],
+              ),
               textAlign: TextAlign.justify,
             ),
             SizedBox(height: 10),

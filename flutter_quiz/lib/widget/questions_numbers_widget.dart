@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz/data/global_variables.dart';
 import '../classes/question.dart';
 
 class QuestionNumbersWidget extends StatelessWidget {
@@ -44,8 +45,8 @@ class QuestionNumbersWidget extends StatelessWidget {
       required bool isSelected,
       required bool isCorrect,
       required bool isAnswered}) {
-    final correctionColor = isCorrect ? Colors.green : Colors.red;
-    final baseColor = isAnswered ? correctionColor : Colors.white;
+    final correctionColor = isCorrect ? themeColors[4] : themeColors[5];
+    final baseColor = isAnswered ? correctionColor : themeColors[2];
     final color = isSelected ? Colors.orange.shade300 : baseColor;
 
     return GestureDetector(
@@ -58,7 +59,7 @@ class QuestionNumbersWidget extends StatelessWidget {
           child: Text(
             '${index + 1}',
             style: TextStyle(
-              color: Colors.black,
+              color: themeColors[3],
               fontWeight: FontWeight.bold,
               fontSize: 18,
             ),

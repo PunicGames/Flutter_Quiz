@@ -40,13 +40,15 @@ class HomePage extends StatelessWidget {
             )
           ],
         ),
-        body: ListView(
-          physics: BouncingScrollPhysics(),
-          padding: const EdgeInsets.all(16),
-          children: [
-            //SizedBox(height: 8),
-            buildCategories(context),
-          ],
+        body: Container(
+          color: themeColors[2],
+          child: ListView(
+            physics: BouncingScrollPhysics(),
+            padding: const EdgeInsets.all(16),
+            children: [
+              buildCategories(context),
+            ],
+          ),
         ),
       );
 

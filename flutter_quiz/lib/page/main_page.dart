@@ -100,7 +100,7 @@ class _MainPageState extends State<MainPage> {
           key: navigationKey,
           color: themeColors[1],
           buttonBackgroundColor: themeColors[0],
-          backgroundColor: Colors.transparent,
+          backgroundColor: themeColors[2],
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 300),
           height: MediaQuery.of(context).size.height * 0.08,

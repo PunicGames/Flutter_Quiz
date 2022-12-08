@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz/data/global_variables.dart';
 import '../classes/category.dart';
 import '../classes/option.dart';
 import '../classes/question.dart';
@@ -36,6 +37,7 @@ class QuestionsWidget extends StatelessWidget {
     required Question question,
   }) =>
       Container(
+        color: themeColors[2],
         padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,14 +46,22 @@ class QuestionsWidget extends StatelessWidget {
             const SizedBox(height: 0),
             Text(
               question.text,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+                color: themeColors[3],
+              ),
               //textAlign: TextAlign.justify,
             ),
             //Subtexto debajo de la pregunta
             SizedBox(height: 10),
             Text(
               'Choose your answer',
-              style: TextStyle(fontStyle: FontStyle.italic, fontSize: 16),
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontSize: 16,
+                color: themeColors[3],
+              ),
             ),
             SizedBox(height: 32),
             Expanded(

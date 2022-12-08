@@ -105,17 +105,20 @@ class ResultsPage extends StatelessWidget {
     if (success > 4) confetti.play();
     return Scaffold(
       appBar: buildAppBar(context),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          buildStructure(context),
-        ],
+      body: Container(
+        color: themeColors[2],
+        child: ListView(
+          padding:
+              const EdgeInsets.only(left: 16, top: 0, right: 16, bottom: 16),
+          children: [
+            buildStructure(context),
+          ],
+        ),
       ),
     );
   }
 
   Widget buildStructure(BuildContext context) => Container(
-        padding: const EdgeInsets.only(left: 0, top: 10, right: 0, bottom: 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -132,19 +135,28 @@ class ResultsPage extends StatelessWidget {
               animationDuration: 2500,
               axes: <RadialAxis>[
                 RadialAxis(
+                  minorTickStyle: MinorTickStyle(
+                    color: themeColors[3], //ticks
+                  ),
+                  majorTickStyle: MajorTickStyle(
+                    color: themeColors[3], //ticks
+                  ),
                   showTicks: true,
                   tickOffset: 0.00,
                   labelOffset: 0.1,
                   offsetUnit: GaugeSizeUnit.factor,
                   axisLabelStyle: GaugeTextStyle(
-                    color: Colors.black54,
+                    color: themeColors[3],
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                   radiusFactor: 0.95,
                   canScaleToFit: true,
                   axisLineStyle: AxisLineStyle(
-                      thickness: 15, cornerStyle: CornerStyle.bothFlat),
+                    thickness: 15,
+                    cornerStyle: CornerStyle.bothFlat,
+                    color: themeColors[3], //color de fondo de la curva
+                  ),
                   startAngle: 160,
                   endAngle: 20,
                   minimum: 0,
@@ -152,7 +164,13 @@ class ResultsPage extends StatelessWidget {
                   interval: 1,
                   showLastLabel: true,
                   pointers: <GaugePointer>[
-                    NeedlePointer(value: success.toDouble()),
+                    NeedlePointer(
+                      value: success.toDouble(),
+                      needleColor: themeColors[3],
+                      knobStyle: KnobStyle(
+                        color: themeColors[3],
+                      ),
+                    ),
                     RangePointer(
                       value: success.toDouble(),
                       width: 0.1,
@@ -170,43 +188,54 @@ class ResultsPage extends StatelessWidget {
                         0.75,
                         1.0
                       ]),
-                    )
+                    ),
                   ],
                   annotations: <GaugeAnnotation>[
                     GaugeAnnotation(
                         widget: Container(
-                            child: Text("Score: ${success}/${totalQuestions}",
-                                style: TextStyle(
-                                    fontSize: 35,
-                                    fontWeight: FontWeight.bold))),
+                          child: Text(
+                            "Score: ${success}/${totalQuestions}",
+                            style: TextStyle(
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                              color: themeColors[3],
+                            ),
+                          ),
+                        ),
                         angle: 90,
-                        positionFactor: 0.85)
+                        positionFactor: 0.85),
                   ],
-                )
+                ),
               ],
               title: GaugeTitle(
                 text: 'FreakOMeter',
-                textStyle:
-                    TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
+                textStyle: TextStyle(
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.bold,
+                  color: themeColors[3],
+                ),
                 borderWidth: 10,
               ),
             ),
 
-            SizedBox(height: 70),
+            SizedBox(height: 80),
             Container(
               padding: EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.grey.shade200,
+                color: themeColors[6],
                 borderRadius: BorderRadius.circular(25),
               ),
               //no se determina el tamaño para que se adecue al flexible container
               child: Text(
                 freakometerResult,
-                style: TextStyle(fontSize: 20),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: themeColors[3],
+                ),
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 15),
             //boton de play quiz y estadisticas,
             //texto de sinopsis
 
