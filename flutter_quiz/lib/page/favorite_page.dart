@@ -17,7 +17,7 @@ class FavoritePage extends StatelessWidget {
           flexibleSpace: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                  colors: themeColors,
+                  colors: [themeColors[0], themeColors[1]],
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft),
             ),

@@ -226,7 +226,7 @@ class ResultsPage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.1,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                      colors: themeColors,
+                      colors: [themeColors[0], themeColors[1]],
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft),
                   borderRadius: BorderRadius.circular(15),
@@ -269,7 +269,7 @@ class ResultsPage extends StatelessWidget {
         flexibleSpace: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: themeColors,
+              colors: [themeColors[0], themeColors[1]],
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
             ),

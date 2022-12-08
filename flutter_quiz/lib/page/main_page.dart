@@ -28,6 +28,11 @@ class _MainPageState extends State<MainPage> {
     print("inicializado");
     favorites = [];
 
+    if (preferences.getBool("DarkMode") != null) {
+      darkMode = preferences.getBool("DarkMode")!;
+      print(darkMode);
+    }
+
     if (preferences.getBool("Mute") != null) {
       mute = preferences.getBool("Mute")!;
     }
