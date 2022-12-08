@@ -91,9 +91,12 @@ class SettingsPageState extends State<SettingsPage> {
                       //lightTheme
                       darkMode = false;
                       themeColors = lightTheme;
-                      setState(() {
-                        themeColors = (darkMode ? darkTheme : lightTheme);
-                      });
+
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(),
+                        ),
+                      );
                       setPreferencesDarkMode();
 
                       if (!mute) {
@@ -122,9 +125,12 @@ class SettingsPageState extends State<SettingsPage> {
                       //darkTheme
                       darkMode = true;
                       themeColors = darkTheme;
-                      setState(() {
-                        themeColors = (darkMode ? darkTheme : lightTheme);
-                      });
+                      //apaño navigator
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => MainPage(),
+                        ),
+                      );
                       setPreferencesDarkMode();
 
                       if (!mute) {
