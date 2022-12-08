@@ -30,6 +30,9 @@ class _MainPageState extends State<MainPage> {
 
     if (preferences.getBool("DarkMode") != null) {
       darkMode = preferences.getBool("DarkMode")!;
+      setState(() {
+        themeColors = (darkMode ? darkTheme : lightTheme);
+      });
       print(darkMode);
     }
 
@@ -90,7 +93,6 @@ class _MainPageState extends State<MainPage> {
     ];
 
     return Scaffold(
-      //extendBody: true,
       body: screens[index],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(

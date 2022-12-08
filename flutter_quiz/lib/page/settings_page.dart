@@ -176,7 +176,7 @@ class SettingsPageState extends State<SettingsPage> {
               ),
               textAlign: TextAlign.justify,
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Row(
               children: [
                 Expanded(
