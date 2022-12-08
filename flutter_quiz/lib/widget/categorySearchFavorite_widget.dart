@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../data/favorites.dart';
 import '../classes/category.dart';
 import '../page/categoryViewer_page.dart';
@@ -9,6 +10,7 @@ import '../data/global_variables.dart';
 class CategorySearchFavorite extends SearchDelegate<Category?> {
   final List<Category> recentCategories = [];
   final player = AudioCache();
+  TextInputAction get textInputAction => super.textInputAction;
 
   @override
   ThemeData appBarTheme(BuildContext context) {
@@ -60,13 +62,14 @@ class CategorySearchFavorite extends SearchDelegate<Category?> {
       );
 
   @override
-  Widget buildResults(BuildContext context) => Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: favorites
-              .map((category) => CategoryHeaderWidget(category: category))
-              .toList(),
-        ),
+  Widget buildResults(BuildContext context) => Container(
+        color: themeColors[2],
+        // child: Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: favorites
+        //       .map((category) => CategoryHeaderWidget(category: category))
+        //       .toList(),
+        // ),
       );
 
   @override

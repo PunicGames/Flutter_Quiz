@@ -56,7 +56,10 @@ class HomePageState extends State<HomePage> {
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                showSearch(context: context, delegate: CategorySearch());
+                showSearch(
+                  context: context,
+                  delegate: CategorySearch(),
+                );
 
                 // Play button sound
                 final player = AudioCache();

@@ -105,7 +105,9 @@ class _MainPageState extends State<MainPage> {
           backgroundColor: themeColors[2],
           animationCurve: Curves.easeInOut,
           animationDuration: Duration(milliseconds: 300),
-          height: MediaQuery.of(context).size.height * 0.08,
+          height: (MediaQuery.of(context).size.height * 0.08 > 74
+              ? 75
+              : MediaQuery.of(context).size.height * 0.08),
           index: index,
           items: items,
           onTap: (index) => setState(() {
