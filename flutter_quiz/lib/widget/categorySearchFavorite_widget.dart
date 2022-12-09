@@ -6,6 +6,7 @@ import '../page/categoryViewer_page.dart';
 import 'category_header_widget.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../data/global_variables.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class CategorySearchFavorite extends SearchDelegate<Category?> {
   final List<Category> recentCategories = [];
@@ -51,6 +52,9 @@ class CategorySearchFavorite extends SearchDelegate<Category?> {
               query = '';
               showSuggestions(context);
             }
+            if (!mute) {
+              player.play('Selector_Button_Sound_Backwards.mp3');
+            }
           },
         )
       ];
@@ -58,7 +62,12 @@ class CategorySearchFavorite extends SearchDelegate<Category?> {
   @override
   Widget? buildLeading(BuildContext context) => IconButton(
         icon: Icon(Icons.arrow_back),
-        onPressed: () => close(context, null),
+        onPressed: () {
+          close(context, null);
+          if (!mute) {
+            player.play("Selector_Button_Sound_Backwards.mp3");
+          }
+        },
       );
 
   @override

@@ -229,7 +229,7 @@ class _CategoryPageState extends State<CategoryPage> {
         if (indexPage > nextPage.toInt()) {
           player.play('Next_Question_Sound.mp3');
         } else if (indexPage < nextPage.toInt()) {
-          player.play('Next_Question_Sound.mp3');
+          player.play('Previous_Question_Sound.mp3');
         }
       }
     });

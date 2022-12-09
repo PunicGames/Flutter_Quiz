@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quiz/page/main_page.dart';
 import 'package:flutter_quiz/widget/categorySearchFavorite_widget.dart';
 import '../data/favorites.dart';
 import '../data/global_variables.dart';
 import '../widget/category_header_widget.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class FavoritePage extends StatelessWidget {
+  final player = AudioCache();
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
@@ -30,6 +34,10 @@ class FavoritePage extends StatelessWidget {
               onPressed: () {
                 showSearch(
                     context: context, delegate: CategorySearchFavorite());
+                // Play button sound
+                if (!mute) {
+                  player.play('Selector_Button_Sound_Forward.mp3');
+                }
               },
             )
           ],

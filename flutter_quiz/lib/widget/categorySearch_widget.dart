@@ -49,6 +49,9 @@ class CategorySearch extends SearchDelegate<Category?> {
               query = '';
               showSuggestions(context);
             }
+            if (!mute) {
+              player.play('Selector_Button_Sound_Backwards.mp3');
+            }
           },
         )
       ];
@@ -56,7 +59,12 @@ class CategorySearch extends SearchDelegate<Category?> {
   @override
   Widget? buildLeading(BuildContext context) => IconButton(
         icon: Icon(Icons.arrow_back),
-        onPressed: () => close(context, null),
+        onPressed: () {
+          close(context, null);
+          if (!mute) {
+            player.play('Selector_Button_Sound_Backwards.mp3');
+          }
+        },
       );
 
   @override
