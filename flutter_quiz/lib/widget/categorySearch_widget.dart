@@ -60,13 +60,14 @@ class CategorySearch extends SearchDelegate<Category?> {
       );
 
   @override
-  Widget buildResults(BuildContext context) => Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: categories
-              .map((category) => CategoryHeaderWidget(category: category))
-              .toList(),
-        ),
+  Widget buildResults(BuildContext context) => Container(
+        color: themeColors[2],
+        // child: Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: favorites
+        //       .map((category) => CategoryHeaderWidget(category: category))
+        //       .toList(),
+        // ),
       );
 
   @override
