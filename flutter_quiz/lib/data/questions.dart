@@ -4,39 +4,37 @@ import '../classes/question.dart';
 final GodOfWarIV_questions = [
   //  #1
   Question(
-    text: '¿Por que Kratos es tan palido?',
+    text: 'Why is Kratos so pale??',
     options: [
-      Option(code: 'A', text: 'Es Gamer', isCorrect: false),
-      Option(code: 'B', text: 'Es alergico a la luz del sol', isCorrect: false),
       Option(
-          code: 'C',
-          text:
-              'Esta cubierto de pies a cabeza con las cenizas de su familia muerta',
-          isCorrect: true),
+          code: 'A',
+          text: 'He was locked away for a long time',
+          isCorrect: false),
+      Option(code: 'B', text: 'He´s a Real Gamer', isCorrect: false),
+      Option(code: 'C', text: 'He´s allergic to sunlight', isCorrect: false),
       Option(
           code: 'D',
-          text: 'Estuvo encerrado durante mucho tiempo',
-          isCorrect: false),
+          text: 'He´s covered head to toe in the ashes of his dead family',
+          isCorrect: true),
     ],
-    solution:
-        'Esta cubierto de pies a cabeza con las cenizas de su familia muerta',
+    solution: 'He´s covered head to toe in the ashes of his dead family',
   ),
 
   //  #2
   Question(
-    text: '¿Cómo se llama la primera esposa de Kratos?',
+    text: 'What is the name of Kratos´ first wife?',
     options: [
       Option(code: 'A', text: 'Caliope', isCorrect: false),
       Option(code: 'B', text: 'Selene', isCorrect: false),
       Option(code: 'C', text: 'Faye', isCorrect: false),
-      Option(code: 'D', text: 'Lisandra', isCorrect: true),
+      Option(code: 'D', text: 'Lysandra', isCorrect: true),
     ],
-    solution: 'Lisandra',
+    solution: 'Lysandra',
   ),
 
   //  #3
   Question(
-    text: '¿Qué personaje narra los juegos griegos de God of War?',
+    text: 'The Greek God of War games are narrated by which character?',
     options: [
       Option(code: 'A', text: 'Atenea', isCorrect: false),
       Option(code: 'B', text: 'Caliope', isCorrect: false),
@@ -48,38 +46,42 @@ final GodOfWarIV_questions = [
 
   //  #4
   Question(
-    text: '¿Cuál es el único juego de God of War que cuenta con multijugador?',
+    text:
+        'Kratos´ signature weapon goes by various names in the different games. What are his chain blades called in God of War: Ghost of Sparta?',
     options: [
-      Option(code: 'A', text: 'God of War: Ghost of Sparta', isCorrect: false),
-      Option(code: 'B', text: 'God of War (2018)', isCorrect: false),
-      Option(code: 'C', text: "God of War 3", isCorrect: false),
-      Option(code: 'D', text: "God of War: Ascensión", isCorrect: true),
+      Option(code: 'A', text: 'Blades of Athena', isCorrect: true),
+      Option(code: 'B', text: 'Blades of Chaos', isCorrect: false),
+      Option(code: 'C', text: "Blades of Olympus", isCorrect: false),
+      Option(code: 'D', text: "Blades of Exile", isCorrect: false),
     ],
-    solution: 'God of War: Ascensión',
+    solution: 'Blades of Athena',
   ),
 
   //  #5
   Question(
-    text: '¿Por qué tiene Kratos ese tatuaje rojo en el cuerpo?',
+    text: 'Why does Kratos have that red body tattoo?',
     options: [
       Option(
           code: 'A',
-          text: 'Es un símbolo de su hermano menor, Deimos',
+          text: 'It´s symbolic of his younger brother, Deimos',
           isCorrect: true),
-      Option(code: 'B', text: 'Pensó que se vería bien', isCorrect: false),
       Option(
-          code: 'C', text: 'Es una tradición en su familia', isCorrect: false),
+          code: 'B',
+          text: 'He just thought it would look cool',
+          isCorrect: false),
+      Option(
+          code: 'C', text: 'It´s a tradition in his family', isCorrect: false),
       Option(
           code: 'D',
-          text: 'Fue atado a él al mismo tiempo que las cenizas',
+          text: 'It was bound to him at the same time as the ashes',
           isCorrect: false),
     ],
-    solution: 'Es un símbolo de su hermano menor, Deimos',
+    solution: 'It´s symbolic of his younger brother, Deimos',
   ),
 
   //  #6
   Question(
-    text: 'En God of War 2, se revela el padre de Kratos. ¿Quién es?',
+    text: 'In God of War 2, Kratos´ father is revealed. Who is it?',
     options: [
       Option(code: 'A', text: 'Cronos', isCorrect: false),
       Option(code: 'B', text: 'Zeus', isCorrect: true),
@@ -91,7 +93,7 @@ final GodOfWarIV_questions = [
 
   //  #7
   Question(
-    text: '¿Quién fue el director de God of War 3?',
+    text: 'Who was game director on God of War 3?',
     options: [
       Option(code: 'A', text: 'Cory Barlog', isCorrect: false),
       Option(code: 'B', text: 'Stig Asmussen', isCorrect: true),
@@ -103,33 +105,32 @@ final GodOfWarIV_questions = [
 
   //  #8
   Question(
-    text: '¿Que titan acompaña siempre a Kratos?',
+    text: 'Which is the only God of War game to feature multiplayer?',
     options: [
-      Option(code: 'A', text: 'Cronos', isCorrect: false),
-      Option(code: 'B', text: 'Urano', isCorrect: false),
-      Option(code: 'C', text: 'Gaia', isCorrect: false),
-      Option(code: 'D', text: 'Crio', isCorrect: true),
+      Option(code: 'A', text: 'God of War (2018)', isCorrect: false),
+      Option(code: 'B', text: 'God of War 3', isCorrect: false),
+      Option(code: 'C', text: 'God of War: Ascension', isCorrect: false),
+      Option(code: 'D', text: 'God of War: Ghost of Sparta', isCorrect: true),
     ],
-    solution: '',
+    solution: 'God of War: Ascension',
   ),
 
   //  #9
   Question(
     text:
-        'God of War: Chains of Olympus es uno de los dos juegos de PSP. Cronológicamente, ¿dónde se encuentra dentro de la historia?',
+        'God of War: Chains of Olympus is one of the two PSP games. Chronologically, where does it fall within the whole storyline?',
     options: [
-      Option(code: 'A', text: 'Entre Ascensión y 1', isCorrect: true),
-      Option(code: 'B', text: 'Entre el 1 y el 2', isCorrect: false),
-      Option(code: 'C', text: 'Entre el 2 y el 3', isCorrect: false),
-      Option(
-          code: 'D', text: 'Antes de todos los demás juegos', isCorrect: false),
+      Option(code: 'A', text: 'Between Ascension and 1', isCorrect: true),
+      Option(code: 'B', text: 'Between 1 and 2', isCorrect: false),
+      Option(code: 'C', text: 'Between 2 and 3', isCorrect: false),
+      Option(code: 'D', text: 'Before all the other games', isCorrect: false),
     ],
-    solution: 'Entre Ascensión y 1',
+    solution: 'Between Ascension and 1',
   ),
 
   //  #10
   Question(
-    text: '¿Quién es el primer dios griego que muere en God of War 3?',
+    text: 'Who is the first Greek god to die in God of War 3?',
     options: [
       Option(code: 'A', text: 'Hades', isCorrect: false),
       Option(code: 'B', text: 'Helios', isCorrect: false),
