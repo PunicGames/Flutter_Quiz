@@ -6,10 +6,9 @@ List<Category> categories = <Category>[
     questions: GodOfWarIV_questions,
     categoryName: 'God of War IV',
     imageUrl: 'assets/GodOfWarIV_Image.jpg',
-    videoUrl:
-        'https://www.youtube.com/watch?v=dK42JGgkoF8&t=2s&ab_channel=PlayStationEspa%C3%B1a',
+    videoUrl: 'https://www.youtube.com/watch?v=hfJ4Km46A-0',
     description:
-        "Kratos, que ha dejado atrás el mundo de los dioses, deberá adaptarse a tierras que no le son familiares, afrontar peligros inesperados y aprovechar una segunda oportunidad de ejercer como padre. Junto a su hijo Atreus se aventurará en lo más profundo e inclemente de las tierras de Midgard y luchará por culminar una búsqueda profundamente personal.",
+        "Leaving the world of the gods behind, Kratos must adjust to unfamiliar lands, face unexpected dangers, and seize a second chance to be a father. Together with his son, Atreus, he will venture into the deepest and harshest lands of Midgard and fight to complete a deeply personal quest.",
     correctAnswer: 0,
     isFavorite: false,
     //(preferences.getBool("_isFavorite") == null  ? false : preferences.getBool("God of War IV_isFavorite")!)
