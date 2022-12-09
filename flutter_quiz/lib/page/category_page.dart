@@ -65,7 +65,9 @@ class _CategoryPageState extends State<CategoryPage> {
               builder: (context) => MainPage(),
             ),
           );
-          player.play("Selector_Button_Sound_Backwards.mp3");
+          if (!mute) {
+            player.play("Selector_Button_Sound_Backwards.mp3");
+          }
         }),
         title: Text(widget.category.categoryName),
         flexibleSpace: Container(
