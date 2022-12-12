@@ -1,10 +1,11 @@
-<img src=https://user-images.githubusercontent.com/26395726/200412509-eaf471b0-8b29-4acb-a671-6300a09adf35.jpg>
-<H1 ALIGN="CENTER">MARBLE STARS</H1>
+<img src=https://user-images.githubusercontent.com/90959761/207105784-d25ee937-c2f2-4e30-a025-08ce3c050b3a.png>
+<H1 ALIGN="CENTER">Freak 'O' Meter</H1>
 <br> 
 </br>
 
 <p align="center"> 
 <img width="547" alt="Recurso 13@2x" src="https://user-images.githubusercontent.com/26395726/200410366-994a64c8-7660-40d0-9673-524e6c3d088b.png">
+
 </p>
 <H2 ALIGN="CENTER">WELCOME</H2>
 <br> 
