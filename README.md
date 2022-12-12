@@ -20,10 +20,9 @@
 <H2 ALIGN="CENTER">IN GAME SCREENSHOTS </H2>
  <br> 
   <p align="center"> 
-      <img src=https://user-images.githubusercontent.com/26395726/200411296-07a57859-ee5b-4e32-90f5-b8abae84e92e.jpg width=25%>
-      <img src=https://user-images.githubusercontent.com/26395726/200411532-eed9107e-e7d7-4282-9ac2-6559c1b839af.jpg width=25%>
-      <img src=https://user-images.githubusercontent.com/26395726/200411596-dd65172f-6dfc-43e7-a920-8a1860e0c658.jpg width=25%>
-      <img src=https://user-images.githubusercontent.com/26395726/200411631-61e8b9c0-9753-4467-a128-d9d10f650b63.jpg width=25%>
-      <img src=https://user-images.githubusercontent.com/26395726/200411686-291c760d-3f1f-4208-8c3b-d89a30ce6b6b.jpg width=25%>
-
+      <img src=https://user-images.githubusercontent.com/90959761/207118764-99f4ba8c-d71f-4c42-ae45-2edf7c736ce1.jpeg width=25%>
+      <img src=https://user-images.githubusercontent.com/90959761/207118824-5ef3fdfb-50d5-4cb7-af6c-e10b0ea1bafd.jpeg width=25%>
+      <img src=https://user-images.githubusercontent.com/90959761/207118836-323b068e-d1f1-433d-b2a9-9931226972a8.jpeg width=25%>
+      <img src=https://user-images.githubusercontent.com/90959761/207118843-3c3bd322-61db-468b-848a-c94a4dfbefab.jpeg width=25%>
+      <img src=https://user-images.githubusercontent.com/90959761/207118853-ddf96738-5630-4122-839c-61c7aa1026d8.jpeg width=25%>
   </p>
