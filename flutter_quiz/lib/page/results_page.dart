@@ -75,10 +75,15 @@ class ResultsPage extends StatelessWidget {
         break;
     }
 
-    if (success <= 4) {
-      // Bad
+    if (success <= 1) {
+      // Sooo bad
       if (!mute) {
         player.play('Goofy_At_The_Game_Sound.mp3');
+      }
+    } else if (success <= 4) {
+      // Bad
+      if (!mute) {
+        player.play('Bad_At_The_Game_Sound.mp3');
       }
 
       confettiParticles = 1;
