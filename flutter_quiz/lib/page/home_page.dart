@@ -38,7 +38,7 @@ class HomePageState extends State<HomePage> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
-          title: Text('FreakOMeter'),
+          title: Text("Freak 'O' Meter"),
           centerTitle: true,
 
           //decoracion de la parte de arriba de la pagina

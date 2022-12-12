@@ -20,10 +20,18 @@ dependencies:
   confetti: ^0.6.0
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.7
+  flutter_launcher_icons: ^0.11.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+  adaptive_icon_background: "assets/logo_background.png"
+  adaptive_icon_foreground: "assets/logo_foreground.png"
 
   flutter_lints: ^2.0.0
 
