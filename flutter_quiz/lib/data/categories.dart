@@ -120,7 +120,7 @@ List<Category> categories = <Category>[
   Category(
     questions: slyCooper_questions_en,
     categoryName: 'Sly Cooper',
-    imageUrl: 'assets/Sly.jpeg',
+    imageUrl: 'assets/Sly.jpg',
     videoUrl: 'https://www.youtube.com/watch?v=5w_AZ5GTojY',
     description:
         "Sly Cooper is a saga of platform, action and stealth video game homonymous to its main character for PlayStation 2, PlayStation 3 and PlayStation Vita developed and created by Sucker Punch Productions at the end of 2002, whose games have been created by this company and Sanzaru Games.",
