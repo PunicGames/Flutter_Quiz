@@ -1,33 +1,24 @@
-<img src=https://user-images.githubusercontent.com/90959761/207105784-d25ee937-c2f2-4e30-a025-08ce3c050b3a.png>
+
 <H1 ALIGN="CENTER">Freak 'O' Meter</H1>
 <br> 
-</br>
-
-<p align="center"> 
-<img width="547" alt="Recurso 13@2x" src="https://user-images.githubusercontent.com/26395726/200410366-994a64c8-7660-40d0-9673-524e6c3d088b.png">
+<img src=https://user-images.githubusercontent.com/90959761/207107731-f91d265c-5081-46c7-aaf3-062bd4161137.png>
 
 </p>
-<H2 ALIGN="CENTER">WELCOME</H2>
+<H2 ALIGN="CENTER">TAILORED FOR YOUR PHONE DEVICE</H2>
 <br> 
-</br>
 <p align="center"> 
 
-<img width="547" alt="Recurso 13@2x" src="https://user-images.githubusercontent.com/26395726/200410611-6551d312-cd9e-4047-98a6-522653a7a8ef.png">
+<img width=50% alt="Recurso 13@2x" src="https://user-images.githubusercontent.com/90959761/207107891-bb1feb23-4361-4b01-9222-8762487c4d75.png">
 </p>
 
  <br> 
-</br>
 <p align="center"> 
- <img src=https://user-images.githubusercontent.com/79087129/198837116-ad304cc8-8520-417a-9316-623312229afb.png width=25%>
+ <img src=https://user-images.githubusercontent.com/79087129/198837116-ad304cc8-8520-417a-9316-623312229afb.png width=50%>
 </p> 
 <br> 
-</br>
 
-
-
-<H2 ALIGN="CENTER"> SCREENSHOTS </H2>
+<H2 ALIGN="CENTER">IN GAME SCREENSHOTS </H2>
  <br> 
-  </br>
   <p align="center"> 
       <img src=https://user-images.githubusercontent.com/26395726/200411296-07a57859-ee5b-4e32-90f5-b8abae84e92e.jpg width=25%>
       <img src=https://user-images.githubusercontent.com/26395726/200411532-eed9107e-e7d7-4282-9ac2-6559c1b839af.jpg width=25%>
@@ -36,14 +27,3 @@
       <img src=https://user-images.githubusercontent.com/26395726/200411686-291c760d-3f1f-4208-8c3b-d89a30ce6b6b.jpg width=25%>
 
   </p>
-<br> 
-</br>
-<H2 ALIGN="CENTER">ASSETS</H2>
- <br> 
-  </br>
-<p align="center">
- <img src=https://user-images.githubusercontent.com/26395726/200411995-fc0c7317-4247-4c0d-be0f-b718d5f3584e.png>
- <img src=https://user-images.githubusercontent.com/26395726/200412002-54b232d4-d21c-46bc-89c6-63154b8806c7.png>
- <img src=https://user-images.githubusercontent.com/26395726/200412010-878d3e53-46b7-49ba-95cd-9b7136ceb2f2.png>
- <img src=https://user-images.githubusercontent.com/26395726/200412014-4917e644-41d1-42be-9013-7250c00419ac.png>
-</p>
