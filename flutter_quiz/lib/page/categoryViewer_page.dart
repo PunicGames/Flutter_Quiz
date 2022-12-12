@@ -50,20 +50,34 @@ class _CategoryViewerPageState extends State<CategoryViewerPage> {
   }
 
   @override
-  Widget build(BuildContext context) => YoutubePlayerBuilder(
-        player: YoutubePlayer(
-          controller: controller,
-        ),
-        builder: (context, player) => Scaffold(
-          appBar: buildAppBar(context),
-          body: Container(
-            color: themeColors[2],
-            child: ListView(
-              padding: const EdgeInsets.all(16),
-              children: [
-                player,
-                buildStructure(),
-              ],
+  Widget build(BuildContext context) => WillPopScope(
+        onWillPop: () async {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) => MainPage(),
+            ),
+          );
+          if (!mute) {
+            player.play('Selector_Button_Sound_Backwards.mp3');
+          }
+
+          return false;
+        },
+        child: YoutubePlayerBuilder(
+          player: YoutubePlayer(
+            controller: controller,
+          ),
+          builder: (context, player) => Scaffold(
+            appBar: buildAppBar(context),
+            body: Container(
+              color: themeColors[2],
+              child: ListView(
+                padding: const EdgeInsets.all(16),
+                children: [
+                  player,
+                  buildStructure(),
+                ],
+              ),
             ),
           ),
         ),

@@ -184,7 +184,7 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.github,
                       color: Colors.purple,
-                      size: MediaQuery.of(context).size.height * 0.08,
+                      size: MediaQuery.of(context).size.height * 0.07,
                     ),
                     iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
@@ -198,7 +198,7 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.twitter,
                       color: Colors.blue,
-                      size: MediaQuery.of(context).size.height * 0.08,
+                      size: MediaQuery.of(context).size.height * 0.07,
                     ),
                     iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
@@ -211,7 +211,7 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.youtube,
                       color: Colors.red,
-                      size: MediaQuery.of(context).size.height * 0.08,
+                      size: MediaQuery.of(context).size.height * 0.07,
                     ),
                     iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {
@@ -225,7 +225,7 @@ class SettingsPageState extends State<SettingsPage> {
                     icon: FaIcon(
                       FontAwesomeIcons.itchIo,
                       color: Colors.orange,
-                      size: MediaQuery.of(context).size.height * 0.08,
+                      size: MediaQuery.of(context).size.height * 0.07,
                     ),
                     iconSize: MediaQuery.of(context).size.height * 0.06,
                     onPressed: () {

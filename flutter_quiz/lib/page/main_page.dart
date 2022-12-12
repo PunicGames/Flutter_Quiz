@@ -92,31 +92,37 @@ class _MainPageState extends State<MainPage> {
       Icon(Icons.settings, size: 30),
     ];
 
-    return Scaffold(
-      body: screens[index],
-      bottomNavigationBar: Theme(
-        data: Theme.of(context).copyWith(
-          iconTheme: IconThemeData(color: Colors.white),
-        ),
-        child: CurvedNavigationBar(
-          key: navigationKey,
-          color: themeColors[1],
-          buttonBackgroundColor: themeColors[0],
-          backgroundColor: themeColors[2],
-          animationCurve: Curves.easeInOut,
-          animationDuration: Duration(milliseconds: 300),
-          height: (MediaQuery.of(context).size.height * 0.08 > 74
-              ? 75
-              : MediaQuery.of(context).size.height * 0.08),
-          index: index,
-          items: items,
-          onTap: (index) => setState(() {
-            this.index = index;
-            indexPage = index;
-            if (!mute) {
-              player.play('Selector_Button_Sound_Forward.mp3');
-            }
-          }),
+    return WillPopScope(
+      onWillPop: () async {
+        print("botonsito");
+        return false;
+      },
+      child: Scaffold(
+        body: screens[index],
+        bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+            iconTheme: IconThemeData(color: Colors.white),
+          ),
+          child: CurvedNavigationBar(
+            key: navigationKey,
+            color: themeColors[1],
+            buttonBackgroundColor: themeColors[0],
+            backgroundColor: themeColors[2],
+            animationCurve: Curves.easeInOut,
+            animationDuration: Duration(milliseconds: 300),
+            height: (MediaQuery.of(context).size.height * 0.08 > 74
+                ? 75
+                : MediaQuery.of(context).size.height * 0.08),
+            index: index,
+            items: items,
+            onTap: (index) => setState(() {
+              this.index = index;
+              indexPage = index;
+              if (!mute) {
+                player.play('Selector_Button_Sound_Forward.mp3');
+              }
+            }),
+          ),
         ),
       ),
     );

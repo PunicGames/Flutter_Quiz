@@ -10,22 +10,24 @@ class FavoritePage extends StatelessWidget {
   final player = AudioCache();
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          elevation: 0,
-          title: Text('My favourites'),
-          centerTitle: true,
+  Widget build(BuildContext context) => WillPopScope(
+        onWillPop: onWillPop,
+        child: Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            elevation: 0,
+            title: Text('My favourites'),
+            centerTitle: true,
 
-          //decoracion de la parte de arriba de la pagina
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [themeColors[0], themeColors[1]],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft),
+            //decoracion de la parte de arriba de la pagina
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [themeColors[0], themeColors[1]],
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft),
+              ),
             ),
-          ),
 
           //boton de buscar
           actions: [
@@ -51,6 +53,17 @@ class FavoritePage extends StatelessWidget {
               //SizedBox(height: 8),
               buildCategories(context),
             ],
+          ),
+          body: Container(
+            color: themeColors[2],
+            child: ListView(
+              physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.all(16),
+              children: [
+                //SizedBox(height: 8),
+                buildCategories(context),
+              ],
+            ),
           ),
         ),
       );
