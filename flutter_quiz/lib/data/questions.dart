@@ -2267,7 +2267,7 @@ final worldOfWarcraft_Classic_en = [
       Option(code: 'C', text: 'Wailing Cavers', isCorrect: false),
       Option(code: 'D', text: 'Ragefire chasm', isCorrect: true),
     ],
-    solution: "",
+    solution: "Ragefire chasm",
   ),
 
   // #7
@@ -2313,7 +2313,7 @@ final worldOfWarcraft_Classic_en = [
       Option(code: 'C', text: 'Hunter', isCorrect: true),
       Option(code: 'D', text: 'Warlock', isCorrect: false),
     ],
-    solution: "",
+    solution: "Hunter",
   ),
 
   // #10
@@ -2362,11 +2362,11 @@ final worldOfWarcraft_Classic_en = [
     text: 'Which is not the name of any mainland island?',
     options: [
       Option(code: 'A', text: "Kalimdor", isCorrect: false),
-      Option(code: 'B', text: 'The Maelstorm', isCorrect: false),
+      Option(code: 'B', text: 'The Maelstorm', isCorrect: true),
       Option(code: 'C', text: 'Azeroth', isCorrect: false),
       Option(code: 'D', text: 'Lordaeron', isCorrect: false),
     ],
-    solution: "",
+    solution: "The Maelstorm",
   ),
 
   // #14
@@ -2390,7 +2390,7 @@ final worldOfWarcraft_Classic_en = [
       Option(code: 'C', text: 'Shaman', isCorrect: false),
       Option(code: 'D', text: 'Druid', isCorrect: true),
     ],
-    solution: "",
+    solution: "Druid",
   ),
 ];
 
