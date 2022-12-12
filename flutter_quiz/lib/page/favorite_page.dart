@@ -6,43 +6,46 @@ import '../widget/category_header_widget.dart';
 
 class FavoritePage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          elevation: 0,
-          title: Text('My favourites'),
-          centerTitle: true,
+  Widget build(BuildContext context) => WillPopScope(
+        onWillPop: onWillPop,
+        child: Scaffold(
+          appBar: AppBar(
+            automaticallyImplyLeading: false,
+            elevation: 0,
+            title: Text('My favourites'),
+            centerTitle: true,
 
-          //decoracion de la parte de arriba de la pagina
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [themeColors[0], themeColors[1]],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft),
+            //decoracion de la parte de arriba de la pagina
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [themeColors[0], themeColors[1]],
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft),
+              ),
             ),
-          ),
 
-          //boton de buscar
-          actions: [
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                showSearch(
-                    context: context, delegate: CategorySearchFavorite());
-              },
-            )
-          ],
-        ),
-        body: Container(
-          color: themeColors[2],
-          child: ListView(
-            physics: BouncingScrollPhysics(),
-            padding: const EdgeInsets.all(16),
-            children: [
-              //SizedBox(height: 8),
-              buildCategories(context),
+            //boton de buscar
+            actions: [
+              IconButton(
+                icon: Icon(Icons.search),
+                onPressed: () {
+                  showSearch(
+                      context: context, delegate: CategorySearchFavorite());
+                },
+              )
             ],
+          ),
+          body: Container(
+            color: themeColors[2],
+            child: ListView(
+              physics: BouncingScrollPhysics(),
+              padding: const EdgeInsets.all(16),
+              children: [
+                //SizedBox(height: 8),
+                buildCategories(context),
+              ],
+            ),
           ),
         ),
       );
